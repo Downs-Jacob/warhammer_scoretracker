@@ -15,6 +15,7 @@ class GameController extends Controller
     public function index()
     {
         //
+        return view('index');
     }
 
     /**
@@ -24,8 +25,74 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
-        return view('create');
+        $categories = [
+            [
+                'name'=>'PURGE',
+                'options'=> [
+                    'Assassinate',
+                    'Bring it Down',
+                    'Titan Slayers',
+                    'Slay the Warlord'
+                ]
+            ],[
+                'name'=>'NO MERCY, NO RESPITE',
+                'options'=> [
+                    'Thin Their Ranks',
+                    'Attrition',
+                    'While We Stand We Fight',
+                    'First Strike'
+                ]
+            ],[
+                'name'=>'BATTLEFIELD SUPREMACY',
+                'options'=> [
+                    'Engage on all Fronts',
+                    'Linebreaker',
+                    'Domination'
+                ]
+            ],[
+                'name'=>'SHADOW OPERATIONS',
+                'options'=> [
+                    'Investigate Sites',
+                    'Repair Teleport Homer',
+                    'Raise the Banners High'
+                ]
+            ],[
+                'name'=>'WARPCRAFT',
+                'options'=> [
+                    'Mental Interrogation',
+                    'Psychic Ritual',
+                    'Abhor the Witch'
+                ]
+            ],[
+                'name'=>'MISSION SPECIFIC',
+                'options'=> [
+                    'Surgical Assault',
+                    'Survey',
+                    'Encircle',
+                    'Lines of Demarcation',
+                    'Outflank',
+                    'Center Ground',
+                    'Forward Push',
+                    'Ransack',
+                    'Test Their Line',
+                    'Minimise Loses',
+                    'Vital Ground',
+                    'Siphon Power',
+                    'Secure No Mans Land',
+                    'Raze',
+                    'Data Intercept',
+                    'Hold the Center',
+                    'Surround Them',
+                    'Search for the Portal'
+                ]
+            ]
+        ];
+
+
+        return view('create', [
+            'categories'=>$categories
+        ]);
+
     }
 
     /**

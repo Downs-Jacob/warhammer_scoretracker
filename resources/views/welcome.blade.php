@@ -1,90 +1,22 @@
 @extends ('layouts\layout')
 
-@section('header')
-<div id="header-wrapper">
-    <div id="header" class="container">
-        <div id="logo">
-            <h1><a href="#">Warhammer 40k Score Tracker</a></h1>
 
+@section ('header')
+        <!--Left Col-->
+<body class="bg-gray-400 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
+			<h1 class="font-bold text-3xl my-4">Warhammer 40k Score Tracker</h1>
+			<p class="leading-normal mb-4">This is a website for tracking your games of Warhammer 40k 9th edition. Click 'New Game' in the navigation bar above to start a new game or the button below! </p>
+			<a href="/create" class="bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">Start New Game</a>
+		</div>
+		<!--Right Col-->
+		<div class="w-full lg:w-1/2 lg:py-6 text-center">
+			<!--Add your product image here-->
+			<svg class="fill-current text-gray-900 w-3/5 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17 6V5h-2V2H3v14h5v4h3.25H11a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6zm-5.75 14H3a2 2 0 0 1-2-2V2c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5.75zM11 8v8h6V8h-6zm3 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
         </div>
     </div>
-</div>
-<div id="banner"></div>
-	<div id="page" class="container">
-		<div id="content">
-			<div class="title">
-				<h2></h2>
-				<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span> </div>
-			<p>This is <strong>GrassyGreen</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
-			<p>Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget, tempus et, tellus. Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu wisi suscipit nulla suscipit interdum. Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. </p>
-		</div>
-		<div id="sidebar">
-			<div class="box2">
-				<div class="title">
-					<h2>Integer gravida</h2>
-				</div>
-				<ul class="style2">
-					<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-					<li><a href="#">Ornare in hendrerit in lectus</a></li>
-					<li><a href="#">Semper mod quis eget mi dolore</a></li>
-					<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-					<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-					<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-					<li><a href="#">Consequat etiam lorem phasellus</a></li>
-				</ul>
-			</div>
-		</div>
-
-@endsection
-
-@section ('content')
-
-
-
-<div id="footer-wrapper">
-	<div id="footer" class="container">
-		<div id="box1">
-			<div class="title">
-				<h2>Latest Post</h2>
-			</div>
-			<ul class="style1">
-				<li><a href="#">Semper mod quis eget mi dolore</a></li>
-				<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-				<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-				<li><a href="#">Consequat etiam lorem phasellus</a></li>
-				<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-				<li><a href="#">Semper mod quisturpis nisi</a></li>
-			</ul>
-		</div>
-		<div id="box2">
-			<div class="title">
-				<h2>Popular Links</h2>
-			</div>
-			<ul class="style1">
-				<li><a href="#">Semper mod quis eget mi dolore</a></li>
-				<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-				<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-				<li><a href="#">Consequat etiam lorem phasellus</a></li>
-				<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-				<li><a href="#">Semper mod quisturpis nisi</a></li>
-			</ul>
-		</div>
-		<div id="box3">
-			<div class="title">
-				<h2>Follow Us</h2>
-			</div>
-			<p>Proin eu wisi suscipit nulla suscipit interdum. Aenean lectus lorem, imperdiet magna.</p>
-			<ul class="contact">
-				<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-				<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
-				<li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
-				<li><a href="#" class="icon icon-tumblr"><span>Tumblr</span></a></li>
-				<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-			</ul>
-				<a href="#" class="button">Read More</a> </div>
-		</div>
-	</div>
-</div>
+</body>
 
 
 @endsection
