@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 
 Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
-Route::get('/create', [\App\Http\Controllers\GameController::class,'create']);
+Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
