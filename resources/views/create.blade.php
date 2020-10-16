@@ -123,7 +123,9 @@
                     }"
                   <br>
 
-                <form action="/score" METHOD="POST" id="formid">
+                <form action="/create" METHOD="POST" id="formid">
+                  @csrf
+
                   <div class="flex flex-wrap mb-6 ">
                     <div class="w-auto">
                       <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
@@ -143,16 +145,16 @@
                   </div>
                   <div class="flex flex-wrap mb-6 ">
                     <div class="w-auto">
-                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
                         Army name
                         </label>
-                      <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white" name='aname' type="text" placeholder="Army Name">
+                      <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white" name='player1_army' type="text" placeholder="Army Name">
                     </div>
                     <div class="w-auto px-3">
-                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="player">
                         Player name
                         </label>
-                        <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"  name='pname' type="text" placeholder="Player Name">
+                        <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"  name='player1_name' type="text" placeholder="Player Name">
                     </div>
                   </div>
                 <br>
@@ -184,14 +186,14 @@
                   <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
                     <label x-text="primaryTotal()" class="mr-2"></label>
-                    <input type="hidden" name="pScore" :value="primaryTotal()">
+                    <input type="hidden" name="player1_primary" :value="primaryTotal()">
                   </div>
                 <div>
                     <div class="w-full max-w-lg pb-4">
                       <div
                         class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
-                        <span x-text="getsecondaryTotal()" class="mr-2" name='secondaryscore'></span>
+                        <span x-text="getsecondaryTotal()" class="mr-2" name='player1_secondary'></span>
                       </div>
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
@@ -201,7 +203,7 @@
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
                     <label x-text="getTotal()" class="mr-2"></label>
-                    <input type="hidden" name="tScore" :value="getTotal()">
+                    <input type="hidden" name="player1_score" :value="getTotal()">
                   </div>
               </div>
             </form>

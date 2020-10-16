@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\project;
+use App\Models\Game;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -15,7 +15,8 @@ class GameController extends Controller
     public function index()
     {
         //
-        return view('index');
+        $games = Game::latest()->get();
+        return view('index', ['games'=>$games]);
     }
 
     /**
@@ -25,6 +26,7 @@ class GameController extends Controller
      */
     public function create()
     {
+
         $categories = [
             [
                 'name'=>'PURGE',
@@ -89,8 +91,10 @@ class GameController extends Controller
         ];
 
 
+
         return view('create', [
             'categories'=>$categories
+
         ]);
 
     }
@@ -101,9 +105,17 @@ class GameController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $games = new Game();
+
+        $games->scenario = request('scenario');
+        $games->player1_name = request('player1_name');
+        $games->player1_army = request('player1_army');
+        $games->player1_score = request('player1_score');
+
+        $games->save();
+        return redirect('/create');
     }
 
     /**
@@ -112,14 +124,12 @@ class GameController extends Controller
      * @param  \App\Models\project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
         //
-        $game = \DB::table('games')->where('slug', $slug)->first();
+        $game = Game::find($id);
+        return view('/show', ['game' => $game]);
 
-        return view('game', [
-            'game'=>$game
-        ]);
     }
 
     /**
