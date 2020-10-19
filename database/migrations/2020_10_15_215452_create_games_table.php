@@ -19,6 +19,8 @@ class CreateGamesTable extends Migration
             $table->string('scenario');
             $table->string('player1_name');
             $table->string('player1_army');
+            $table->string('player1_primary');
+            $table->string('player1_secondary');
             $table->string('player1_score');
             $table->timestamps();
         });

@@ -112,6 +112,8 @@ class GameController extends Controller
         $games->scenario = request('scenario');
         $games->player1_name = request('player1_name');
         $games->player1_army = request('player1_army');
+        $games->player1_primary = request('player1_primary');
+        $games->player1_secondary = request('player1_secondary');
         $games->player1_score = request('player1_score');
 
         $games->save();

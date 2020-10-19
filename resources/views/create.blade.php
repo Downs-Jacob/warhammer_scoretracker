@@ -193,11 +193,13 @@
                       <div
                         class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
-                        <span x-text="getsecondaryTotal()" class="mr-2" name='player1_secondary'></span>
+                        <span x-text="getsecondaryTotal()" class="mr-2"></span>
+                        <input type="hidden" name="player1_secondary" :value="getsecondaryTotal()">
                       </div>
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
+                      <input type="hidden" name="selection_1" :value="selection_1">
                     </div>
                   </div>
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">

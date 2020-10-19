@@ -15,6 +15,10 @@
                     <br>
                     Player 1 Army: {{ $game->player1_army}}
                     <br>
+                    Player 1 Primary Score: {{ $game->player1_primary}}
+                    <br>
+                    Player 1 Secondary Score: {{ $game->player1_secondary}}
+                    <br>
                     Player 1 Score: {{ $game->player1_score}}
             </div>
         </div>
