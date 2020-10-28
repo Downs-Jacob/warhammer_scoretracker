@@ -35,8 +35,11 @@
     </div>
 </div>
 <div class="py-4">
-    <a href="{{route('archive')}}" class="flex-1 px-4 py-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+    <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
         Return to Archive
+    </a>
+    <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+        Edit Game
     </a>
 </div>
 

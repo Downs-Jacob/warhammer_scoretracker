@@ -145,9 +145,10 @@ class GameController extends Controller
      * @param  \App\Models\project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(project $project)
+    public function edit($id)
     {
-        //
+        $game = Game::find($id);
+        return view('/edit', ['game' => $game]);
     }
 
     /**
@@ -172,4 +173,5 @@ class GameController extends Controller
     {
         //
     }
+
 }

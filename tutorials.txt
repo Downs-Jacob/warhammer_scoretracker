@@ -5,3 +5,5 @@ Passing Request Data to Views: https://laracasts.com/series/laravel-6-from-scrat
 Routing to Controllers: https://laracasts.com/series/laravel-6-from-scratch/episodes/9?autoplay=true
 
 Setting up Database: https://laracasts.com/series/laravel-6-from-scratch/episodes/10?autoplay=true
+
+Creating Editing: https://laracasts.com/series/laravel-6-from-scratch/episodes/24?autoplay=true

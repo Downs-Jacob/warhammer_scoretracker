@@ -11,7 +11,7 @@
 
               </style>
 
-              <div class='border-8 border-gray-300 py-3 px-6' x-data="{
+              <div class='border-8 border-gray-300 py-3 px-6 m-2' x-data="{
                     getprimaryTotal(turn) {
                       let total = 0;
                       if (turn.primaries.hold) {
@@ -68,40 +68,7 @@
                           }
                       ],
                     show: false,
-                    selection_scenario: null,
-                    scenarios: [
-                        {
-                        name: 'COMBAT PATROL',
-                        options: [
-                            'Incisive Attack',
-                            'Outriders',
-                            'Encircle'
-                            ]
-                        },
-                        {
-                        name: 'INCURSION',
-                        options: [
-                          'Divide and Conquer',
-                          'Crossfire',
-                          'Center Ground',
-                          'Forward Push',
-                          'Ransack',
-                          'Shifting Front'
-                         ]
-                        },
-                        {
-                          name:'STRIKE FORCE',
-                          options: [
-                          'Retrieval Mission',
-                          'Front-line Warfare',
-                          'The Four Pillars',
-                          'No Mans Land',
-                          'Scorched Earth',
-                          'Vital Intelligence'
-                         ]
-                        }
 
-                    ],
 
                     show: false,
                     selection_1: null,
@@ -120,42 +87,22 @@
                     }"
                   <br>
 
-
-
-
-                  <div class="flex flex-wrap mb-6 ">
-                    <div class="w-auto">
-                      <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
-                        scenario
-                      </label>
-                        <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
-                            <option value=''>--</option>
-                              <template x-for="scenario in scenarios">
-                                <optgroup :label="scenario.name">
-                                  <template x-for="item in scenario.options" :key="item">
-                                    <option x-text="item" :value="item"></option>
-                                  </template>
-                                </optgroup>
-                              </template>
-                        </select>
-                    </div>
-                  </div>
                   <div class="flex flex-wrap mb-6 ">
                     <div class="w-auto">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
-                        Army name
+                          Player Army
                         </label>
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
-                            name='player1_army'
+                            name='{{$player_army}}'
                             type="text"
                             placeholder="Army Name">
                     </div>
                     <div class="w-auto">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
-                        Player name
+                        Player Name
                         </label>
                         <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
-                            name='player1_name'
+                            name='{{$player_name}}'
                             type="text"
                             placeholder="Player Name">
                     </div>
@@ -189,7 +136,10 @@
                   <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
                     <label x-text="primaryTotal()" class="mr-2"></label>
-                    <input type="hidden" name="player1_primary" :value="primaryTotal()">
+                    <input
+                        type="hidden"
+                        name='{{$player_primary}}'
+                        :value="primaryTotal()">
                   </div>
                 <div>
                     <div class="w-full max-w-lg pb-4">
@@ -197,7 +147,10 @@
                         class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
                         <span x-text="getsecondaryTotal()" class="mr-2"></span>
-                        <input type="hidden" name="player1_secondary" :value="getsecondaryTotal()">
+                        <input
+                            type="hidden"
+                            name="{{$player_secondary}}"
+                            :value="getsecondaryTotal()">
                       </div>
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
@@ -208,20 +161,14 @@
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
                     <label x-text="getTotal()" class="mr-2"></label>
-                    <input type="hidden" name="player1_score" :value="getTotal()">
+                    <input
+                        type="hidden"
+                        name="{{$player_score}}"
+                        :value="getTotal()">
                   </div>
               </div>
             </div>
           </body>
-          <div class=container>
-            <div class="title">
-                <div class="container flex items-center">
-                    <div class="flex items-center ml-8 mr-4 py-5">
-                        <button type="submit" form="formid" value="Submit" class="flex-1 px-4 py-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
-                        End This Game and Add to Archive
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     </div>

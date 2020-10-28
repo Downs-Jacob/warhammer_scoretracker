@@ -11,7 +11,7 @@
 
               </style>
 
-              <div class='border-8 border-gray-300 py-4 px-6' x-data="{
+              <div class='border-8 border-gray-300 py-3 px-6 m-2' x-data="{
                     getprimaryTotal(turn) {
                       let total = 0;
                       if (turn.primaries.hold) {
@@ -123,23 +123,39 @@
 
 
 
-
-                  <div class="flex flex-wrap mb-6 mt-20">
+                  <div class="flex flex-wrap mb-6 ">
+                    <div class="w-auto">
+                      <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
+                        scenario
+                      </label>
+                        <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
+                            <option value=''>--</option>
+                              <template x-for="scenario in scenarios">
+                                <optgroup :label="scenario.name">
+                                  <template x-for="item in scenario.options" :key="item">
+                                    <option x-text="item" :value="item"></option>
+                                  </template>
+                                </optgroup>
+                              </template>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap mb-6 ">
                     <div class="w-auto">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
-                        Army name
+                        Player 1 Army
                         </label>
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
-                            name='player2_army'
+                            name='player1_army'
                             type="text"
                             placeholder="Army Name">
                     </div>
                     <div class="w-auto">
-                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="player">
-                        Player name
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
+                        Player 1 Name
                         </label>
                         <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
-                            name='player2_name'
+                            name='player1_name'
                             type="text"
                             placeholder="Player Name">
                     </div>
@@ -173,7 +189,7 @@
                   <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
                     <label x-text="primaryTotal()" class="mr-2"></label>
-                    <input type="hidden" name="player2_primary" :value="primaryTotal()">
+                    <input type="hidden" name="player1_primary" :value="primaryTotal()">
                   </div>
                 <div>
                     <div class="w-full max-w-lg pb-4">
@@ -181,7 +197,7 @@
                         class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
                         <span x-text="getsecondaryTotal()" class="mr-2"></span>
-                        <input type="hidden" name="player2_secondary" :value="getsecondaryTotal()">
+                        <input type="hidden" name="player1_secondary" :value="getsecondaryTotal()">
                       </div>
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                       @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
@@ -192,9 +208,15 @@
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
                     <label x-text="getTotal()" class="mr-2"></label>
-                    <input type="hidden" name="player2_score" :value="getTotal()">
+                    <input type="hidden" name="player1_score" :value="getTotal()">
                   </div>
               </div>
             </div>
           </body>
-        </div>
+         
+    </div>
+    {{-- <div>
+        @include('p1',['player_army'=>'player1_army', 'player_name'=>'player1_name', 'player_primary'=>'player1_primary', 'player_secondary'=>'player1_secondary', 'player_score'=>'player1_score']) 
+    </div> --}}
+   
+  
