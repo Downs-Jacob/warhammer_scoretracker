@@ -35,7 +35,7 @@ class GameController extends Controller
                     'Bring it Down',
                     'Titan Slayers',
                     'Slay the Warlord'
-                ]
+                    ]
             ],[
                 'name'=>'NO MERCY, NO RESPITE',
                 'options'=> [
@@ -43,28 +43,28 @@ class GameController extends Controller
                     'Attrition',
                     'While We Stand We Fight',
                     'First Strike'
-                ]
+                    ]
             ],[
                 'name'=>'BATTLEFIELD SUPREMACY',
                 'options'=> [
                     'Engage on all Fronts',
                     'Linebreaker',
                     'Domination'
-                ]
+                     ]
             ],[
                 'name'=>'SHADOW OPERATIONS',
                 'options'=> [
                     'Investigate Sites',
                     'Repair Teleport Homer',
                     'Raise the Banners High'
-                ]
+                    ]
             ],[
                 'name'=>'WARPCRAFT',
                 'options'=> [
                     'Mental Interrogation',
                     'Psychic Ritual',
                     'Abhor the Witch'
-                ]
+                     ]
             ],[
                 'name'=>'MISSION SPECIFIC',
                 'options'=> [
@@ -86,11 +86,10 @@ class GameController extends Controller
                     'Hold the Center',
                     'Surround Them',
                     'Search for the Portal'
-                ]
+                    ]
             ]
+
         ];
-
-
 
         return view('create', [
             'categories'=>$categories
@@ -115,6 +114,12 @@ class GameController extends Controller
         $games->player1_primary = request('player1_primary');
         $games->player1_secondary = request('player1_secondary');
         $games->player1_score = request('player1_score');
+
+        $games->player2_name = request('player2_name');
+        $games->player2_army = request('player2_army');
+        $games->player2_primary = request('player2_primary');
+        $games->player2_secondary = request('player2_secondary');
+        $games->player2_score = request('player2_score');
 
         $games->save();
         return redirect('/create');
