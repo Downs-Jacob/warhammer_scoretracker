@@ -2,8 +2,13 @@
 
 @section('content')
 
-
+@if (session('message'))
+<div class="text-green-500 mt-2">
+    {{ session('message')}}
+</div>
+@endif
 <div class="flex bg-gray-200">
+
     <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1>
         <br>
@@ -38,7 +43,7 @@
     <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
         Return to Archive
     </a>
-    <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+    <a href="{{route('edit', ['game' => $game])}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
         Edit Game
     </a>
 </div>

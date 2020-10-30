@@ -106,22 +106,20 @@ class GameController extends Controller
      */
     public function store()
     {
-        $games = new Game();
+        $game = new Game();
 
-        $games->scenario = request('scenario');
-        $games->player1_name = request('player1_name');
-        $games->player1_army = request('player1_army');
-        $games->player1_primary = request('player1_primary');
-        $games->player1_secondary = request('player1_secondary');
-        $games->player1_score = request('player1_score');
-
-        $games->player2_name = request('player2_name');
-        $games->player2_army = request('player2_army');
-        $games->player2_primary = request('player2_primary');
-        $games->player2_secondary = request('player2_secondary');
-        $games->player2_score = request('player2_score');
-
-        $games->save();
+        $game->scenario = request('scenario');
+        $game->player1_name = request('player1_name');
+        $game->player1_army = request('player1_army');
+        $game->player1_primary = request('player1_primary');
+        $game->player1_secondary = request('player1_secondary');
+        $game->player1_score = request('player1_score');
+        $game->player2_name = request('player2_name');
+        $game->player2_army = request('player2_army');
+        $game->player2_primary = request('player2_primary');
+        $game->player2_secondary = request('player2_secondary');
+        $game->player2_score = request('player2_score');
+        $game->save();
         return redirect('/create');
     }
 
@@ -148,7 +146,7 @@ class GameController extends Controller
     public function edit($id)
     {
         $game = Game::find($id);
-        return view('/edit', ['game' => $game]);
+        return view('edit', ['game' => $game]);
     }
 
     /**
@@ -158,9 +156,26 @@ class GameController extends Controller
      * @param  \App\Models\project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, project $project)
+    public function update($id)
     {
-        //
+        $game = Game::find($id);
+
+        $game->scenario = request('scenario');
+        $game->player1_name = request('player1_name');
+        $game->player1_army = request('player1_army');
+        $game->player1_primary = request('player1_primary');
+        $game->player1_secondary = request('player1_secondary');
+        $game->player1_score = request('player1_score');
+
+        $game->player2_name = request('player2_name');
+        $game->player2_army = request('player2_army');
+        $game->player2_primary = request('player2_primary');
+        $game->player2_secondary = request('player2_secondary');
+        $game->player2_score = request('player2_score');
+
+        $game->save();
+        return redirect('/games/'.$game->id)
+            ->with('message', 'Game Updated');
     }
 
     /**

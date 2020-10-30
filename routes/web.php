@@ -23,5 +23,5 @@ Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->n
 Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('archive');
 Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
 Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
-
+Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
 
