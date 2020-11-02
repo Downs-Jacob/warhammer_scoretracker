@@ -119,6 +119,7 @@ class GameController extends Controller
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_score');
+        $game->description = request('description');
         $game->save();
         return redirect('/create');
     }
@@ -172,6 +173,8 @@ class GameController extends Controller
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_score');
+
+        $game->description = request('player2_score');
 
         $game->save();
         return redirect('/games/'.$game->id)

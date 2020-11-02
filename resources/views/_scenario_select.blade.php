@@ -53,21 +53,28 @@
                     }"
                   <br>
 
-                  <div class="flex mb-6 ">
+                <div class="flex mb-6 ">
                     <div class="w-auto">
-                      <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
-                        scenario
-                      </label>
+                        <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
+                            scenario
+                        </label>
                         <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
                             <option value={{'option'}}>--</option>
-                              <template x-for="scenario in scenarios">
+                            <template x-for="scenario in scenarios">
                                 <optgroup :label="scenario.name">
-                                  <template x-for="item in scenario.options" :key="item">
-                                    <option x-text="item" :value="item"></option>
-                                  </template>
+                                    <template x-for="item in scenario.options" :key="item">
+                                        <option x-text="item" :value="item"></option>
+                                    </template>
                                 </optgroup>
-                              </template>
+                            </template>
                         </select>
+
+                    </div>
+                    <div class="w-auto">
+                        <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
+                          Description
+                        </label>
+                        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" name='description' rows="4"></textarea>
                     </div>
                   </div>
                 </div>

@@ -39,6 +39,9 @@
         Player 2 Score: {{ $game->player2_score}}
     </div>
 </div>
+    <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Description: {{ $game->description}}
+    </div>
 <div class="py-4">
     <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
         Return to Archive

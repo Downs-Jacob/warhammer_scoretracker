@@ -5,8 +5,9 @@
 <form action="/create" METHOD="POST" id="formid">
     @csrf
     @include('_scenario_select')
-    @include('_player_layout',['player_army'=>'player1_army', 'player_name'=>'player1_name', 'player_primary'=>'player1_primary', 'player_secondary'=>'player1_secondary', 'player_score'=>'player1_score']) 
-    @include('_player_layout',['player_army'=>'player2_army', 'player_name'=>'player2_name', 'player_primary'=>'player2_primary', 'player_secondary'=>'player2_secondary', 'player_score'=>'player2_score']) 
+    @include('_player_layout',['player_army'=>'player1_army', 'player_name'=>'player1_name', 'player_primary'=>'player1_primary', 'player_secondary'=>'player1_secondary', 'player_score'=>'player1_score'])
+    @include('_player_layout',['player_army'=>'player2_army', 'player_name'=>'player2_name', 'player_primary'=>'player2_primary', 'player_secondary'=>'player2_secondary', 'player_score'=>'player2_score'])
+
 </form>
 
 </div>
