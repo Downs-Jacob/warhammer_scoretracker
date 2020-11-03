@@ -29,7 +29,7 @@ class CreateGamesTable extends Migration
             $table->string('player2_primary');
             $table->string('player2_secondary');
             $table->string('player2_score');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

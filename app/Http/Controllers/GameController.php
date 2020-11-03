@@ -162,6 +162,7 @@ class GameController extends Controller
         $game = Game::find($id);
 
         $game->scenario = request('scenario');
+
         $game->player1_name = request('player1_name');
         $game->player1_army = request('player1_army');
         $game->player1_primary = request('player1_primary');
@@ -174,7 +175,7 @@ class GameController extends Controller
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_score');
 
-        $game->description = request('player2_score');
+        $game->description = request('description');
 
         $game->save();
         return redirect('/games/'.$game->id)
