@@ -1,4 +1,4 @@
-@extends ('layouts\layout')
+@extends ('layouts.layout')
 
 @section('content')
 
@@ -12,6 +12,7 @@
 </form>
 </div>
 </div>
+
 <div class=container>
     <div class="title">
         <div class="container flex items-center">

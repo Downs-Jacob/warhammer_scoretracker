@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+
 
 class GameController extends Controller
 {
@@ -159,6 +161,15 @@ class GameController extends Controller
      */
     public function update($id)
     {
+        request()->validate([
+            'scenario'=>'required',
+            'player1_name'=>'required',
+            'player1_army'=>'required',
+            'player2_name'=>'required',
+            'player2_army'=>'required',
+            'description'=>'required'
+        ]);
+
         $game = Game::find($id);
 
         $game->scenario = request('scenario');
