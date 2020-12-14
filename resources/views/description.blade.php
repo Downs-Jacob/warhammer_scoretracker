@@ -3,6 +3,9 @@
         <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
         Description of Game
         </label>
-        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" name='description' rows="4"></textarea>
+        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" name='description' rows="4" required></textarea>
+        @error('description')
+             <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+        @enderror
     </div>
 </div>

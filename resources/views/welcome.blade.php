@@ -1,7 +1,7 @@
-@extends ('layouts\layout')
+@extends ('layouts.layout')
 
 
-@section ('header')
+@section ('content')
         <!--Left Col-->
 <body class="bg-gray-400 font-sans leading-normal tracking-normal">
     <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">

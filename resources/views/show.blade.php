@@ -1,4 +1,4 @@
-@extends ('layouts\layout')
+@extends ('layouts.layout')
 
 @section('content')
 
@@ -7,16 +7,16 @@
     {{ session('message')}}
 </div>
 @endif
-<div class="flex bg-gray-200">
+<div class="flex bg-gray-100">
 
-    <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1>
         <br>
         Date : {{$game->created_at}}
         <br>
         Scenario: {{ $game->scenario}}
     </div>
-    <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
         Player 1 Name: {{ $game->player1_name}}
         <br>
         Player 1 Army: {{ $game->player1_army}}
@@ -27,7 +27,7 @@
         <br>
         Player 1 Score: {{ $game->player1_score}}
     </div>
-    <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
         Player 2 Name: {{ $game->player2_name}}
         <br>
         Player 2 Army: {{ $game->player2_army}}
@@ -39,7 +39,7 @@
         Player 2 Score: {{ $game->player2_score}}
     </div>
 </div>
-    <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
         Description: {{ $game->description}}
     </div>
 <div class="py-4">

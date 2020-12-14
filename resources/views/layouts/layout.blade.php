@@ -39,7 +39,8 @@
                         </a>
 				  </li>
 				  <li class="mr-3">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="/index">Archives</a>
+					<a href="{{route('archive')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-white focus:border-pink-700 transition duration-150 ease-in-out {{'archive' === Route::currentRouteName() ? ' text-white ' : ' text-gray-600 hover:text-white '}}">
+                        Archive
 				  </li>
 					<li class="mr-3">
 					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Statistics</a>

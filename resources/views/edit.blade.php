@@ -1,4 +1,4 @@
-@extends ('layouts\layout')
+@extends ('layouts.layout')
 
 @section('content')
     <form method="POST" action="/games/{{$game->id}}">
