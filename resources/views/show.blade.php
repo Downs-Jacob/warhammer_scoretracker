@@ -3,20 +3,30 @@
 @section('content')
 
 @if (session('message'))
-<div class="text-green-500 mt-2">
+<div class="mt-2 text-green-500">
     {{ session('message')}}
 </div>
 @endif
 <div class="flex bg-gray-100">
 
-    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-200">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1>
         <br>
         Date : {{$game->created_at}}
         <br>
         Scenario: {{ $game->scenario}}
+        <br>
+
+        @if ($game->player1_primary + $game->player1_secondary > $game->player2_primary + $game->player2_secondary)
+            Player 1 Victory
+        @elseif ($game->player1_primary + $game->player1_secondary === $game->player2_primary + $game->player2_secondary)
+            The Game was a Tie
+        @else
+            Player 2 Victory
+        @endif
+
     </div>
-    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-200">
         Player 1 Name: {{ $game->player1_name}}
         <br>
         Player 1 Army: {{ $game->player1_army}}
@@ -25,9 +35,9 @@
         <br>
         Player 1 Secondary Score: {{ $game->player1_secondary}}
         <br>
-        Player 1 Score: {{ $game->player1_score}}
+        Player 1 Score: {{ $game->player1_primary + $game->player1_secondary }}
     </div>
-    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-200">
         Player 2 Name: {{ $game->player2_name}}
         <br>
         Player 2 Army: {{ $game->player2_army}}
@@ -36,10 +46,10 @@
         <br>
         Player 2 Secondary Score: {{ $game->player2_secondary}}
         <br>
-        Player 2 Score: {{ $game->player2_score}}
+        Player 2 Score: {{ $game->player2_primary + $game->player2_secondary }}
     </div>
 </div>
-    <div class="flex-1 text-gray-700 text-center bg-blue-200 px-4 py-2 m-2">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-200">
         Description: {{ $game->description}}
     </div>
 <div class="py-4">

@@ -11,7 +11,7 @@
 
               </style>
 
-              <div class='border-8 border-gray-300 py-3 px-6 m-2' x-data="{
+              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
 
                     show: false,
                     selection_scenario: null,
@@ -68,6 +68,7 @@
                                 </optgroup>
                             </template>
                         </select>
+
                     </div>
                   </div>
 

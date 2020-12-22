@@ -108,6 +108,16 @@ class GameController extends Controller
      */
     public function store()
     {
+        request()->validate([
+            'scenario'=>'required',
+            'player1_name'=>'required',
+            'player1_army'=>'required',
+            'player2_name'=>'required',
+            'player2_army'=>'required',
+            'description'=>'required'
+        ]);
+
+
         $game = new Game();
 
         $game->scenario = request('scenario');
@@ -122,6 +132,7 @@ class GameController extends Controller
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_score');
         $game->description = request('description');
+
         $game->save();
         return redirect('/create');
     }
@@ -202,6 +213,13 @@ class GameController extends Controller
     public function destroy(project $project)
     {
         //
+    }
+
+    public function stats()
+    {
+        //
+        return view('/stats');
+
     }
 
 }

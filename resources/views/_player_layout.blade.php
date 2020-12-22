@@ -11,7 +11,7 @@
 
               </style>
 
-              <div class='border-8 border-gray-300 py-3 px-6 m-2' x-data="{
+              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
                     getprimaryTotal(turn) {
                       let total = 0;
                       if (turn.primaries.hold) {
@@ -95,7 +95,10 @@
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_army}}'
                             type="text"
-                            placeholder="Army Name">
+                            placeholder="Army Name"
+                            value="{{ old($player_army) }}"
+                            >
+
                     </div>
                     <div class="w-auto">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
@@ -104,7 +107,9 @@
                         <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_name}}'
                             type="text"
-                            placeholder="Player Name">
+                            placeholder="Player Name"
+                            value="{{ old($player_name) }}"
+                            >
                     </div>
                   </div>
                 <br>
@@ -152,9 +157,9 @@
                             name="{{$player_secondary}}"
                             :value="getsecondaryTotal()">
                       </div>
-                      @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
-                      @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
-                      @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
+                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
+                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
+                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
                       <input type="hidden" name="selection_1" :value="selection_1">
                     </div>
                   </div>
