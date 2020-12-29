@@ -21,14 +21,6 @@ class GameController extends Controller
         return view('index', ['games'=>$games]);
     }
 
-    public function stats()
-    {
-        $games = Game::latest()->get();
-        $count = Game::latest('id')->count();
-
-        return view('/stats',['games'=>$games],['count'=>$count]);
-    }
-
     /**
      * Show the form for creating a new resource.
      *

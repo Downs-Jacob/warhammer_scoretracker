@@ -21,8 +21,9 @@ Route::get('/', function () {
 Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
 Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
 Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('archive');
-Route::get('/stats', [\App\Http\Controllers\GameController::class,'stats'])->name('statistics');
 Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
 Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
 Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
+
+Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
 
