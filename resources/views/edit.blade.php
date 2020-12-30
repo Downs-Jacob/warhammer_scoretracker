@@ -4,7 +4,9 @@
     <form method="POST" action="/games/{{$game->id}}">
         @csrf
         @method('PUT')
-        @include ('_scenario_select')
+
+        @include ('_scenario_select', ['scenario'=>$game->scenario])
+
         <div class= "px-6 py-3 m-2 border-8 border-gray-300">
             <div class="">
                 <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">

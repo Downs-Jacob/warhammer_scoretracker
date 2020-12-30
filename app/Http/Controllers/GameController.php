@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
-
+use Illuminate\Notifications\Notifiable;
 
 class GameController extends Controller
 {
+    use HasFactory, Notifiable;
     /**
      * Display a listing of the resource.
      *

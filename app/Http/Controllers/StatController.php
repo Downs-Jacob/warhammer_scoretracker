@@ -13,6 +13,14 @@ class StatController extends Controller
     {
         $games = Game::latest()->get();
         $count = Game::latest('id')->count();
-        return view('/stats',['games'=>$games],['count'=>$count]);
+        $army_stats = Game::query()
+            ->select(['player1_army', DB::raw('count(*) as army_count')])
+            ->groupBy('player1_army')
+            ->orderBy(DB::raw('count(*)'), 'DESC')->get();
+
+        dd($army_stats->toArray());
+        return view('/stats',['games'=>$games, 'count'=>$count, 'army_stats'=>$army_stats]);
     }
+
+#laravel collections
 }
