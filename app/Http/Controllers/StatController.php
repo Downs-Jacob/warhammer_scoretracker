@@ -13,13 +13,20 @@ class StatController extends Controller
     {
         $games = Game::latest()->get();
         $count = Game::latest('id')->count();
-        $army_stats = Game::query()
-            ->select(['player1_army', DB::raw('count(*) as army_count')])
+        $victory_count_p1 = Game::where('victory_p1', true)->count();
+        $victory_count_p2 = Game::where('victory_p2', true)->count();
+        $army_stats_p1 = Game::query()
+            ->select(['player1_army', DB::raw('count(*) as army_count'), 'player1_name'])
             ->groupBy('player1_army')
             ->orderBy(DB::raw('count(*)'), 'DESC')->get();
+        $army_stats_p2 = Game::query()
+            ->select(['player2_army', DB::raw('count(*) as army_count'), 'player2_name'])
+            ->groupBy('player2_army')
+            ->orderBy(DB::raw('count(*)'), 'DESC')->get();
 
-        dd($army_stats->toArray());
-        return view('/stats',['games'=>$games, 'count'=>$count, 'army_stats'=>$army_stats]);
+
+
+        return view('/stats',['games'=>$games, 'count'=>$count, 'p1_stats'=>$army_stats_p1, 'p2_stats'=>$army_stats_p2, 'victory_count_p1'=>$victory_count_p1, 'victory_count_p2'=>$victory_count_p2]);
     }
 
 #laravel collections

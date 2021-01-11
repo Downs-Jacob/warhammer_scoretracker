@@ -14,7 +14,7 @@
               <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
 
                     show: false,
-                    selection_scenario: '{{$scenario}}',
+                    selection_scenario: null,
                     scenarios: [
                         {
                         name: 'COMBAT PATROL',

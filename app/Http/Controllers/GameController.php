@@ -127,13 +127,24 @@ class GameController extends Controller
         $game->player1_army = request('player1_army');
         $game->player1_primary = request('player1_primary');
         $game->player1_secondary = request('player1_secondary');
-        $game->player1_score = request('player1_score');
+        $game->player1_score = request('player1_primary')+request('player1_secondary');
         $game->player2_name = request('player2_name');
         $game->player2_army = request('player2_army');
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
-        $game->player2_score = request('player2_score');
+        $game->player2_score = request('player2_primary')+request('player2_secondary');
         $game->description = request('description');
+
+        if($game->player1_score > $game->player2_score){
+            $game->victory_p1 = true;
+            $game->victory_p2 = false;
+        } elseif($game->player1_score === $game->player2_score) {
+            $game->victory_p1 = false;
+            $game->victory_p2 = false;
+        } else {
+            $game->victory_p2 = true;
+            $game->victory_p1 = false;
+        };
 
         $game->save();
         return redirect('/create');
@@ -191,15 +202,26 @@ class GameController extends Controller
         $game->player1_army = request('player1_army');
         $game->player1_primary = request('player1_primary');
         $game->player1_secondary = request('player1_secondary');
-        $game->player1_score = request('player1_score');
+        $game->player1_score = request('player1_primary')+request('player1_secondary');
 
         $game->player2_name = request('player2_name');
         $game->player2_army = request('player2_army');
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
-        $game->player2_score = request('player2_score');
+        $game->player2_score = request('player2_primary')+request('player2_secondary');
 
         $game->description = request('description');
+
+        if($game->player1_score > $game->player2_score){
+            $game->victory_p1 = true;
+            $game->victory_p2 = false;
+        } elseif($game->player1_score === $game->player2_score) {
+            $game->victory_p1 = false;
+            $game->victory_p2 = false;
+        } else {
+            $game->victory_p2 = true;
+            $game->victory_p1 = false;
+        };
 
         $game->save();
         return redirect('/games/'.$game->id)
