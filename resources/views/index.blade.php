@@ -7,7 +7,7 @@
             <div class="id">
                 <h2>
                     <a href="/games/{{ $game->id }}">
-                        {{ $game->id }} : {{$game->created_at}}
+                        {{ $game->id}} : {{$game->created_at->format('M, d, Y')}}
                     </a>
                 </h2>
             </div>
