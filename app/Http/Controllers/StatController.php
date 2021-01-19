@@ -33,7 +33,11 @@ class StatController extends Controller
             ->where('victory_p2', '=', "1")
             ->groupBy('player2_army')
             ->get();
-
+        $scenario_stats = Game::query()
+            ->select('scenario', DB::raw('count(*) as scenario_stats'), 'scenario')
+            ->groupBy('scenario')
+            ->orderBy(DB::raw('count(*)'), 'DESC')
+            ->get();
 
         return view('/stats',[
             'games'=>$games,
@@ -44,6 +48,7 @@ class StatController extends Controller
             'victory_count_p2'=>$victory_count_p2,
             'army_wins_p1'=>$army_wins_p1,
             'army_wins_p2'=>$army_wins_p2,
+            'scenario_stats'=>$scenario_stats,
 
             ]);
     }
