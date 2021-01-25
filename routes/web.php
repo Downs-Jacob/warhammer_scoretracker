@@ -13,17 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
 
 
-Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
-Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
-Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('archive');
-Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
-Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
-Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
 
-Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
+    Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
+    Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
+    Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('archive');
+    Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
+    Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
+    Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
+    Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+
+
+Auth::routes();
 
