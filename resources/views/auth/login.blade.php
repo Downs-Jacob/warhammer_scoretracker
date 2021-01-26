@@ -1,7 +1,7 @@
 @extends('layouts.layout')
     @section('content')
         <div class="container flex justify-center mx-auto">
-            <div class="px-12 py-8 bg-gray-400 border border-gray-300 rounded-xl">
+            <div class="px-12 py-8 bg-gray-300 border border-gray-300 rounded-xl">
                 <div class="col-md-8">
 
                     <div class="mb-4 text-lg font-bold">{{ __('Login') }}</div>
@@ -11,7 +11,7 @@
                         @csrf
 
                         <div class='mb-6'>
-                            <label class="block mb-2 text-xs font-bold uppercase text-grey-700" for="email">
+                            <label class="block mb-2 text-xs font-bold uppercase text-gray-700" for="email">
                                 Email
                             </label>
                             <input class="w-full p-2 border border-gray-400" type="text" name="email" id="email"

@@ -11,7 +11,7 @@ class StatController extends Controller
 {
     public function index()
     {
-        $games = Game::latest()->get();
+
         $count = Game::latest('id')->count();
         $victory_count_p1 = Game::where('victory_p1', true)->count();
         $victory_count_p2 = Game::where('victory_p2', true)->count();
@@ -40,7 +40,7 @@ class StatController extends Controller
             ->get();
 
         return view('/stats',[
-            'games'=>$games,
+            'games'=>auth()->user()->timeline(),
             'count'=>$count,
             'p1_stats'=>$army_stats_p1,
             'p2_stats'=>$army_stats_p2,
@@ -51,6 +51,7 @@ class StatController extends Controller
             'scenario_stats'=>$scenario_stats,
 
             ]);
+
     }
 
 #laravel collections

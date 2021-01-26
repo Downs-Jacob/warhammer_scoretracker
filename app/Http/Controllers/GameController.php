@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
@@ -19,8 +20,8 @@ class GameController extends Controller
     public function index()
     {
         //
-        $games = Game::latest()->get();
-        return view('index', ['games'=>$games]);
+        return view('index', [
+            'games'=> auth()->user()->timeline()]);
     }
 
     /**
@@ -123,6 +124,7 @@ class GameController extends Controller
         $game = new Game();
 
         $game->scenario = request('scenario');
+        $game->user_id = auth()->id();
         $game->player1_name = request('player1_name');
         $game->player1_army = request('player1_army');
         $game->player1_primary = request('player1_primary');
@@ -145,6 +147,8 @@ class GameController extends Controller
             $game->victory_p2 = true;
             $game->victory_p1 = false;
         };
+
+
 
         $game->save();
         return redirect('/create');
