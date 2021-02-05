@@ -1,7 +1,7 @@
 @extends('layouts.layout')
     @section('content')
         <div class="container flex justify-center mx-auto">
-            <div class="px-12 py-8 bg-gray-300 border border-gray-300 rounded-xl">
+            <div class="px-12 py-8 bg-gray-200 border border-gray-300 rounded-xl">
                 <div class="col-md-8">
 
                     <div class="mb-4 text-lg font-bold">{{ __('Login') }}</div>

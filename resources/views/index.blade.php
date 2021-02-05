@@ -1,17 +1,32 @@
 @extends ('layouts.layout')
 
 @section('content')
+<div class="flex container justify-center">
+    <div class="text-center px-2 py-2 bg-blue-200 border border-gray-300 rounded-xl">
+      <div class="grid grid-cols-3 bg-blue-100 ">
+        <div class="flex-1">ID</div>
+        <div class="flex-1 col-span-2">Date</div>
+      </div>
 
-    @foreach ($games as $game)
-        <div class="content">
-            <div class="id">
-                <h2>
-                    <a href="/games/{{ $game->id }}">
-                        {{ $game->id}} : {{$game->created_at->format('M, d, Y')}}
+                @foreach ($games as $game)
+
+                    <a class="flex hover:text-white transition duration-150 ease-in-out" href="/games/{{$game->id}}">
+                        <div class="bg-blue-100">
+                            <div class="ml-5 px-2 w-8 ">
+                                {{ $game->id}}
+                            </div>
+                        </div>
+                        <div class="bg-blue-100">
+                            <div class="px-2 ml-2 w-40">
+                                {{$game->created_at->format('M, d, Y')}}
+                            </div>
+                        </div>
                     </a>
-                </h2>
-            </div>
-        </div>
-    @endforeach
 
+
+                @endforeach
+
+        </div>
+    </div>
+</div>
 @endsection

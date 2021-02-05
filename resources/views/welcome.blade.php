@@ -3,6 +3,7 @@
 
 @section ('content')
         <!--Left Col-->
+
 <body class="font-sans leading-normal tracking-normal">
     <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
 		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
@@ -18,6 +19,6 @@
         </div>
     </div>
 </body>
-
+<div class="container bg-black">
 
 @endsection

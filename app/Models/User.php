@@ -42,8 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function timeline()
+    public function games()
     {
-        return Game::where('user_id', $this->id)->latest()->get();
+        return $this->hasMany(Game::class)->latest();
     }
 }

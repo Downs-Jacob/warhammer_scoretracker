@@ -21,7 +21,7 @@ class GameController extends Controller
     {
         //
         return view('index', [
-            'games'=> auth()->user()->timeline()]);
+            'games'=> auth()->user()->games]);
     }
 
     /**
