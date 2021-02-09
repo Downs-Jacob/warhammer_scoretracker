@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex container justify-center">
-    <div class="text-center px-2 py-2 bg-blue-200 border border-gray-300 rounded-xl">
+    <div class="text-center px-2 py-2 bg-blue-200 shadow-xl  border border-gray-300 rounded-xl">
       <div class="grid grid-cols-3 bg-blue-100 ">
         <div class="flex-1">ID</div>
         <div class="flex-1 col-span-2">Date</div>

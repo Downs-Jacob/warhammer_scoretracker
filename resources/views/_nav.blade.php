@@ -11,22 +11,35 @@
         <div class="flex content-center justify-between w-full pt-2 md:w-1/2 md:justify-end">
             <ul class="flex items-center justify-between flex-1 list-reset md:flex-none">
                 <li class="mr-3 ">
-                    <a href="{{route('welcome')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-white focus:border-pink-700 transition duration-150 ease-in-out {{'welcome' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                    <a href="{{route('welcome')}}"
+                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                        focus:outline-none focus:text-white focus:border-pink-700
+                        transition duration-150 ease-in-out
+                        {{'welcome' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                         Home
                         </a>
                 </li>
                 <li class="mr-3">
-                    <a href="{{route('create')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-white focus:border-pink-700 transition duration-150 ease-in-out {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Create
+                    <a href="{{route('create')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-white focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                    Record Game
                     </a>
                  </li>
                 <li class="mr-3">
-                    <a href="{{route('archive')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-white focus:border-pink-700 transition duration-150 ease-in-out {{'archive' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                    <a href="{{route('archive')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-white focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'archive' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                     Archive
                     </a>
                 </li>
                 <li class="mr-3">
-                    <a href="{{route('statistics')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-white focus:border-pink-700 transition duration-150 ease-in-out {{'statistics' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                    <a href="{{route('statistics')}}" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-white focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'statistics' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                         Statistics
                     </a>
                 </li>
@@ -34,10 +47,22 @@
 
                 @else
                 <li class="mr-3">
-                    <a href="/register" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 focus:outline-none focus:text-green-500 focus:border-pink-700 transition duration-150 ease-in-out {{'register' === Route::currentRouteName() ? ' text-green-500 ' : ' text-green-400 hover:text-green-200 '}}">
+                    <a href="/register" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-green-500 focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'register' === Route::currentRouteName() ? ' text-green-500 ' : ' text-green-400 hover:text-green-200 '}}">
                         Register
                     </a>
                 </li>
+                <li class="mr-3">
+                    <a href="/login" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-green-500 focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'register' === Route::currentRouteName() ? ' text-green-500 ' : ' text-green-400 hover:text-green-200 '}}">
+                        Login
+                    </a>
+                </li>
+
                 @endif
                 @if (auth()->check())
                 <form method="POST" action='/logout'>

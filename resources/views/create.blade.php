@@ -18,7 +18,7 @@
         @include('_player_layout',['player_army'=>'player2_army', 'player_name'=>'player2_name', 'player_primary'=>'player2_primary', 'player_secondary'=>'player2_secondary', 'player_score'=>'player2_score'])
 </form>
 
-</div>
+    </div>
 </div>
 
 <div class=container>

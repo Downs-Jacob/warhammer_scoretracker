@@ -92,7 +92,13 @@ class GameController extends Controller
                     'Surround Them',
                     'Search for the Portal'
                     ]
-            ]
+                ],[
+                    'name'=>'ARMY SPECIFIC',
+                    'options'=> [
+                        'Army Specific Secondary'
+                        ]
+                ]
+
 
         ];
 
@@ -241,6 +247,22 @@ class GameController extends Controller
     public function destroy(project $project)
     {
         //
+    }
+
+    public function faq()
+    {
+
+        return view('faq');
+    }
+    public function about()
+    {
+
+        return view('about');
+    }
+    public function contact()
+    {
+
+        return view('contact');
     }
 
 

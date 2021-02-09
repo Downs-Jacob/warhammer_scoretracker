@@ -25,7 +25,7 @@
                             ]
                         },
                         {
-                        name: 'INCURSION',
+                        name: 'CORE RULES INCURSION',
                         options: [
                           'Divide and Conquer',
                           'Crossfire',
@@ -36,7 +36,7 @@
                          ]
                         },
                         {
-                          name:'STRIKE FORCE',
+                          name:'CORE RULES STRIKE FORCE',
                           options: [
                           'Retrieval Mission',
                           'Front-line Warfare',
@@ -45,7 +45,35 @@
                           'Scorched Earth',
                           'Vital Intelligence'
                          ]
-                        }
+                        },
+                        {
+                            name:'GT2020 INCURSION',
+                            options: [
+                            'Crossfire',
+                            'Resupply',
+                            'Raid',
+                            'Centre Ground',
+                            'Ascension',
+                            'Forward Push',
+                            'Rise of the Machine Spirit',
+                            'Show of Force',
+                            'Reconnaissance Mission'
+                           ]
+                          },
+                          {
+                            name:'GT2020 STRIKE FORCE',
+                            options: [
+                            'Retrieval Mission',
+                            'Scorched Earth',
+                            'Vital Intelligence',
+                            'Surround and Destroy',
+                            'Battle Lines',
+                            'The Scouring',
+                            'Overrun',
+                            'Sweep and Clear',
+                            'Priority Target'
+                           ]
+                          }
 
                     ],
 
@@ -71,4 +99,5 @@
 
                     </div>
                   </div>
+
 

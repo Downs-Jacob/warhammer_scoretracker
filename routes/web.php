@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('welcome');
@@ -29,6 +30,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
+
+Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
+Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
+
+Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
 
 
 Auth::routes();

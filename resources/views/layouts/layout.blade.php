@@ -21,11 +21,14 @@
 
 
 	<!--Container-->
-	<div class="h-screen bg-white">
-        <div class="container px-6 pt-24 mx-auto md:pt-16">
-            @yield ('content')
+        <div class="">
+            <div class="container px-6 pt-24 mx-auto md:pt-16">
+                @yield ('content')
+            </div>
+
         </div>
-    </div>
+
+
 
 
 </body>
