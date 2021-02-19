@@ -48,12 +48,12 @@
         Player 2 Total Score: {{ $game->player2_primary + $game->player2_secondary }}
     </div>
 </div>
-<div class="flex px-4 pb-2 bg-blue-200">
+<div class="flex px-4 pb-2 bg-blue-200 shadow-xl">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
         Description: {{ $game->description}}
     </div>
 </div>
-<div class="py-4">
+<div class="pt-12 py-4">
     <a href="{{route('archive')}}" class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
         Return to Archive
     </a>

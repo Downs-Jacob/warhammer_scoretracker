@@ -1,4 +1,4 @@
-<div id="page" class="flex wrap">
+<div id="page" class="flex flex-wrap">
     <div id="content">
         <div class="box2">
             <style>
@@ -96,7 +96,7 @@
                             name='{{$player_army}}'
                             type="text"
                             placeholder="Army Name"
-                            value="{{ old($player_army) }}"
+
                             >
 
                     </div>
@@ -108,7 +108,6 @@
                             name='{{$player_name}}'
                             type="text"
                             placeholder="Player Name"
-                            value="{{ old($player_name) }}"
                             >
                     </div>
                   </div>

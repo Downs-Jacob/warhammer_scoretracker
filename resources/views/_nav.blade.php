@@ -67,7 +67,7 @@
                 @if (auth()->check())
                 <form method="POST" action='/logout'>
                     @csrf
-                    <button class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5  text-red-500 ">Logout</button>
+                    <button class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5  text-red-600 hover:text-red-200 ">Logout</button>
                 </form>
                 @else
                 @endif
