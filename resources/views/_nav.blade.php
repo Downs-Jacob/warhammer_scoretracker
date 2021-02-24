@@ -5,7 +5,7 @@
     <div class="container flex flex-wrap items-center mx-auto">
         <div class="flex justify-center w-full font-extrabold text-white md:w-1/2 md:justify-start">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
-                <span class="pl-2 text-2xl"><i></i> Warhammer 40k 9th Edition Game Tracker</span>
+                <span class="pl-2 text-2xl"><i></i> Warhammer 40k 9th Edition Scorebook</span>
             </a>
         </div>
         <div class="flex content-center justify-between w-full pt-2 md:w-1/2 md:justify-end">
