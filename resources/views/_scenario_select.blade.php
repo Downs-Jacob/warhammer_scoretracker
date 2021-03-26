@@ -1,4 +1,4 @@
-<div id="page" class="flex wrap">
+<div id="page" class="container flex justify-center mx-auto">
     <div id="content">
         <div class="box2">
             <style>

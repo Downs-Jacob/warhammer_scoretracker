@@ -1,6 +1,6 @@
-<div id="page" class="flex flex-wrap">
+<div id="page" class="flex flex-wrap ">
     <div id="content">
-        <div class="box2">
+        <div class="mx-auto">
             <style>
                 .turngrid {
                   grid-template-columns: 50px 1fr 1fr 1fr 50px;

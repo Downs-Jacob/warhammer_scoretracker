@@ -28,10 +28,10 @@
             'player_secondary'=>'player2_secondary',
              'player_score'=>'player2_score'
              ])
-    </form>
-
-    </div>
+</form>
 </div>
+</div>
+
 
 <div class=container>
     <div class="title">
