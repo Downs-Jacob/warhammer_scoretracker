@@ -7,9 +7,8 @@
             class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
             name='description'
             rows="4"
-            required>
-            {{ old('description') }}
-        </textarea>
+            required
+            >{{old('description')}}</textarea>
 
     </div>
 </div>
