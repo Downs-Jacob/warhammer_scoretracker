@@ -182,7 +182,7 @@ class GameController extends Controller
      */
     public function edit($id)
     {
-        $game = Game::find($id);
+        $game = Game::findorFail($id);
         return view('edit', ['game' => $game]);
     }
 
