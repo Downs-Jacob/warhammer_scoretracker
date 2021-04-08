@@ -254,17 +254,14 @@ class GameController extends Controller
 
     public function faq()
     {
-
         return view('faq');
     }
     public function about()
     {
-
         return view('about');
     }
     public function contact()
     {
-
         return view('contact');
     }
 

@@ -1,12 +1,10 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container flex justify-center mx-auto">
+    <div class="px-12 py-8 bg-gray-200 border border-gray-300 shadow-xl rounded-xl">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
+            <div class="mb-4 text-lg font-bold">{{ __('Reset Password') }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -18,30 +16,31 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label class="block mb-2 text-xs font-bold text-gray-700 uppercase" for="email">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <div class="mx-auto col-md-6">
+                                <input class="w-full p-2 border border-gray-400" type="text" name="email" id="email"
+                                autocomplete="email" value="{{ old('email') }}" required>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="mb-0 ml-4 form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="px-4 py-2 mt-4 mr-2 text-white bg-blue-400 rounded hover:bg-blue-500">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
                         </div>
                     </form>
+                    @error('email')
+                    <span class="mx-12 text-red-500" role="alert">
+                        <strong>No Account Found</strong>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@enderror
 @endsection

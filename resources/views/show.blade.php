@@ -77,7 +77,7 @@
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium leading-6 text-gray-900"> Game Removal </h3>
                 <div class="mt-2">
-                    <p class="text-center text-sm leading-5 text-gray-500"> By Confirming You will remove this Record Permanently </p>
+                    <p class="text-center text-sm leading-5 text-gray-500"> By clicking 'Confirm Removal' you will remove this record permanently </p>
                     <p class="text-center text-sm leading-5 text-gray-500"> Are you sure you want to continue? </p>
                 </div>
             </div>
