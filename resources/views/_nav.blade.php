@@ -3,9 +3,9 @@
 
 <nav class="w-full p-2 mt-0 bg-gray-800"> <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
     <div class="container flex flex-wrap items-center mx-auto">
-        <div class="flex justify-center w-full font-extrabold text-white md:w-1/2 md:justify-start">
+        <div class="flex justify-center w-full font-extrabold text-center text-white md:w-1/2">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
-                <span class="pl-2 text-2xl"><i></i> Warhammer 40k 9th Edition Scorebook</span>
+                <span class="pl-2 text-2xl"><i></i> Warhammer 40k 9th Edition Score Tracker</span>
             </a>
         </div>
         <div class="flex content-center justify-between w-full pt-2 md:w-1/2 md:justify-end">
@@ -67,7 +67,7 @@
                 @if (auth()->check())
                 <form method="POST" action='/logout'>
                     @csrf
-                    <button class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5  text-red-600 hover:text-red-200 ">Logout</button>
+                    <button class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-red-600 hover:text-red-200 ">Logout</button>
                 </form>
                 @else
                 @endif

@@ -1,0 +1,5 @@
+branch-defaults:
+  feature/softdeletes:
+    environment: Scoretracker-env
+global:
+  profile: eb-cli
