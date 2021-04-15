@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
 });
 
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');

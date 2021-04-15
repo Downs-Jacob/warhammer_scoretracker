@@ -1,9 +1,9 @@
-<div class="bg-white text-left px-10">
+<div class="text-xs text-left bg-white lg:px-10 lg:text-base">
     2021 JCQ Production
-    <a class="text-blue-600 px-2 hover:text-blue-300" href="/faq">faq</a>
+    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/faq">faq</a>
     |
-    <a class="text-blue-600 px-2 hover:text-blue-300" href="/about">about</a>
+    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/about">about</a>
     |
-    <a class="text-blue-600 px-2 hover:text-blue-300" href="/contact">contact</a>
+    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/contact">contact</a>
     |
 </div>

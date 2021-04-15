@@ -244,24 +244,24 @@ class GameController extends Controller
      * @param  \App\Models\project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(project $project)
+    public function destroy($id)
     {
-        //
+        $game = Game::find($id);
+        $game->delete();
+        return view('index', [
+            'games'=> auth()->user()->games]);
     }
 
     public function faq()
     {
-
         return view('faq');
     }
     public function about()
     {
-
         return view('about');
     }
     public function contact()
     {
-
         return view('contact');
     }
 

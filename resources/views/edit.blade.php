@@ -32,7 +32,15 @@
 
         </div>
         <div class="control">
-            <button class="flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full button is-link mr-l hover:bg-blue-700" type="submit">Submit</button>
+            <button class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700" type="submit">Submit</button>
+            <a
+            href="/games/{{$game->id}}"
+            class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Game
+            </a>
+            <a
+            href="{{route('archive')}}"
+            class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
+            </a>
         </div>
     </form>
 
