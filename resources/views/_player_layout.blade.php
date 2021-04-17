@@ -1,4 +1,4 @@
-<div id="page" class="flex flex-wrap ">
+<div id="page" class="lg:flex lg:flex-wrap ">
     <div id="content">
         <div class="mx-auto">
             <style>
@@ -87,8 +87,8 @@
                     }"
                   <br>
 
-                  <div class="flex flex-wrap mb-6 ">
-                    <div class="w-auto">
+                  <div class="flex md:flex-wrap lg:flex-wrap mb-6 ">
+                    <div class="w-1/2">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
                           Player Army
                         </label>

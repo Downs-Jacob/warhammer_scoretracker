@@ -24,6 +24,11 @@ class GameController extends Controller
             'games'=> auth()->user()->games]);
     }
 
+    public function splash()
+    {
+        return view('welcome');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -263,6 +268,10 @@ class GameController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+    public function simpletrack()
+    {
+        return view('simpletrack');
     }
 
 

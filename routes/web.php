@@ -28,10 +28,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
 });
 
+Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
+
+Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])->name('scorecard');
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
 
