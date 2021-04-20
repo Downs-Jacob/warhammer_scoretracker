@@ -15,7 +15,7 @@
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
-                        {{'welcome' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                        {{'splash' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                     Home
                     </a>
                 </li>
@@ -55,7 +55,7 @@
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
-                        {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                        {{'scorecard' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                     Score Card
                     </a>
                 </li>
@@ -63,7 +63,7 @@
                     <a href="/register" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                     focus:outline-none focus:text-green-500 focus:border-pink-700
                     transition duration-150 ease-in-out
-                    {{'register' === Route::currentRouteName() ? ' text-green-500 ' : ' text-green-400 hover:text-green-200 '}}">
+                    {{'register' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
                         Register
                     </a>
                 </li>
@@ -71,7 +71,7 @@
                     <a href="/login" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                     focus:outline-none focus:text-green-500 focus:border-pink-700
                     transition duration-150 ease-in-out
-                    {{'register' === Route::currentRouteName() ? ' text-green-500 ' : ' text-green-400 hover:text-green-200 '}}">
+                    {{'login' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
                         Login
                     </a>
                 </li>
