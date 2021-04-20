@@ -31,8 +31,9 @@
              ])
 </form>
 </div>
-</div>
 
+</div>
+@include('_footer')
 @if (auth()->check())
     <div class=container>
         <div class="title">

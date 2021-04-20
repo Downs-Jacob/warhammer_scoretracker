@@ -1,4 +1,4 @@
-<div id="page" class="lg:flex lg:flex-wrap ">
+<div id="page" class="xl:flex xl:flex-wrap ">
     <div id="content">
         <div class="mx-auto">
             <style>
@@ -36,12 +36,7 @@
 
                     turns: [
                         {
-                          primaries: {
-                            hold: false,
-                            hold_many: false,
-                            hold_more: false
-                          }
-                        },{
+                         
                           primaries: {
                             hold: false,
                             hold_many: false,
@@ -90,12 +85,12 @@
                   <div class="flex md:flex-wrap lg:flex-wrap mb-6 ">
                     <div class="w-1/2">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
-                          Player Army
+                          Player Faction
                         </label>
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_army}}'
                             type="text"
-                            placeholder="Army Name"
+                            placeholder="Faction Name"
 
                             >
 
@@ -121,7 +116,7 @@
                 </div>
                   <template x-for="(turn, index) in turns" :key="index">
                     <div class="grid turngrid">
-                      <div class="p-2 text-center text-white bg-purple-500 border" x-text="index+1"></div>
+                      <div class="p-2 text-center text-white bg-purple-500 border" x-text="index+2"></div>
                       <div class="p-2 text-center text-white border" @click="turn.primaries.hold = !turn.primaries.hold" :class="{
                           'bg-blue-400': turn.primaries.hold,
                           'bg-purple-500': !turn.primaries.hold
@@ -172,7 +167,7 @@
                   </div>
               </div>
             </div>
+            
           </body>
-
-
     </div>
+    

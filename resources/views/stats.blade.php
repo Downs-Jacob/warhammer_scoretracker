@@ -44,6 +44,7 @@
                     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100">{{$scenario_stats->scenario}} : {{$scenario_stats->scenario_stats}}</div>
                 @endforeach
     </div>
+
 </div>
 
 

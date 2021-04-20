@@ -39,7 +39,7 @@ class StatController extends Controller
             ->groupBy('scenario')
             ->orderBy(DB::raw('count(*)'), 'DESC')
             ->get();
-
+    
         return view('/stats',[
             'games'=>auth()->user()->games(),
             'count'=>$count,
@@ -50,6 +50,7 @@ class StatController extends Controller
             'army_wins_p1'=>$army_wins_p1,
             'army_wins_p2'=>$army_wins_p2,
             'scenario_stats'=>$scenario_stats,
+
 
             ]);
 
