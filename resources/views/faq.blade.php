@@ -55,9 +55,9 @@
                 Once in the edit window of the game you can change any or all of the fields that have been saved. Unfotunately at this time, secondary objectives are not saved
                 into the archive. Once complete, click "submit" and your game will be updated. You will redirected to the view window of that game!
             </p>
-        <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">6.) How do I make bug reports or contact the creator! </h2>
+        <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">6.) How do I submit bug reports or contact the creator! </h2>
             <p class="text-justify">
-                If you go to the homepage of this website you will see a link for "contact" at the bottom. Click on that and fill out the form. This will send
+                If you go to the homepage of this website you will see a link for "Contacts" at the bottom. Click on that and fill out the form. This will send
                 an email to the creator!
             </p>
 
