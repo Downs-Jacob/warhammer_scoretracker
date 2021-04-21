@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('smtp.sendgrid.net', env('MAIL_HOST', 'smtp.mailgun.org')),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('apikey', env('MAIL_USERNAME')),
+            'password' => env('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', env('MAIL_PASSWORD')),
             'timeout' => null,
             'auth_mode' => null,
         ],
