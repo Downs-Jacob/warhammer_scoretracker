@@ -30,6 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
 
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
+
+    Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 });
 
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
@@ -38,8 +41,7 @@ Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
 
-Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
-Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
 
 
 
