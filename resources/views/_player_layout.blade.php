@@ -91,7 +91,6 @@
                             name='{{$player_army}}'
                             type="text"
                             placeholder="Faction Name"
-
                             >
 
                     </div>
@@ -110,8 +109,8 @@
                 <div class="grid bg-white turngrid">
                   <div class="text-xl font-bold text-center text-white bg-purple-500 border">Turn</div>
                   <div class="text-xl font-bold text-center text-white bg-purple-500 border">Hold</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Hold Many</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Hold More</div>
+                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Many</div>
+                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">More</div>
                   <div class="text-xl font-bold text-center text-white bg-purple-500 border">Total</div>
                 </div>
                   <template x-for="(turn, index) in turns" :key="index">
@@ -132,7 +131,7 @@
                       <div class="p-2 text-center text-white bg-purple-500 border" x-text="getprimaryTotal(turn);"></div>
                     </div>
                   </template>
-                  <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
+                  <div class="flex justify-between my-4 mr-4 text-xl lg:text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
                     <label x-text="primaryTotal()" class="mr-2"></label>
                     <input
@@ -143,7 +142,7 @@
                 <div>
                     <div class="w-full max-w-lg pb-4">
                       <div
-                        class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
+                        class="flex text-xl justify-between my-4 mr-4 lg:text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
                         <span x-text="getsecondaryTotal()" class="mr-2"></span>
                         <input

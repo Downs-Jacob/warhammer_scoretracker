@@ -1,7 +1,7 @@
 @extends ('layouts.layout')
 
 @section('content')
-<div class="container flex justify-center mx-auto">
+<div class="container lg:flex justify-center mx-auto">
     <div class="flex-2 shadow-xl px-4 py-2 m-2 text-center text-gray-700 bg-blue-200 border border-indigo-200 rounded-lg">
         <h3 class="font-extrabold text-2xl">Your Statistics:</h3>
             <h1 class="font-extrabold"> Number of Games Played: {{$count}}</h1>
@@ -25,7 +25,7 @@
                 @endforeach
     </div>
 </div>
-<div class="container flex justify-center mx-auto">
+<div class="container lg:flex justify-center mx-auto">
     <div class="flex-2 shadow-xl px-4 py-2 m-2 text-center text-gray-700 bg-blue-200 border border-indigo-200 rounded-lg">
         <h1 class="font-extrabold"> Player 1 Amry <br> Victory Breakdown</h1>
                 @foreach($army_wins_p1 as $army_wins_p1)
