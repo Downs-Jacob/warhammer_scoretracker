@@ -1,7 +1,7 @@
 @extends ('layouts.layout')
 
 @section('content')
-<div class="container flex justify-center mx-auto">
+<div class="container pt-4 flex justify-center mx-auto">
     <div class="shadow-xl px-12 py-8 bg-gray-200 border border-gray-300 rounded-xl">
         <div class="col-md-8">
             <form action="" method="post" action="{{ route('contact.store') }}">

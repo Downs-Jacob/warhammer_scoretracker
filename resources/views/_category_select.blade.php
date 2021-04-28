@@ -12,13 +12,13 @@
             @endforeach
         </select>
           <div class="flex items-center m-2">
-            <div class="px-4">
+            <div class="ml-2 lg:px-4">
               <button
-                class="px-4 py-3 mr-6 font-bold text-white bg-red-500 border border-blue-700 rounded hover:bg-red-600"
+                class="px-4 py-3 mr-2 lg:mr-6 font-bold text-white bg-red-500 border border-blue-700 rounded hover:bg-red-600"
                 @click.prevent="if({{$count_id}}>0) {{$count_id}}--"
               ></button>
               <button
-                class="px-4 py-3 mr-6 font-bold text-white bg-green-500 border border-blue-700 rounded hover:bg-green-600"
+                class="px-4 py-3 mr-2 lg:mr-6 font-bold text-white bg-green-500 border border-blue-700 rounded hover:bg-green-600"
                 @click.prevent="if({{$count_id}}<15){{$count_id}}++"
                 @click.prevent="passvalues()"
               ></button>

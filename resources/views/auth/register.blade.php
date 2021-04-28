@@ -1,6 +1,6 @@
 @extends('layouts.layout')
     @section('content')
-    <div class="container flex justify-center mx-auto">
+    <div class="container pt-12 flex justify-center mx-auto">
         <div class="shadow-xl px-12 py-8 bg-gray-200 border border-gray-300 rounded-xl">
             <div class="col-md-8">
 
@@ -61,8 +61,8 @@
                             </div>
 
                             <div class="mb-0 form-group row">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="px-6 py-4 text-sm text-white uppercase bg-blue-400 rounded">
+                                <div class="pt-4">
+                                    <button type="submit" class="w-full px-4 py-2 mr-2 text-white bg-blue-400 rounded hover:bg-blue-500">
                                         {{ __('Register') }}
                                     </button>
                                 </div>

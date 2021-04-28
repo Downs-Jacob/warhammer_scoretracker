@@ -1,6 +1,6 @@
 @extends('layouts.layout')
     @section('content')
-        <div class="container flex justify-center mx-auto">
+        <div class="container pt-12 flex justify-center mx-auto">
             <div class="shadow-xl px-12 py-8 bg-gray-200 border border-gray-300 rounded-xl">
                 <div class="col-md-8">
 
@@ -39,8 +39,10 @@
                             <div>
                                 <input class="mr-1" type="checkbox" name="remember" id="remember" {{old('remember') ? 'checked' : ''}}>
                                 <label class='text-xs font-bold text-gray-700 uppercase' for="remember"> Remember Me </label>
+                                
                             </div>
-
+                            <a class='text-xs font-bold text-blue-700' href="{{ route('password.request') }}"> 
+                                    Forgot Your Password? </a>
 
                             @error('remember')
                                 <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
@@ -48,11 +50,11 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="px-4 py-2 mr-2 text-white bg-blue-400 rounded hover:bg-blue-500">
+                            <button type="submit" class="w-full px-4 py-2 mr-2 text-white bg-blue-400 rounded hover:bg-blue-500">
                                 Submit
                             </button>
 
-                            <a href="{{ route('password.request') }}"> Forgot Your Password </a>
+                            
                         </div>
                     </form>
                 </div>

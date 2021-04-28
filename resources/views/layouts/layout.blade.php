@@ -22,7 +22,7 @@
 
 	<!--Container-->
         <div class="">
-            <div class="container px-6 pt-24 mx-auto md:pt-16">
+            <div class="container lg:px-6 lg:pt-24 mx-auto md:pt-16">
                 @yield ('content')
             </div>
 

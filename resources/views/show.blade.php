@@ -83,14 +83,14 @@
             </div>
             <div class="mt-5 sm:mt-6">
                 <span class="flex w-full rounded-md shadow-sm">
-                    <button
-                        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"
-                        onclick ="window.location='{{route('remove', ['game' => $game])}}'">
-                        Confirm Removal
-                    </button>
                     <button @click="open = false"
                         class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
                         Return
+                    </button>
+                    <button
+                        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-red-500 rounded-full mr-l hover:bg-red-700"
+                        onclick ="window.location='{{route('remove', ['game' => $game])}}'">
+                        &#9888; Confirm Removal
                     </button>
                 </span>
             </div>
