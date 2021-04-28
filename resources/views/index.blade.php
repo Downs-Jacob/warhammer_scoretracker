@@ -1,7 +1,7 @@
 @extends ('layouts.layout')
 
 @section('content')
-<div class="flex container justify-center">
+<div class="flex container py-6 justify-center">
     <div class="text-center px-2 py-2 bg-blue-200 shadow-xl  border border-indigo-200 rounded-xl">
       <div class="grid grid-cols-3 bg-blue-100 ">
         <div class="flex-1">ID</div>

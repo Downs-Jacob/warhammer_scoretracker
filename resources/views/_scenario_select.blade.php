@@ -38,40 +38,40 @@
                         {
                           name:'CORE RULES STRIKE FORCE',
                           options: [
-                          'Retrieval Mission',
-                          'Front-line Warfare',
-                          'The Four Pillars',
-                          'No Mans Land',
-                          'Scorched Earth',
-                          'Vital Intelligence'
+                            'Retrieval Mission',
+                            'Front-line Warfare',
+                            'The Four Pillars',
+                            'No Mans Land',
+                            'Scorched Earth',
+                            'Vital Intelligence'
                          ]
                         },
                         {
                             name:'GT2020 INCURSION',
                             options: [
-                            'Crossfire',
-                            'Resupply',
-                            'Raid',
-                            'Centre Ground',
-                            'Ascension',
-                            'Forward Push',
-                            'Rise of the Machine Spirit',
-                            'Show of Force',
-                            'Reconnaissance Mission'
+                                'Crossfire',
+                                'Resupply',
+                                'Raid',
+                                'Centre Ground',
+                                'Ascension',
+                                'Forward Push',
+                                'Rise of the Machine Spirit',
+                                'Show of Force',
+                                'Reconnaissance Mission'
                            ]
                           },
                           {
                             name:'GT2020 STRIKE FORCE',
                             options: [
-                            'Retrieval Mission',
-                            'Scorched Earth',
-                            'Vital Intelligence',
-                            'Surround and Destroy',
-                            'Battle Lines',
-                            'The Scouring',
-                            'Overrun',
-                            'Sweep and Clear',
-                            'Priority Target'
+                                'Retrieval Mission',
+                                'Scorched Earth',
+                                'Vital Intelligence',
+                                'Surround and Destroy',
+                                'Battle Lines',
+                                'The Scouring',
+                                'Overrun',
+                                'Sweep and Clear',
+                                'Priority Target'
                            ]
                           }
 

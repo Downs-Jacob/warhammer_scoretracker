@@ -1,7 +1,7 @@
 @extends ('layouts.layout')
 
 @section('content')
-    <div class="container lg:px-40 lg:w-full ">
+    <div class="container px-6 lg:px-40 lg:w-full ">
             <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">1.) What is this website?</h2>
             <p class="text-justify">
                 Scoretracker.com is a website for keeping a record of your games of Warhammer 40k, 9th edition. Not only does this 
