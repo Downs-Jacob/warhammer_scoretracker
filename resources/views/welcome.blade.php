@@ -8,6 +8,7 @@
 		<div class="flex flex-col w-full lg:w-1/2 items-start pb-12 px-6 lg:pl-20">
 			<h1 class="font-bold text-3xl my-4 text-center">Warhammer 40k Score Tracker</h1>
 		@if (auth()->check())
+		
 			<p class="leading-normal mb-4">
 			This is a website for tracking your games of Warhammer 40k 9th edition. 
 			Click 'New Game' in the navigation bar above to start a new game or the button below! </p>
@@ -36,10 +37,10 @@
         </div>
 
     </div>
-
-	
-
 </body>
+
 @include('_footer')
+
+
 
 @endsection

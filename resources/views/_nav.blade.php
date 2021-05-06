@@ -16,7 +16,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'splash' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Home
+                        Home
                     </a>
                 </li>
                 @if (auth()->check())
@@ -26,7 +26,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Record Game
+                        Record Game
                     </a>
                  </li>
                 <li class="mr-3">
@@ -35,7 +35,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'archive' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Archive
+                        Archive
                     </a>
                 </li>
                 <li class="mr-3">
@@ -44,7 +44,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'statistics' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Statistics
+                        Statistics
                     </a>
                 </li>
                
@@ -56,22 +56,24 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'scorecard' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                    Score Card
+                        Score Card
                     </a>
                 </li>
                 <li class="mr-3">
-                    <a href="/register" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
-                    focus:outline-none focus:text-green-500 focus:border-pink-700
-                    transition duration-150 ease-in-out
-                    {{'register' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
+                    <a href="/register" 
+                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                        focus:outline-none focus:text-green-500 focus:border-pink-700
+                        transition duration-150 ease-in-out
+                        {{'register' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
                         Register
                     </a>
                 </li>
                 <li class="mr-3">
-                    <a href="/login" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
-                    focus:outline-none focus:text-green-500 focus:border-pink-700
-                    transition duration-150 ease-in-out
-                    {{'login' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
+                    <a href="/login" 
+                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                        focus:outline-none focus:text-green-500 focus:border-pink-700
+                        transition duration-150 ease-in-out
+                        {{'login' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
                         Login
                     </a>
                 </li>

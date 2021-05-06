@@ -35,6 +35,7 @@
 </div>
 
 @if (auth()->check())
+
     <div class=container>
         <div class="title">
             <div class="container flex items-center">

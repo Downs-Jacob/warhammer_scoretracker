@@ -4,8 +4,9 @@
     <form method="POST" action="/games/{{$game->id}}">
         @csrf
         @method('PUT')
-
+       
         @include ('_scenario_select', ['scenario'=>$game->scenario])
+        
 
         <div class= "px-6 py-3 m-2 border-8 border-gray-300">
             <div class="">
@@ -15,6 +16,7 @@
                 <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" name='description' rows="4">{{$game->description}}</textarea>
             </div>
         </div>
+       
         <div class='px-6 py-3 m-2 border-8 border-gray-300'>
             <div class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase"> Player 1 Information</div>
             <textarea class="py-0 text-center" name="player1_name" id="player1_name">{{$game->player1_name}}</textarea>
