@@ -84,7 +84,7 @@
             <div class="mt-5 sm:mt-6">
                 <span class="flex w-full rounded-md shadow-sm">
                     <button @click="open = false"
-                        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+                        class="shadow-xl flex-1 px-3 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
                         Return
                     </button>
                     <button
