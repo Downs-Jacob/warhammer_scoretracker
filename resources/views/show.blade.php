@@ -12,14 +12,20 @@
         <br>
         Scenario: {{ $game->scenario}}
         <br>
+        <div class="font-bold text-green-700">
+        <br>
         @if ($game->player1_primary + $game->player1_secondary > $game->player2_primary + $game->player2_secondary)
             Player 1 Victory
         @elseif ($game->player1_primary + $game->player1_secondary === $game->player2_primary + $game->player2_secondary)
             The Game was a Tie
         @else Player 2 Victory
         @endif
+        </div>
     </div>
-    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl"> Player 1 Name: {{ $game->player1_name}}
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl"> 
+        Player 1 Name: {{ $game->player1_name}}
+        <br>
+        Player 1 Faction: {{$game->player1_faction}}
         <br>
         Player 1 Army: {{ $game->player1_army}}
         <br>
@@ -31,6 +37,8 @@
      </div>
      <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
          Player 2 Name: {{ $game->player2_name}}
+         <br>
+         Player 2 Faction: {{$game->player2_faction}}
          <br>
          Player 2 Army: {{ $game->player2_army}}
          <br>
