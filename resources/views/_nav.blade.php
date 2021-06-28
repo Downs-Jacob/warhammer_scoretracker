@@ -26,7 +26,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                        Record Game
+                        Record
                     </a>
                  </li>
                 <li class="mr-3">

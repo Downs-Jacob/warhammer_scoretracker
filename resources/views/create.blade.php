@@ -10,11 +10,12 @@
         @csrf
 
         @include('_scenario_select')
-    @if (auth()->check())
-        @include('description')
-    @endif
+        @if (auth()->check())
+            @include('description')
+        @endif
 
         @include('_player_layout',[
+            'player' => 'player1',
             'player_army'=>'player1_army',
             'player_name'=>'player1_name',
             'player_primary'=>'player1_primary',
@@ -23,6 +24,7 @@
             ])
 
         @include('_player_layout',[
+            'player' => 'player2',
             'player_army'=>'player2_army',
             'player_name'=>'player2_name',
             'player_primary'=>'player2_primary',

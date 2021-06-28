@@ -6,7 +6,7 @@
     <div class="mt-2 text-green-500"> {{ session('message')}} </div>
 @endif
 
-<div class="flex bg-blue-200 py-2 px-4">
+<div class="lg:flex ml-2 mr-2 mt-4 bg-blue-200 py-2 px-4">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1> Date : {{$game->created_at}}
         <br>
@@ -41,7 +41,7 @@
          Player 2 Total Score: {{ $game->player2_primary + $game->player2_secondary }}
      </div>
 </div>
-<div class=" flex px-4 pb-2 bg-blue-200 shadow-xl">
+<div class="ml-2 mr-2 flex px-4 pb-2 bg-blue-200 shadow-xl">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
         Description: {{ $game->description}}
     </div>
@@ -49,20 +49,20 @@
 
 <!--MODAL -->
 <div
-    class="mt-6"
+    class="mt-6 flex"
     x-data="{ open: false }"
     x-show=true>
 
     <a
         href="{{route('archive')}}"
-        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
     </a>
     <a
         href="{{route('edit', ['game' => $game])}}"
-        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Edit Game
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Edit This Game
     </a>
     <button
-        class="shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"
         @click="open = true"> Delete Game
     </button>
 

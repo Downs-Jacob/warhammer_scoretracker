@@ -47,7 +47,7 @@
                          ]
                         },
                         {
-                            name:'GT2020 INCURSION',
+                            name:'GRAND TOURNAMENT INCURSION',
                             options: [
                                 'Crossfire',
                                 'Resupply',
@@ -61,13 +61,13 @@
                            ]
                           },
                           {
-                            name:'GT2020 STRIKE FORCE',
+                            name:'GRAND TOURNAMENT STRIKE FORCE',
                             options: [
                                 'Retrieval Mission',
                                 'Scorched Earth',
                                 'Vital Intelligence',
                                 'Surround and Destroy',
-                              'Battle Lines',
+                                'Battle Lines',
                                 'The Scouring',
                                 'Overrun',
                                 'Sweep and Clear',

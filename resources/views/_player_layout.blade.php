@@ -81,7 +81,8 @@
                         }
                     }"
                   <br>
-                  @include ('_faction_select')
+                    @include('_faction_select')
+
                   <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
                  
                     <div class="w-1/2">
@@ -97,7 +98,7 @@
                             >
                             
                     </div>
-                    <div class="w-auto">
+                    <div class="w-1/2">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
                         Player Name
                         </label>
