@@ -15,7 +15,7 @@
     </div>
     <div class="flex-2 shadow-xl px-4 py-2 m-2 text-center text-gray-700 bg-blue-200  border border-indigo-200  rounded-lg">
         <h3 class="font-extrabold text-2xl">Opponent Statistics: </h3>
-            <h1 class="font-extrabold"> Number of Games Played: {{$count}}</h1>
+            <h1 class="font-extrabold"> Number of Games Played: {{$count}} </h1>
             <h1 class="font-bold"> Number of Games Won:  {{$victory_count_p2}}</h1>
             @if ($count>0)
                 <h1 class="font-bold"> Percent Victory:  {{round($victory_count_p2/$count * 100,2)}}%</h1>
