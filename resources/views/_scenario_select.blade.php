@@ -38,40 +38,40 @@
                         {
                           name:'CORE RULES STRIKE FORCE',
                           options: [
-                          'Retrieval Mission',
-                          'Front-line Warfare',
-                          'The Four Pillars',
-                          'No Mans Land',
-                          'Scorched Earth',
-                          'Vital Intelligence'
+                            'Retrieval Mission',
+                            'Front-line Warfare',
+                            'The Four Pillars',
+                            'No Mans Land',
+                            'Scorched Earth',
+                            'Vital Intelligence'
                          ]
                         },
                         {
-                            name:'GT2020 INCURSION',
+                            name:'GRAND TOURNAMENT INCURSION',
                             options: [
-                            'Crossfire',
-                            'Resupply',
-                            'Raid',
-                            'Centre Ground',
-                            'Ascension',
-                            'Forward Push',
-                            'Rise of the Machine Spirit',
-                            'Show of Force',
-                            'Reconnaissance Mission'
+                                'Crossfire',
+                                'Resupply',
+                                'Raid',
+                                'Centre Ground',
+                                'Ascension',
+                                'Forward Push',
+                                'Rise of the Machine Spirit',
+                                'Show of Force',
+                                'Reconnaissance Mission'
                            ]
                           },
                           {
-                            name:'GT2020 STRIKE FORCE',
+                            name:'GRAND TOURNAMENT STRIKE FORCE',
                             options: [
-                            'Retrieval Mission',
-                            'Scorched Earth',
-                            'Vital Intelligence',
-                            'Surround and Destroy',
-                            'Battle Lines',
-                            'The Scouring',
-                            'Overrun',
-                            'Sweep and Clear',
-                            'Priority Target'
+                                'Retrieval Mission',
+                                'Scorched Earth',
+                                'Vital Intelligence',
+                                'Surround and Destroy',
+                                'Battle Lines',
+                                'The Scouring',
+                                'Overrun',
+                                'Sweep and Clear',
+                                'Priority Target'
                            ]
                           }
 
@@ -86,6 +86,7 @@
                         <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
                             scenario
                         </label>
+                        
                         <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
                             <option value={{'option'}}>--</option>
                             <template x-for="scenario in scenarios">

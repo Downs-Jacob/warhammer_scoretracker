@@ -36,84 +36,94 @@ class GameController extends Controller
      */
     public function create()
     {
-
         $categories = [
             [
                 'name'=>'PURGE',
                 'options'=> [
-                    'Assassinate',
-                    'Bring it Down',
-                    'Titan Slayers',
-                    'Slay the Warlord'
+                    'Assassination',
+                    'Titan Hunters',
+                    'Bring it Down'
                     ]
             ],[
                 'name'=>'NO MERCY, NO RESPITE',
                 'options'=> [
-                    'Thin Their Ranks',
-                    'Attrition',
-                    'While We Stand We Fight',
-                    'First Strike'
+                    'No Prisoners',
+                    'Grind Them Down',
+                    'To The Last'
                     ]
             ],[
                 'name'=>'BATTLEFIELD SUPREMACY',
                 'options'=> [
                     'Engage on all Fronts',
-                    'Linebreaker',
-                    'Domination'
+                    'Behind Enemy Lines',
+                    'Stranglehold'
                      ]
             ],[
                 'name'=>'SHADOW OPERATIONS',
                 'options'=> [
-                    'Investigate Sites',
-                    'Repair Teleport Homer',
-                    'Raise the Banners High'
+                    'Raise the Banners High',
+                    'Investigate Signal',
+                    'Retrieve Octarius Data',
+                    'Deploy Teleport Homers'
                     ]
             ],[
                 'name'=>'WARPCRAFT',
                 'options'=> [
-                    'Mental Interrogation',
-                    'Psychic Ritual',
-                    'Abhor the Witch'
+                    'Abhor the Witch',
+                    'Warp Ritual',
+                    'Pierce the Veil',
+                    'Psychic Interrogation'
                      ]
             ],[
                 'name'=>'MISSION SPECIFIC',
                 'options'=> [
+                    'Ascend',
+                    'Center Ground',
+                    'Data Intercept',
+                    'Direct Assault',
+                    'Encircle',
+                    'Forward Push',
+                    'Hold the Center',
+                    'Inload Data-Psalm',
+                    'Lines of Demarcation',
+                    'Minimise Loses',
+                    'Outflank',
+                    'Overrun',
+                    'Priority Targets',
+                    'Raid Supply Lines',
+                    'Ransack',
+                    'Raze',
+                    'Recon Sweep',
+                    'Siphon Power',
+                    'Search for the Portal',
+                    'Secure No Mans Land',
+                    'Secure Landing Sites',
+                    'Strategic Scan',
                     'Surgical Assault',
                     'Survey',
-                    'Encircle',
-                    'Lines of Demarcation',
-                    'Outflank',
-                    'Center Ground',
-                    'Forward Push',
-                    'Ransack',
-                    'Test Their Line',
-                    'Minimise Loses',
-                    'Vital Ground',
-                    'Siphon Power',
-                    'Secure No Mans Land',
-                    'Raze',
-                    'Data Intercept',
-                    'Hold the Center',
                     'Surround Them',
-                    'Search for the Portal'
+                    'Test Their Line',
+                    'Vital Ground'
+
                     ]
                 ],[
                     'name'=>'ARMY SPECIFIC',
                     'options'=> [
                         'Army Specific Secondary'
                         ]
+                ],[
+                    'name'=>'OTHER',
+                    'options'=> [
+                        'Other Secondary'
+                        ]
                 ]
-
-
         ];
 
         return view('create', [
             'categories'=>$categories
 
         ]);
-
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -131,22 +141,24 @@ class GameController extends Controller
             'description'=>'required'
         ]);
 
-
         $game = new Game();
 
         $game->scenario = request('scenario');
         $game->user_id = auth()->id();
         $game->player1_name = request('player1_name');
+        $game->player1_faction = request('player1_faction');
         $game->player1_army = request('player1_army');
         $game->player1_primary = request('player1_primary');
         $game->player1_secondary = request('player1_secondary');
         $game->player1_score = request('player1_primary')+request('player1_secondary');
         $game->player2_name = request('player2_name');
+        $game->player2_faction = request('player2_faction');
         $game->player2_army = request('player2_army');
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_primary')+request('player2_secondary');
         $game->description = request('description');
+        
 
         if($game->player1_score > $game->player2_score){
             $game->victory_p1 = true;
@@ -158,13 +170,9 @@ class GameController extends Controller
             $game->victory_p2 = true;
             $game->victory_p1 = false;
         };
-
-
-
         $game->save();
         return redirect('/create');
     }
-
     /**
      * Display the specified resource.
      *
@@ -173,12 +181,9 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        //
         $game = Game::find($id);
         return view('/show', ['game' => $game]);
-
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -203,9 +208,9 @@ class GameController extends Controller
         request()->validate([
             'scenario'=>'required',
             'player1_name'=>'required',
-            'player1_army'=>'required',
+            'player1_faction'=>'required',
             'player2_name'=>'required',
-            'player2_army'=>'required',
+            'player2_faction'=>'required',
             'description'=>'required'
         ]);
 
@@ -215,12 +220,14 @@ class GameController extends Controller
 
         $game->player1_name = request('player1_name');
         $game->player1_army = request('player1_army');
+        $game->player1_army = request('player1_faction');
         $game->player1_primary = request('player1_primary');
         $game->player1_secondary = request('player1_secondary');
         $game->player1_score = request('player1_primary')+request('player1_secondary');
 
         $game->player2_name = request('player2_name');
         $game->player2_army = request('player2_army');
+        $game->player1_army = request('player2_faction');
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_primary')+request('player2_secondary');
@@ -242,7 +249,6 @@ class GameController extends Controller
         return redirect('/games/'.$game->id)
             ->with('message', 'Game Updated');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -256,7 +262,6 @@ class GameController extends Controller
         return view('index', [
             'games'=> auth()->user()->games]);
     }
-
     public function faq()
     {
         return view('faq');
@@ -273,6 +278,4 @@ class GameController extends Controller
     {
         return view('simpletrack');
     }
-
-
 }

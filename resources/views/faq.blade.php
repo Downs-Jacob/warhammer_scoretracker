@@ -1,10 +1,10 @@
 @extends ('layouts.layout')
 
 @section('content')
-    <div class="container lg:px-40 lg:w-full ">
+    <div class="container px-6 lg:px-40 lg:w-full ">
             <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">1.) What is this website?</h2>
             <p class="text-justify">
-                Scoretracker.com is a website for keeping a record of your games of Warhammer 40k, 9th edition. Not only does this 
+                Scoretracker.games is a website for keeping a record of your games of Warhammer 40k, 9th edition. Not only does this 
                 website store the information you provide for each game of Warhammer 40k 9th Edition that you play, 
                 it also keeps track of some pertinent statistics.
             </p>
@@ -17,7 +17,7 @@
                 or filled a field with a placeholder.<br><br>
             </p>
             <div>
-                <img src="/images/Record_Game.jpg"
+                <img src="/images/new_record_game.jpg"
                     alt=""
                     class="px-10 mt-6 mb-2"
 
@@ -42,7 +42,7 @@
                 both the ID number of the game, as well as the date the game was recorded.
             </p>
             <div>
-                <img src="/images/archive.jpg"
+                <img src="/images/archive_new.png"
                     alt=""
                     class="px-10 mt-6 mb-2"
                 >
@@ -54,11 +54,11 @@
         <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">5.) How do I edit my recorded games </h2>
             <p class="text-justify">
                 First, you need to go to the "Archive" of your recorded games and click on the ID or Date of the game you wish to 
-                edit. Once laoded, you will see a button at the bottom
+                edit. Once loaded, you will see a button at the bottom
                 that says "Edit Game." Click this and you will open the game for editing.
             </p>
             <div>
-                <img src="/images/edit.jpg"
+                <img src="/images/game_update.jpg"
                     alt=""
                     class="px-10 mt-6 mb-2"
                 >

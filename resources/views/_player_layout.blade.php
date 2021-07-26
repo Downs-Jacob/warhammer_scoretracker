@@ -81,20 +81,24 @@
                         }
                     }"
                   <br>
+                    @include('_faction_select')
 
-                  <div class="flex md:flex-wrap lg:flex-wrap mb-6 ">
+                  <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
+                 
                     <div class="w-1/2">
+                    
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
-                          Player Faction
+                          Player Sub Faction
                         </label>
+                        
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_army}}'
                             type="text"
                             placeholder="Faction Name"
                             >
-
+                            
                     </div>
-                    <div class="w-auto">
+                    <div class="w-1/2">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
                         Player Name
                         </label>
