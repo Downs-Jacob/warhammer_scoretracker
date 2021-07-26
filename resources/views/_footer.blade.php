@@ -1,9 +1,58 @@
 <div class="text-xs text-left pl-6 bg-white lg:px-10 lg:text-base">
+    <div
+    class="mt-6 flex"
+    x-data="{ open: false }"
+    x-show=true>
     2021 JCQ Production
-    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/faq">faq</a>
+    <a
+        href="/faq"
+        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> faq
+    </a>
     |
-    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/about">about</a>
+    <a
+        href="/about"
+        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> about
+    </a>
     |
-    <a class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base" href="/contact">contact</a>
+    <a
+        href="/contact"
+        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> contact
+    </a>
     |
+    <button
+        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"
+        @click="open = true"> updates
+    </button>
+
+    <!-- Dialog (full screen) -->
+    <div
+        class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+        style="background-color: rgba(0,0,0,.5);"
+        x-show="open">
+        <div
+            class="h-auto p-4 mx-2 text-center bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0"
+            @click.away="open = false">
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 class="text-lg text-center font-medium leading-6 text-gray-900"> Recent Updates </h3>
+                <h2 class="text-lg text-center font-medium leading-6 pb-3 text-gray-900"> August 2021 </h2>
+                <div class="mt-2">
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Replaced faction user input field with drop-down menu</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Archive now shows the army matchup in addition to date and id number</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Changes to entire website to be more mobile friendly</p>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-6">
+                <span class="flex w-full rounded-md shadow-sm">
+                    <button @click="open = false"
+                        class="shadow-xl flex-1 px-3 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+                        Return
+                    </button> 
+                </span>
+            </div>
+        </div>
+    </div>
+ </div>
 </div>
+
+
+ 
