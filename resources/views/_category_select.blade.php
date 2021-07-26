@@ -1,7 +1,7 @@
 <div class="mt-4 text-base">
     <div class="flex justify-between w-full py-2 pb-4 border-b border-blue-800">
         <select class="lg:px-4 lg:py-2 border rounded" x-model="{{$selection_id}}" name="{{$selection_id}}">
-            <option value="">--</option>
+            <option value="">--</option> <a href=""></a>
             @foreach($categories as $category)
                 <optgroup label="{{$category['name']}}" >
                     @foreach($category['options'] as $option)
