@@ -144,7 +144,7 @@
                         :value="primaryTotal()">
                   </div>
                 <div>
-                    <div class="w-full max-w-lg pb-4">
+                    <div class="w-full pb-4">
                       <div
                         class="flex text-xl justify-between my-4 mr-4 lg:text-2xl text-indigo-400 border-b w-fullp-2 flex-between">
                         SECONDARY OBJECTIVES
