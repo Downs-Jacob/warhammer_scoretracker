@@ -33,8 +33,8 @@
             class="h-auto p-4 mx-2 text-center bg-white rounded shadow-xl md:max-w-xl md:p-6 lg:p-8 md:mx-0"
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                <h3 class="text-lg text-center font-medium leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-medium leading-6 pb-3 text-gray-900"> August 2021 </h2>
+                <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> August 2021 </h2>
                 <div class="mt-2">
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Replaced faction user input field with drop-down menu</p>
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Archive now shows the army matchup in addition to date and id number</p>
