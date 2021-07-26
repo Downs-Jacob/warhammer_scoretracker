@@ -16,7 +16,7 @@
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'splash' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                        Home
+                        Home 
                     </a>
                 </li>
                 @if (auth()->check())
