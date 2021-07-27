@@ -21,7 +21,7 @@
             <div class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase"> Player 1 Information</div>
             <div class="flex">
                 <textarea class="py-0 text-center" name="player1_name" id="player1_name">{{$game->player1_name}}</textarea>
-                <textarea class="py-0 text-center" name="player1_army" id="player1_army">{{$game->player1_army}}</textarea>
+                <textarea class="py-0 text-center" name="player1_faction" id="player1_faction">{{$game->player1_faction}}</textarea>
                 <textarea class="py-0 text-center" name="player1_primary" id="player1_primary">{{$game->player1_primary}}</textarea>
                 <textarea class="py-0 text-center" name="player1_secondary" id="player1_secondary">{{$game->player1_secondary}}</textarea>
             </div>
@@ -30,7 +30,7 @@
         <div class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase"> Player 2 Information</div>
             <div class="flex">
                 <textarea class="py-0 text-center" name="player2_name" id="player2_name">{{$game->player2_name}}</textarea>
-                <textarea class="py-0 text-center" name="player2_army" id="player2_army">{{$game->player2_army}}</textarea>
+                <textarea class="py-0 text-center" name="player2_faction" id="player2_faction">{{$game->player2_faction}}</textarea>
                 <textarea class="py-0 text-center" name="player2_primary" id="player2_primary">{{$game->player2_primary}}</textarea>
                 <textarea class="py-0 text-center" name="player2_secondary" id="player2_secondary">{{$game->player2_secondary}}</textarea>
             </div>

@@ -2,36 +2,37 @@
 
 @section('content')
     @if ($errors->any())
-        <p class="mt-2 text-xs text-red-500"> {{ "Please make sure Scenario, Description, Player Names, and Army Names have all been added" }}</p>
+        <p class="text-center mt-2 text-xs text-red-500"> {{ "Please make sure that the Scenario, Description, Player Faction, Player Names, and Sub Faction Names have all been added" }}</p>
     @endif
 
-<form action="/create" METHOD="POST" id="formid">
+    <form action="/create" novalidate METHOD="POST" id="formid">
 
-        @csrf
+            @csrf
 
-        @include('_scenario_select')
-        @if (auth()->check())
-            @include('description')
-        @endif
+            @include('_scenario_select')
+        
+            @if (auth()->check())
+                @include('description')
+            @endif
 
-        @include('_player_layout',[
-            'player' => 'player1',
-            'player_army'=>'player1_army',
-            'player_name'=>'player1_name',
-            'player_primary'=>'player1_primary',
-            'player_secondary'=>'player1_secondary',
-            'player_score'=>'player1_score'
-            ])
+            @include('_player_layout',[
+                'player' => 'Player 1',
+                'player_army'=>'player1_army',
+                'player_name'=>'player1_name',
+                'player_primary'=>'player1_primary',
+                'player_secondary'=>'player1_secondary',
+                'player_score'=>'player1_score'
+                ])
 
-        @include('_player_layout',[
-            'player' => 'player2',
-            'player_army'=>'player2_army',
-            'player_name'=>'player2_name',
-            'player_primary'=>'player2_primary',
-            'player_secondary'=>'player2_secondary',
-             'player_score'=>'player2_score'
-             ])
-</form>
+            @include('_player_layout',[
+                'player' => 'Player 2',
+                'player_army'=>'player2_army',
+                'player_name'=>'player2_name',
+                'player_primary'=>'player2_primary',
+                'player_secondary'=>'player2_secondary',
+                'player_score'=>'player2_score'
+                ])
+    </form>
 </div>
 
 </div>
