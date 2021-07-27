@@ -20,16 +20,26 @@
                     </a>
                 </li>
                 @if (auth()->check())
-                <li class="mr-3">
-                    <a href="{{route('create')}}" 
-                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    <div x-data="{ dropdownOpen: false }" class="relative mr-3">
+                        <button @click="dropdownOpen = !dropdownOpen" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
                         {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                        Record
-                    </a>
-                 </li>
-                <li class="mr-3">
+                            Record
+                        </button>
+                        
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                        
+                        <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                            <a href="{{route('create')}}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            Warhammer 40k
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            Age of Sigmar
+                            </a>
+                        </div>
+                    </div>
+                    <li class="mr-3">
                     <a href="{{route('archive')}}" 
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
@@ -50,15 +60,25 @@
                
 
                 @else
-                <li class="mr-3">
-                    <a href="{{route('scorecard')}}" 
-                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
-                        focus:outline-none focus:text-white focus:border-pink-700
-                        transition duration-150 ease-in-out
-                        {{'scorecard' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                <div x-data="{ dropdownOpen: false }" class="relative mr-3">
+                    <button @click="dropdownOpen = !dropdownOpen" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    focus:outline-none focus:text-white focus:border-pink-700
+                    transition duration-150 ease-in-out
+                    {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                         Score Card
-                    </a>
-                </li>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolutevf  mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                        <a href="{{route('scorecard')}}" class="text-center block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                        Warhammer 40k
+                        </a>
+                        <a href="#" class="text-center block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                        Age of Sigmar
+                        </a>
+                    </div>
+                </div>
                 <li class="mr-3">
                     <a href="/register" 
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
@@ -66,8 +86,7 @@
                         transition duration-150 ease-in-out
                         {{'register' === Route::currentRouteName() ? ' text-green-300 ' : ' text-green-400 hover:text-green-200 '}}">
                         Register
-                    </a>
-                </li>
+                    </a>n 
                 <li class="mr-3">
                     <a href="/login" 
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5

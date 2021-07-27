@@ -9,14 +9,14 @@
 
             @csrf
 
-            @include('_scenario_select')
+            @include('40k._scenario_select')
         
             @if (auth()->check())
                 @include('description')
             @endif
 
-            @include('_player_layout',[
-                'player' => 'Player 1',
+            @include('40k._player_layout',[
+                'player' => 'player1',
                 'player_army'=>'player1_army',
                 'player_name'=>'player1_name',
                 'player_primary'=>'player1_primary',
@@ -24,8 +24,8 @@
                 'player_score'=>'player1_score'
                 ])
 
-            @include('_player_layout',[
-                'player' => 'Player 2',
+            @include('40k._player_layout',[
+                'player' => 'player2',
                 'player_army'=>'player2_army',
                 'player_name'=>'player2_name',
                 'player_primary'=>'player2_primary',

@@ -1,4 +1,5 @@
 <div id="page" class="xl:flex xl:flex-wrap ">
+  
     <div id="content">
         <div class="mx-auto">
             <style>
@@ -81,33 +82,36 @@
                         }
                     }"
                   <br>
-                    @include('_faction_select')
+                    @include('40k._faction_select')
 
                   <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
                  
                     <div class="w-1/2">
-                    
+                    @if (auth()->check())
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase border-blue-300" name="army">
-                         {{$player}} Sub-Faction
+                         Sub-Faction
                         </label>
                         
                       <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_army}}'
                             type="text"
-                            placeholder="Sub-Faction Name"
+                            placeholder="sub-faction name"
                             >
-                            
+                    
+                    
                     </div>
                     <div class="w-1/2">
                         <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" name="name">
-                         {{$player}} Name
+                         {{$player}} name
                         </label>
                         <input class="block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
                             name='{{$player_name}}'
                             type="text"
-                            placeholder="Player Name"
+                            placeholder="{{$player}} name"
                             >
+                    @endif
                     </div>
+                    
                   </div>
                 <br>
                 <div class="grid bg-white turngrid">
@@ -154,9 +158,9 @@
                             name="{{$player_secondary}}"
                             :value="getsecondaryTotal()">
                       </div>
-                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
-                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
-                        @include("_category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
+                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
+                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
+                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
                       <input type="hidden" name="selection_1" :value="selection_1">
                     </div>
                   </div>

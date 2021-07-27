@@ -5,7 +5,7 @@
         @csrf
         @method('PUT')
        
-        @include ('_scenario_select', ['scenario'=>$game->scenario])
+        @include ('40k._scenario_select', ['scenario'=>$game->scenario])
         
 
         <div class= "px-6 py-3 m-2 border-8 border-gray-300">

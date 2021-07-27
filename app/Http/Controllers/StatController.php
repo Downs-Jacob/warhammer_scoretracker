@@ -77,7 +77,7 @@ class StatController extends Controller
             ->groupBy('player2_faction')
             ->get();
     
-        return view('/stats',[
+        return view('/40k.stats',[
             'games'=>auth()->user()->games(),
             'count'=>$count,
             'p1_stats'=>$army_stats_p1,
