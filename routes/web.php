@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
 
 Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])->name('scorecard');
+Route::get('/scorecardSigmar', [App\Http\Controllers\GameController::class, 'createSigmar'])->name('scorecardSigmar');
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
 
