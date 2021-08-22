@@ -28,6 +28,9 @@
                       if (turn.primaries.battle_tactic) {
                         total += 2;
                       }
+                      if (turn.primaries.grand_strat) {
+                        total += 3;
+                      }
                       return total;
                     },
                     primaryTotal() {
@@ -67,7 +70,15 @@
                             hold_many: false,
                             hold_more: false,
                             battle_tactic: false
-                            }
+                          }
+                        },{
+                          primaries: {
+                            hold:false,
+                            hold_many:false,
+                            hold_more:false,
+                            battle_tactic:false
+                          }
+
                           }
                       ],
                     show: false,
@@ -92,6 +103,7 @@
                     }"
                   <br>
                     @include('aos._aos_army_select')
+                    @include("aos._aos_grandstrat_select")
 
                   <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
                  
@@ -131,7 +143,7 @@
                 </div>
                   <template x-for="(turn, index) in turns" :key="index">
                     <div class="grid turngrid">
-                      <div class="p-2 text-center text-white bg-yellow-500 border" x-text="index+2"></div>
+                      <div class="p-2 text-center text-white bg-yellow-500 border" x-text="index+1"></div>
                       <div class="p-2 text-center text-white border" @click="turn.primaries.hold = !turn.primaries.hold" :class="{
                           'bg-green-400': turn.primaries.hold,
                           'bg-yellow-500': !turn.primaries.hold
@@ -154,12 +166,11 @@
                   
                 <div>
                     <div class="w-full pb-4">
-                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
-                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
-                        @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
+                        
                       <input type="hidden" name="selection_1" :value="selection_1">
                     </div>
                   </div>
+                  @include("aos._grandstrat_success", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
                     <label x-text="getTotal()" class="mr-2"></label>
@@ -168,6 +179,7 @@
                         name="{{$player_score}}"
                         :value="getTotal()">
                   </div>
+                  
               </div>
             </div>
             

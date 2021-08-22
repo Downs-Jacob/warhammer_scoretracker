@@ -53,7 +53,7 @@ factions: [
 }"
 <br>
 
-<div class="w-auto">
+<div class="w-full mb-2">
     <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
       {{$player}} Faction
     </label>
@@ -67,6 +67,7 @@ factions: [
             </optgroup>
         </template>
     </select>
+    <label>
 
 </div>
 </div>
