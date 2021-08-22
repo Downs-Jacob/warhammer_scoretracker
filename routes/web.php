@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
     Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+
 });
 
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
