@@ -134,12 +134,12 @@
                   </div>
                 <br>
                 <div class="grid bg-white turngrid">
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">Turn</div>
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">Hold</div>
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">Many</div>
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">More</div>
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">Tactic</div>
-                  <div class="text-xl font-bold text-center text-white bg-yellow-500 border">Total</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl font-bold text-center text-white bg-yellow-500 border">Turn</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl lg:text-xl font-bold text-center text-white bg-yellow-500 border">Hold</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl lg:text-xl font-bold text-center text-white bg-yellow-500 border">Many</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl lg:text-xl font-bold text-center text-white bg-yellow-500 border">More</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl lg:text-xl font-bold text-center text-white bg-yellow-500 border">Tactic</div>
+                  <div class="pt-3 text-xs md:text-xl xl:text-xl font-bold text-center text-white bg-yellow-500 border">Total</div>
                 </div>
                   <template x-for="(turn, index) in turns" :key="index">
                     <div class="grid turngrid">

@@ -1,6 +1,6 @@
 <div class="mt-4 text-base">
     <div class="flex justify-between w-full py-2 pb-4 border-b border-blue-800">
-        <label class="block mb-2 text-medium font-bold tracking-wide text-indigo-400 uppercase" for="grid-grandstrat">
+        <label class="block md:pt-3 lg:pt-3 xl:pt-3 pt-4 mb-2 text-medium font-bold tracking-wide text-indigo-400 uppercase" for="grid-grandstrat">
         Finished Grandstrat
         </label>
           <div class="flex items-center m-2">

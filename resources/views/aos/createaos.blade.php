@@ -12,7 +12,7 @@
             @include('aos._aos_scenario_select')
         
             @if (auth()->check())
-                @include('description')
+                @include('aos._aos_description')
             @endif
 
             @include('aos._aos_player_layout',[
