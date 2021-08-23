@@ -124,27 +124,7 @@ class GameController extends Controller
 
         ]);
     }
-    public function createsigmar()
-    {
-        $categories = [
-            [   
-                'name'=>'CORE RULEBOOK',
-                'options'=> [
-                    'Break Their Spirit',
-                    'Broken Ranks',
-                    'Conquer',
-                    'Repel',
-                    'Seize the Center',
-                    'Slay the Warlord'
-                    ]
-            ]
-        ];
-
-        return view('aos.createaos', [
-            'categories'=>$categories
-
-        ]);
-    }
+    
     /**
      * Store a newly created resource in storage.
      *

@@ -34,13 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
     Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
+    Route::get('/createaos', [App\Http\Controllers\AosController::class, 'createaos'])->name('createaos');
 
 });
 
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
 
 Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])->name('scorecard');
-Route::get('/scorecardSigmar', [App\Http\Controllers\GameController::class, 'createSigmar'])->name('scorecardSigmar');
+Route::get('/scorecardSigmar', [App\Http\Controllers\AosController::class, 'createaos'])->name('scorecardSigmar');
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
 

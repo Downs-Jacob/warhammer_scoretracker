@@ -34,7 +34,7 @@
                             <a href="{{route('create')}}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                             Warhammer 40k
                             </a>
-                            <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            <a href="{{route('createaos')}}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                             Age of Sigmar
                             </a>
                         </div>
