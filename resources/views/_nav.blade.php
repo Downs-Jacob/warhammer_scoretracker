@@ -3,9 +3,9 @@
 
 <nav class="w-full p-2 mt-0 bg-gradient-to-r from-purple-600 via-blue-700 to-indigo-800"> <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
     <div class="container md:flex lg:flex lg:flex-wrap items-center mx-auto">
-        <div class="flex justify-center w-full font-extrabold text-center text-white md:w-1/2">
+        <div class="flex xl:pl-4 lg:pl-4 w-full font-extrabold text-center text-white md:w-1/2">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
-                <span class="pl-2 text-2xl"><i></i> Warhammer 40k 9th Edition Score Tracker</span>
+                <span class="pl-2 text-2xl"><i></i> Warhammer Score Tracker</span>
             </a>
         </div>
         <div class="flex content-center justify-between w-full pt-2 md:w-1/2 md:justify-end">

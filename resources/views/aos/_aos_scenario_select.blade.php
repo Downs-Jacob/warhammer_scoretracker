@@ -52,7 +52,7 @@
                         </select>
 
                         <input class="mr-2 block w-full px-4 py-3 mb-3 leading-tight text-indigo-400 bg-gray-100 border border-blue-500 rounded appearance-none focus:outline-none focus:bg-white"
-                        name=''
+                        name='pointlimit'
                         type="text"
                         placeholder="750 - 3000"
                         >

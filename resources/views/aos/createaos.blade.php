@@ -17,19 +17,17 @@
 
             @include('aos._aos_player_layout',[
                 'player' => 'player1',
-                'player_army'=>'player1_army',
+                'player_faction'=>'player1_faction',
                 'player_name'=>'player1_name',
-                'player_primary'=>'player1_primary',
-                'player_secondary'=>'player1_secondary',
+                'player_grandstrat'=>'player1_grandstrat',
                 'player_score'=>'player1_score'
                 ])
 
             @include('aos._aos_player_layout',[
                 'player' => 'player2',
-                'player_army'=>'player2_army',
+                'player_faction'=>'player2_faction',
                 'player_name'=>'player2_name',
-                'player_primary'=>'player2_primary',
-                'player_secondary'=>'player2_secondary',
+                'player_grandstrat'=>'player2_grandstrat',
                 'player_score'=>'player2_score'
                 ])
     </form>

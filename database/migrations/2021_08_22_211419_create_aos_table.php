@@ -15,6 +15,25 @@ class CreateAosTable extends Migration
     {
         Schema::create('aosgames', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
+            $table->foreignId('user_id');
+            $table->string('scenario');
+            $table->string('pointlimit');
+            //player 1
+            $table->string('player1_name');
+            $table->string('player1_faction');
+            $table->string('player1_grandstrat');
+            $table->string('player1_score');
+            //player 2
+            $table->string('player2_name');
+            $table->string('player2_faction');
+            $table->string('player2_grandstrat');
+            $table->string('player2_score');
+
+            $table->boolean('victory_p1');
+            $table->boolean('victory_p2');
+
+            $table->text('aosdescription');
             $table->timestamps();
         });
     }
