@@ -24,7 +24,7 @@
                         <button @click="dropdownOpen = !dropdownOpen" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
-                        {{'create' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                        {{'create' === Route::currentRouteName() || 'createaos' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
                             Record
                         </button>
                         
@@ -39,15 +39,25 @@
                             </a>
                         </div>
                     </div>
-                    <li class="mr-3">
-                    <a href="{{route('archive')}}" 
-                        class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
+                    <div x-data="{ dropdownOpen: false }" class="relative mr-3">
+                        <button @click="dropdownOpen = !dropdownOpen" class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5
                         focus:outline-none focus:text-white focus:border-pink-700
                         transition duration-150 ease-in-out
-                        {{'archive' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
-                        Archive
-                    </a>
-                </li>
+                        {{'index' === Route::currentRouteName() || 'indexaos' === Route::currentRouteName() ? ' text-white ' : ' text-gray-400 hover:text-white '}}">
+                            Archive
+                        </button>
+                        
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                        
+                        <div x-show="dropdownOpen" class="absolute right-0 left-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                            <a href="{{route('index')}}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            Warhammer 40k
+                            </a>
+                            <a href="{{route('indexaos')}}" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
+                            Age of Sigmar
+                            </a>
+                        </div>
+                    </div>
                 <li class="mr-3">
                     <a href="{{route('statistics')}}" 
                         class="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5

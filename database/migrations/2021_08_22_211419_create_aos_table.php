@@ -13,12 +13,12 @@ class CreateAosTable extends Migration
      */
     public function up()
     {
-        Schema::create('aosgames', function (Blueprint $table) {
+        Schema::create('aos', function (Blueprint $table) {
             $table->id();
             $table->string('slug');
             $table->foreignId('user_id');
             $table->string('scenario');
-            $table->string('pointlimit');
+            $table->string('pointlimit')->nullable();
             //player 1
             $table->string('player1_name');
             $table->string('player1_faction');
@@ -33,7 +33,7 @@ class CreateAosTable extends Migration
             $table->boolean('victory_p1');
             $table->boolean('victory_p2');
 
-            $table->text('aosdescription');
+            $table->text('aosdescription')->nullable();
             $table->timestamps();
         });
     }

@@ -23,18 +23,23 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
     Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
-    Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('archive');
+    Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('index');
+    
     Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
     Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
 
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
-
+    //contact forms
     Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
     Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
-
+    
+    //All AOS is handled Below
+    Route::post('/createaos', [App\Http\Controllers\AosController::class, 'storeaos']);
     Route::get('/createaos', [App\Http\Controllers\AosController::class, 'createaos'])->name('createaos');
+    Route::get('/indexaos', [\App\Http\Controllers\AosController::class,'indexaos'])->name('indexaos');
+    
 
 });
 

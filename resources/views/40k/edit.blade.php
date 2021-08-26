@@ -42,7 +42,7 @@
             class="text-center shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Game
             </a>
             <a
-            href="{{route('archive')}}"
+            href="{{route('index')}}"
             class="text-center shadow-xl flex-1 px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
             </a>
         </div>

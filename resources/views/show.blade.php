@@ -62,7 +62,7 @@
     x-show=true>
 
     <a
-        href="{{route('archive')}}"
+        href="{{route('index')}}"
         class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
     </a>
     <a

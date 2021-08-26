@@ -2,7 +2,7 @@
 
 @section('content')
     @if ($errors->any())
-        <p class="text-center mt-2 text-xs text-red-500"> {{ "Please make sure that the Scenario, Description, Player Faction, Player Names, and Sub Faction Names have all been added" }}</p>
+        <p class="text-center mt-2 text-xs text-red-500"> {{ "Please make sure that the Scenario, Point Limit, and Player Faction Names, and Player Names have all been added" }}</p>
     @endif
 
     <form action="/createaos" novalidate METHOD="POST" id="formid">

@@ -118,6 +118,7 @@
                             name='{{$player_name}}'
                             type="text"
                             placeholder="{{$player}} name"
+                            value="{{ old($player_name) }}"
                             >
                     @endif
                     </div>

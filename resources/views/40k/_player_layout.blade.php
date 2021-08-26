@@ -96,6 +96,7 @@
                             name='{{$player_army}}'
                             type="text"
                             placeholder="sub-faction name"
+                            value="{{ old($player_army) }}"
                             >
                     
                     
@@ -108,6 +109,7 @@
                             name='{{$player_name}}'
                             type="text"
                             placeholder="{{$player}} name"
+                            value="{{ old($player_name) }}"
                             >
                     @endif
                     </div>

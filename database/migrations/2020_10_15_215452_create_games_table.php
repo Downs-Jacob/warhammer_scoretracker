@@ -31,7 +31,7 @@ class CreateGamesTable extends Migration
             $table->string('player2_secondary');
             $table->string('player2_score');
 
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
 

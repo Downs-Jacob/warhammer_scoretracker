@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Game::class)->latest();
     }
+
+    public function aos()
+    {
+        return $this->hasMany(Aos::class)->latest();
+    }
 }
