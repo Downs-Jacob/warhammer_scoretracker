@@ -39,6 +39,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/createaos', [App\Http\Controllers\AosController::class, 'storeaos']);
     Route::get('/createaos', [App\Http\Controllers\AosController::class, 'createaos'])->name('createaos');
     Route::get('/indexaos', [\App\Http\Controllers\AosController::class,'indexaos'])->name('indexaos');
+    Route::get('/aos/{aos}', [\App\Http\Controllers\AosController::class,'showaos']);
+    Route::get('/aos/{aos}/edit', [\App\Http\Controllers\AosController::class,'editaos'])->name('editaos');
+    Route::put('/aos/{aos}', [\App\Http\Controllers\AosController::class,'updateaos']);
+    Route::get('/statsaos', [\App\Http\Controllers\AosController::class,'stats'])->name('statisticsaos');
+    Route::get('/aos/{aos}/remove', [\App\Http\Controllers\AosController::class,'destroyaos'])->name('removeaos');
     
 
 });

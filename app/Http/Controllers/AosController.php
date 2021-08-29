@@ -66,11 +66,12 @@ class AosController extends Controller
         $aos->player1_name = request('player1_name');
         $aos->player1_faction = request('player1_faction');
         $aos->player1_grandstrat = request('player1_grandstrat');
-        $aos->player1_score = request('player1_primary')+request('player1_secondary');
+        $aos->player1_score = request('player1_score');
+
         $aos->player2_name = request('player2_name');
         $aos->player2_faction = request('player2_faction');
         $aos->player2_grandstrat = request('player2_grandstrat');
-        $aos->player2_score = request('player2_primary')+request('player2_secondary');
+        $aos->player2_score = request('player2_score');
         $aos->aosdescription = request('aosdescription');
         
 
@@ -86,5 +87,63 @@ class AosController extends Controller
         };
         $aos->save();
         return redirect('/createaos');
+    }
+
+    public function showaos($id)
+    {
+        $aos = Aos::find($id);
+        return view('aos.showaos', ['aos' => $aos]);
+    }
+
+    public function editaos($id)
+    {
+        $aos = Aos::find($id);
+        return view('aos.editaos', ['aos' => $aos]);
+    }
+
+    public function updateaos($id)
+    {
+
+        $aos = Aos::find($id);
+
+        $aos->scenario = request('scenario');
+        $aos->pointlimit = request('pointlimit');
+
+        $aos->player1_name = request('player1_name');
+        $aos->player1_faction = request('player1_faction');
+        $aos->player1_score = request('player1_score');
+
+        $aos->player2_name = request('player2_name');
+        $aos->player2_faction= request('player2_faction');
+        $aos->player2_score = request('player2_score');
+
+        $aos->aosdescription = request('description');
+
+        if($aos->player1_score > $aos->player2_score){
+            $aos->victory_p1 = true;
+            $aos->victory_p2 = false;
+        } elseif($aos->player1_score === $aos->player2_score) {
+            $aos->victory_p1 = false;
+            $aos->victory_p2 = false;
+        } else {
+            $aos->victory_p2 = true;
+            $aos->victory_p1 = false;
+        };
+
+        $aos->save();
+        return redirect('/aos/'.$aos->id)
+            ->with('message', 'Game Updated');
+    }
+    public function destroyaos($id)
+    {
+        $aos = Aos::find($id);
+        $aos->delete();
+        return view('aos.indexaos', [
+            'aosgames'=> auth()->user()->aos]);
+    }
+
+    public function stats()
+    {
+        return view('aos.statisticsaos');
     }
 }

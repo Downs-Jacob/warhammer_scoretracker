@@ -15,10 +15,10 @@
         <div class="font-bold text-green-700">
         <br>
         @if ($game->player1_primary + $game->player1_secondary > $game->player2_primary + $game->player2_secondary)
-            Player 1 Victory
+            Player 1 Major Victory
         @elseif ($game->player1_primary + $game->player1_secondary === $game->player2_primary + $game->player2_secondary)
             The Game was a Tie
-        @else Player 2 Victory
+        @else Player 2 Major Victory
         @endif
         </div>
     </div>

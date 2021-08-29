@@ -15,7 +15,7 @@
                 @click.prevent="passvalues()"
               ></button>
             </div>
-            <div x-text="{{$count_id}}" class="w-8 pr-4 font-bold text-right" id="{{$count_id}}"></div>
+            <div x-text="{{$count_id}}" class="w-8 pr-4 font-bold text-right" id="{{$count_id}}" ></div>
           </div>
         </div>
       </div>

@@ -159,7 +159,7 @@
                 <div>
                     <div class="w-full pb-4">
                         
-                      <input type="hidden" name="selection_1" :value="selection_1">
+                      <input type="hidden" name="grandstratcheck" :value="selection_1">
                     </div>
                   </div>
                   @include("aos._grandstrat_success", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
