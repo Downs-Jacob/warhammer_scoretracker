@@ -163,6 +163,7 @@
                     </div>
                   </div>
                   @include("aos._grandstrat_success", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
+                  @include("aos._extra_points", ['selection_id'=>'selection_2', 'count_id'=>"counta"])
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
                     <label x-text="getTotal()" class="mr-2"></label>

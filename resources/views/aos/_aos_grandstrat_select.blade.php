@@ -4,16 +4,29 @@
 show: false,
 selection_grandstrat: null,
 grandstrats: [
-  {
-    name: 'CORE RULEBOOK',
-    options: [
-      'Sever the Head',
-      'Vendetta',
-      'Hold the Line'
-      ]
-  }  
-],
-}"
+                      {
+                        name: 'CORE RULEBOOK',
+                        options: [
+                          'Sever the Head',
+                          'Vendetta',
+                          'Hold the Line'
+                          ]
+                      },
+
+                      {
+                        name: 'GH 2021',
+                        options: [
+                          'Dominating Prescence',
+                          'Beast Master',
+                          'Prized Sorcery',
+                          'Pillars of Belief',
+                          'Predators Domain'
+                  
+                          ]
+                      }
+                      
+                  ],
+              }"
 <br>
 
 <div class="w-full">

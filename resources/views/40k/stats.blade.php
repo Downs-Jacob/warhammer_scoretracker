@@ -40,9 +40,9 @@
                 <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100">{{$faction_wins_p2->player2_faction}} : {{$faction_wins_p2->faction_wins_p2}}</div>  
             @endforeach
 
-            <!-- @if($faction_loses_p2 > null) 
+            @if($faction_loses_p2 > null) 
                 <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100">Nothing to Display</div>
-            @endif -->
+            @endif
                      
 
     </div>

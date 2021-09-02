@@ -49,6 +49,6 @@ class User extends Authenticatable
 
     public function aos()
     {
-        return $this->hasMany(Aos::class)->latest();
+        return $this->hasMany(aos::class)->latest();
     }
 }
