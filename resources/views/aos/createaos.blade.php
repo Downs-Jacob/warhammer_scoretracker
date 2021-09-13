@@ -6,8 +6,7 @@
     @endif
 
     <form action="/createaos" novalidate METHOD="POST" id="formid">
-
-            @csrf
+            {{csrf_field()}}
 
             @include('aos._aos_scenario_select')
         
@@ -48,7 +47,7 @@
             </div>
         </div>
     </div>
-    @include('_footer')
+</div>
 @endif
 
 @endsection
