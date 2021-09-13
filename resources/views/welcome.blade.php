@@ -35,6 +35,4 @@
 
 @include('_footer')
 
-
-
 @endsection

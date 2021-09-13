@@ -41,9 +41,6 @@
                 <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100">{{$faction_wins_p2->player2_faction}} : {{$faction_wins_p2->faction_wins_p2}}</div>  
             @endforeach
 
-            @if($faction_loses_p2 > null) 
-                <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100">Nothing to Display</div>
-            @endif
     </div>
     <div class="flex-2 shadow-xl px-4 py-2 m-2 text-center text-gray-700 bg-yellow-200 border border-yellow-200 rounded-lg">
         <h1 class="font-extrabold">Scenario <br> Breakdown</h1>

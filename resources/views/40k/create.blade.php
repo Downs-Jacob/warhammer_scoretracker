@@ -6,7 +6,6 @@
     @endif
 
     <form action="/create" novalidate METHOD="POST" id="formid">
-
             @csrf
 
             @include('40k._scenario_select')
@@ -50,7 +49,8 @@
             </div>
         </div>
     </div>
-    @include('_footer')
+</div>
+
 @endif
 
 @endsection

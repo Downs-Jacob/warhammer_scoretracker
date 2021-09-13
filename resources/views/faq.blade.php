@@ -75,7 +75,8 @@
             </p>
 
     </div>
-    <div class="mt-8 mb-8">
+
+    <div class="mt-20">
         @include('_footer')
     </div>
 
