@@ -1,5 +1,5 @@
 
-<div class="w-full h-10 bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
+<div class="w-full flex bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
     <div
     class="mt-6 flex"
     x-data="{ open: false }"

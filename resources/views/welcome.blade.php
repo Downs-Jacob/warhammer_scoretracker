@@ -29,10 +29,12 @@
             <img class="pb-12 fill-current mx-auto column-tout__image" src="https://www.games-workshop.com/resources/touts/2019-01-05/Home/Register_190105_All.png" viewBox="0 0 20 20" alt="" data-gtm-ea="/image/featuredMedia">
 
         </div>
-
     </div>
+	
 </body>
 
 @include('_footer')
 
 @endsection
+
+
