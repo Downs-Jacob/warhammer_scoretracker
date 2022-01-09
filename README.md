@@ -62,6 +62,8 @@ Add your SSH private key to the ssh-agent 
 ssh-add -k ~/.ssh/id_rsa
 </pre></code>
 
+If ssh does not work : Check this out https://github.com/lionheart/openradar-mirror/issues/15361
+
 # Virtual Machine 
 start the virtual machine up
 <pre><code>vagrant up</pre></code>
