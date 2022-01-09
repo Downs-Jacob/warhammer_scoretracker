@@ -54,13 +54,13 @@ to install vagrant
 
 # Generate a private key for VM
 
-<pre><code>Generate a ssh key 
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+<pre>Generate a ssh key 
+<code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code>
 Start ssh agent 
-eval "$(ssh-agent -s)"
+<code>eval "$(ssh-agent -s)"</code>
 Add your SSH private key to the ssh-agent 
-ssh-add -k ~/.ssh/id_rsa
-</pre></code>
+<code>ssh-add -k ~/.ssh/id_rsa</code>
+</pre>
 
 If ssh does not work : Check this out https://github.com/lionheart/openradar-mirror/issues/15361
 
