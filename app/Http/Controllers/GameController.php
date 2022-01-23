@@ -192,13 +192,10 @@ class GameController extends Controller
      */
     public function edit($id)
     {
-      feature/aos
+
         $game = Game::find($id);
         return view('40k.edit', ['game' => $game]);
-
-        $game = Game::findorFail($id);
-        return view('edit', ['game' => $game]);
-        main
+        
     }
 
     /**
