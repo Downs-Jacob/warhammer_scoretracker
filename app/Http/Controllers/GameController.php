@@ -119,11 +119,12 @@ class GameController extends Controller
                 ]
         ];
 
-        return view('create', [
+        return view('40k.create', [
             'categories'=>$categories
 
         ]);
     }
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -134,11 +135,10 @@ class GameController extends Controller
     {
         request()->validate([
             'scenario'=>'required',
-            'player1_name'=>'required',
+            'player1_faction'=>'required',
             'player1_army'=>'required',
-            'player2_name'=>'required',
+            'player2_faction'=>'required',
             'player2_army'=>'required',
-            'description'=>'required'
         ]);
 
         $game = new Game();
@@ -192,8 +192,13 @@ class GameController extends Controller
      */
     public function edit($id)
     {
+      feature/aos
+        $game = Game::find($id);
+        return view('40k.edit', ['game' => $game]);
+
         $game = Game::findorFail($id);
         return view('edit', ['game' => $game]);
+        main
     }
 
     /**
@@ -205,14 +210,6 @@ class GameController extends Controller
      */
     public function update($id)
     {
-        request()->validate([
-            'scenario'=>'required',
-            'player1_name'=>'required',
-            'player1_faction'=>'required',
-            'player2_name'=>'required',
-            'player2_faction'=>'required',
-            'description'=>'required'
-        ]);
 
         $game = Game::find($id);
 
@@ -220,14 +217,14 @@ class GameController extends Controller
 
         $game->player1_name = request('player1_name');
         $game->player1_army = request('player1_army');
-        $game->player1_army = request('player1_faction');
+        $game->player1_faction = request('player1_faction');
         $game->player1_primary = request('player1_primary');
         $game->player1_secondary = request('player1_secondary');
         $game->player1_score = request('player1_primary')+request('player1_secondary');
 
         $game->player2_name = request('player2_name');
         $game->player2_army = request('player2_army');
-        $game->player1_army = request('player2_faction');
+        $game->player2_faction= request('player2_faction');
         $game->player2_primary = request('player2_primary');
         $game->player2_secondary = request('player2_secondary');
         $game->player2_score = request('player2_primary')+request('player2_secondary');

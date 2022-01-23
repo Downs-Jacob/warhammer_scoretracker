@@ -19,17 +19,17 @@
 
         @include ('_nav')
 
-
+<body>
 	<!--Container-->
         <div class="">
             <div class="container lg:px-6 lg:pt-24 mx-auto md:pt-16">
                 @yield ('content')
             </div>
 
+
+
         </div>
-
-
-
-
 </body>
+
+
 </html>

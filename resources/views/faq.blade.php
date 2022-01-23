@@ -4,14 +4,14 @@
     <div class="container px-6 lg:px-40 lg:w-full ">
             <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">1.) What is this website?</h2>
             <p class="text-justify">
-                Scoretracker.games is a website for keeping a record of your games of Warhammer 40k, 9th edition. Not only does this 
-                website store the information you provide for each game of Warhammer 40k 9th Edition that you play, 
+                Scoretracker.games is a website for keeping a record of your games of Warhammer 40k, 9th edition and Age of Sigmar,
+                3rd edition. Not only does this website store the information you provide for each game that you play, 
                 it also keeps track of some pertinent statistics.
             </p>
         <h2 class="col-start-2 pt-2 pb-2 text-2xl font-bold">2.) How do I get started?</h2>
             <p class="text-justify">
                 The first step is to register as a user with the website. Once you have a login, you can start to record games 
-                of 40k 9th edition that you have played! Record a Game by clicking on the "Record Game" button in the 
+                of Warhammer 40k, 9th edition and Age of Sigmar, 3rd edition that you have played! Record a Game by clicking on the "Record Game" button in the 
                 navigation bar. Be aware that you must fill out all fields to save the game, 
                 but you can always edit the game in the future if you made a mistake
                 or filled a field with a placeholder.<br><br>
@@ -75,7 +75,8 @@
             </p>
 
     </div>
-    <div class="mt-8 mb-8">
+
+    <div class="mt-20">
         @include('_footer')
     </div>
 

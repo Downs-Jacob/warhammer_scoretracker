@@ -15,10 +15,10 @@
         <div class="font-bold text-green-700">
         <br>
         @if ($game->player1_primary + $game->player1_secondary > $game->player2_primary + $game->player2_secondary)
-            Player 1 Victory
+            Player 1 Major Victory
         @elseif ($game->player1_primary + $game->player1_secondary === $game->player2_primary + $game->player2_secondary)
             The Game was a Tie
-        @else Player 2 Victory
+        @else Player 2 Major Victory
         @endif
         </div>
     </div>
@@ -62,7 +62,7 @@
     x-show=true>
 
     <a
-        href="{{route('archive')}}"
+        href="{{route('index')}}"
         class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
     </a>
     <a

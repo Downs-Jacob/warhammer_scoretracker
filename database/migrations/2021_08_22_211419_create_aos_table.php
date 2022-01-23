@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGamesTable extends Migration
+class CreateAosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,30 +13,31 @@ class CreateGamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
+        Schema::create('aos', function (Blueprint $table) {
             $table->id();
             $table->string('slug');
             $table->foreignId('user_id');
             $table->string('scenario');
+            $table->string('pointlimit')->nullable();
             //player 1
             $table->string('player1_name');
-            $table->string('player1_army');
-            $table->string('player1_primary');
-            $table->string('player1_secondary');
+            $table->string('player1_faction');
+            $table->string('player1_grandstrat');
             $table->string('player1_score');
             //player 2
             $table->string('player2_name');
-            $table->string('player2_army');
-            $table->string('player2_primary');
-            $table->string('player2_secondary');
+            $table->string('player2_faction');
+            $table->string('player2_grandstrat');
             $table->string('player2_score');
 
-            $table->text('description')->nullable();
+            $table->boolean('victory_p1');
+            $table->boolean('victory_p2');
+
+            $table->text('aosdescription')->nullable();
             $table->timestamps();
         });
-
-
     }
+    
 
     /**
      * Reverse the migrations.
@@ -45,6 +46,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('aos');
     }
 }
