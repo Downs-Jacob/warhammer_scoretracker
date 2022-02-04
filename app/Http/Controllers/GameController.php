@@ -41,29 +41,35 @@ class GameController extends Controller
                 'name'=>'PURGE',
                 'options'=> [
                     'Assassination',
-                    'Titan Hunters',
-                    'Bring it Down'
+                    'For the Emporer!',
+                    'Bring it Down',
+                    'Titan Hunters'
                     ]
             ],[
                 'name'=>'NO MERCY, NO RESPITE',
                 'options'=> [
                     'No Prisoners',
                     'Grind Them Down',
-                    'To The Last'
+                    'To The Last',
+                    'Path of Destruction',
+                    'Synaptic Insight',
+                    'The Long War',
+                    'Malefic Terror'
                     ]
             ],[
                 'name'=>'BATTLEFIELD SUPREMACY',
                 'options'=> [
                     'Engage on all Fronts',
                     'Behind Enemy Lines',
-                    'Stranglehold'
+                    'Stranglehold',
+                    'Yield No Ground'
                      ]
             ],[
                 'name'=>'SHADOW OPERATIONS',
                 'options'=> [
                     'Raise the Banners High',
                     'Investigate Signal',
-                    'Retrieve Octarius Data',
+                    'Retrieve Nachmund Data',
                     'Deploy Teleport Homers'
                     ]
             ],[
@@ -74,39 +80,8 @@ class GameController extends Controller
                     'Pierce the Veil',
                     'Psychic Interrogation'
                      ]
-            ],[
-                'name'=>'MISSION SPECIFIC',
-                'options'=> [
-                    'Ascend',
-                    'Center Ground',
-                    'Data Intercept',
-                    'Direct Assault',
-                    'Encircle',
-                    'Forward Push',
-                    'Hold the Center',
-                    'Inload Data-Psalm',
-                    'Lines of Demarcation',
-                    'Minimise Loses',
-                    'Outflank',
-                    'Overrun',
-                    'Priority Targets',
-                    'Raid Supply Lines',
-                    'Ransack',
-                    'Raze',
-                    'Recon Sweep',
-                    'Siphon Power',
-                    'Search for the Portal',
-                    'Secure No Mans Land',
-                    'Secure Landing Sites',
-                    'Strategic Scan',
-                    'Surgical Assault',
-                    'Survey',
-                    'Surround Them',
-                    'Test Their Line',
-                    'Vital Ground'
-
-                    ]
-                ],[
+            ],
+            [
                     'name'=>'ARMY SPECIFIC',
                     'options'=> [
                         'Army Specific Secondary'
@@ -192,13 +167,11 @@ class GameController extends Controller
      */
     public function edit($id)
     {
-      feature/aos
         $game = Game::find($id);
         return view('40k.edit', ['game' => $game]);
 
         $game = Game::findorFail($id);
         return view('edit', ['game' => $game]);
-        main
     }
 
     /**

@@ -16,14 +16,14 @@
                     getprimaryTotal(turn) {
                       let total = 0;
                       if (turn.primaries.hold) {
-                        total += 5;
+                        total += 4;
                       }
                       if (turn.primaries.hold_many) {
-                        total += 5;
+                        total += 4;
                       }
 
                       if (turn.primaries.hold_more) {
-                        total += 5;
+                        total += 4;
                       }
                       return total;
                     },
