@@ -16,14 +16,14 @@
                     getprimaryTotal(turn) {
                       let total = 0;
                       if (turn.primaries.hold) {
-                        total += 5;
+                        total += 4;
                       }
                       if (turn.primaries.hold_many) {
-                        total += 5;
+                        total += 4;
                       }
 
                       if (turn.primaries.hold_more) {
-                        total += 5;
+                        total += 4;
                       }
                       return total;
                     },
@@ -74,8 +74,9 @@
                           count:0,
                           counta:0,
                           countb:0,
+                          countc:0,
                           getsecondaryTotal() {
-                              return this.count + this.counta + this.countb;
+                              return this.count + this.counta + this.countb + this.countc;
                           },
                           getTotal() {
                             return this.primaryTotal() + this.getsecondaryTotal();
@@ -141,6 +142,7 @@
                       <div class="p-2 text-center text-white bg-purple-500 border" x-text="getprimaryTotal(turn);"></div>
                     </div>
                   </template>
+
                   <div class="flex justify-between my-4 mr-4 text-xl lg:text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
                     <label x-text="primaryTotal()" class="mr-2"></label>
@@ -163,6 +165,7 @@
                         @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                         @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_2', 'count_id'=>"counta"])
                         @include("40k._category_select", ['categories'=>$categories, 'selection_id'=>'selection_3', 'count_id'=>"countb"])
+                        @include("40k._primary_extra_points", ['count_id'=>"countc"])
                       <input type="hidden" name="selection_1" :value="selection_1">
                     </div>
                   </div>

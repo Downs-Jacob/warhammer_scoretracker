@@ -35,13 +35,12 @@
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> September 2021 </h2>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> February 2022 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Website now has the ability to track your games of Age of Sigmar 3.0!</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added a Record, Archive, and Statistic page for AOS</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added offline scoresheet for Age of Sigmar 3.0</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Input fields should remember their old inputs now</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Changes to entire website to be more mobile friendly</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add the Grand Tournament 2022 Missions</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Update secondary mission selections to reflect 2022 update</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Remove Grand Tournament 2021 Missions</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Minor UI changes</p>
                 </div>
             </div>
             <div class="mt-5 sm:mt-6">

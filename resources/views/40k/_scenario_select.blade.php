@@ -47,37 +47,35 @@
                          ]
                         },
                         {
-                            name:'GRAND TOURNAMENT INCURSION',
+                            name:'GRAND TOURNAMENT 2022 INCURSION',
                             options: [
-                                'Crossfire',
-                                'Resupply',
-                                'Raid',
-                                'Centre Ground',
+                                'Cleanse the Lands',
+                                'Deliverance',
+                                'Desperate Raid',
+                                'Sacred Ground',
                                 'Ascension',
-                                'Forward Push',
+                                'Surge of Faith',
                                 'Rise of the Machine Spirit',
-                                'Show of Force',
+                                'Display of Spiritual Might',
                                 'Reconnaissance Mission'
                            ]
                           },
                           {
-                            name:'GRAND TOURNAMENT STRIKE FORCE',
+                            name:'GRAND TOURNAMENT 2022 STRIKE FORCE',
                             options: [
-                                'Retrieval Mission',
-                                'Scorched Earth',
-                                'Vital Intelligence',
-                                'Surround and Destroy',
-                                'Battle Lines',
+                                'Recover the Relic',
+                                'Tear Down Their Icons',
+                                'Data Scry-Salvage',
+                                'Abandoned Sanctuaries',
+                                'Conversion',
                                 'The Scouring',
-                                'Overrun',
-                                'Sweep and Clear',
-                                'Priority Target'
+                                'Tide of Conviction',
+                                'Death and Zeal',
+                                'Secure Missing Artifacts'
                            ]
                           }
 
                     ],
-
-
                     }"
                   <br>
 
