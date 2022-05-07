@@ -1,7 +1,6 @@
-
-<div class="w-full flex bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
+<div id="footer" class="bg-slate-800 container-fluid w-full pt-10 bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
     <div
-    class="mt-6 flex"
+    class="text-white mt-6 flex"
     x-data="{ open: false }"
     x-show=true>
     2021 JCQ Production
@@ -27,7 +26,7 @@
 
     <!-- Dialog (full screen) -->
     <div
-        class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+        class="fixed bottom-0 left-0 flex items-center justify-center w-full h-full"
         style="background-color: rgba(0,0,0,.5);"
         x-show="open">
         <div
@@ -35,13 +34,12 @@
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> September 2021 </h2>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> May 2022 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Website now has the ability to track your games of Age of Sigmar 3.0!</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added a Record, Archive, and Statistic page for AOS</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added offline scoresheet for Age of Sigmar 3.0</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Input fields should remember their old inputs now</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Changes to entire website to be more mobile friendly</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Complete rework of UI styling</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
                 </div>
             </div>
             <div class="mt-5 sm:mt-6">
