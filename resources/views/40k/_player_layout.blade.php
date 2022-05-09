@@ -117,28 +117,28 @@
                   </div>
                 <br>
                 <div class="grid bg-white turngrid">
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Turn</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Hold</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Many</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">More</div>
-                  <div class="text-xl font-bold text-center text-white bg-purple-500 border">Total</div>
+                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Turn</div>
+                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Hold</div>
+                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Many</div>
+                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">More</div>
+                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Total</div>
                 </div>
                   <template x-for="(turn, index) in turns" :key="index">
                     <div class="grid turngrid">
-                      <div class="p-2 text-center text-white bg-purple-500 border" x-text="index+2"></div>
+                      <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="index+2"></div>
                       <div class="p-2 text-center text-white border" @click="turn.primaries.hold = !turn.primaries.hold" :class="{
                           'bg-blue-400': turn.primaries.hold,
-                          'bg-purple-500': !turn.primaries.hold
+                          'bg-[#5c2d69]': !turn.primaries.hold
                         }"></div>
                       <div class="p-2 text-center text-white border" @click="turn.primaries.hold_many = !turn.primaries.hold_many" :class="{
                           'bg-blue-400': turn.primaries.hold_many,
-                          'bg-purple-500': !turn.primaries.hold_many
+                          'bg-[#5c2d69]': !turn.primaries.hold_many
                         }"></div>
                       <div class="p-2 text-center text-white border" @click="turn.primaries.hold_more = !turn.primaries.hold_more" :class="{
                           'bg-blue-400': turn.primaries.hold_more,
-                          'bg-purple-500': !turn.primaries.hold_more
+                          'bg-[#5c2d69]': !turn.primaries.hold_more
                         }"></div>
-                      <div class="p-2 text-center text-white bg-purple-500 border" x-text="getprimaryTotal(turn);"></div>
+                      <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="getprimaryTotal(turn);"></div>
                     </div>
                   </template>
                   <div class="flex justify-between my-4 mr-4 text-xl lg:text-2xl text-indigo-400 w-fullp-2 flex-between">

@@ -6,21 +6,21 @@
     2021 JCQ Production
     <a
         href="/faq"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> faq
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> faq
     </a>
     |
     <a
         href="/about"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> about
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> about
     </a>
     |
     <a
         href="/contact"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> contact
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> contact
     </a>
     |
     <button
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"
         @click="open = true"> updates
     </button>
 
