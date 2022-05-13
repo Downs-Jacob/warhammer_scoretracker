@@ -169,9 +169,6 @@ class GameController extends Controller
     {
         $game = Game::find($id);
         return view('40k.edit', ['game' => $game]);
-
-        $game = Game::findorFail($id);
-        return view('edit', ['game' => $game]);
     }
 
     /**

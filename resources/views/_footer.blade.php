@@ -1,33 +1,32 @@
-
-<div class="w-full flex bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
+<div id="footer" class="bg-slate-800 container-fluid w-full pt-10 bottom-0 text-xs text-left pl-6 pb-10 lg:px-10 lg:text-base">
     <div
-    class="mt-6 flex"
+    class="text-white mt-6 flex"
     x-data="{ open: false }"
     x-show=true>
     2021 JCQ Production
     <a
         href="/faq"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> faq
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> faq
     </a>
     |
     <a
         href="/about"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> about
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> about
     </a>
     |
     <a
         href="/contact"
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"> contact
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"> contact
     </a>
     |
     <button
-        class="px-2 text-xs text-blue-600 hover:text-blue-300 lg:text-base"
+        class="px-2 text-xs text-blue-400 hover:text-blue-300 lg:text-base"
         @click="open = true"> updates
     </button>
 
     <!-- Dialog (full screen) -->
     <div
-        class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
+        class="fixed bottom-0 left-0 flex items-center justify-center w-full h-full"
         style="background-color: rgba(0,0,0,.5);"
         x-show="open">
         <div
@@ -35,12 +34,13 @@
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> February 2022 </h2>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> May 2022 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add the Grand Tournament 2022 Missions</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Update secondary mission selections to reflect 2022 update</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Remove Grand Tournament 2021 Missions</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Minor UI changes</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Complete rework of UI styling</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+
                 </div>
             </div>
             <div class="mt-5 sm:mt-6">

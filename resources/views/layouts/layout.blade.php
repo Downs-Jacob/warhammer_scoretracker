@@ -12,24 +12,20 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
 
 </head>
 
         @include ('_nav')
 
-<body>
+<body class="m-0">
 	<!--Container-->
-        <div class="">
-            <div class="container lg:px-6 lg:pt-24 mx-auto md:pt-16">
+        <div class="bg-grey-100 container-fluid w-full bottom-0">
+            <div class="bg-grey-100 bottom-0">
                 @yield ('content')
             </div>
-
-
-
         </div>
 </body>
-
-
 </html>

@@ -1,7 +1,7 @@
 
 <!--Nav-->
 
-<nav class="w-full p-2 mt-0 bg-gradient-to-r from-purple-600 via-blue-700 to-indigo-800"> <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
+<nav class="w-full p-2 py-5 mt-0 bg-gradient-to-r from-slate-800 via-[#5c2d69] to-[#5c2d69]"> <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
     <div class="container md:flex lg:flex lg:flex-wrap items-center mx-auto">
         <div class="flex xl:pl-4 lg:pl-4 w-full font-extrabold text-center text-white md:w-1/2">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
