@@ -40,6 +40,7 @@
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+
                 </div>
             </div>
             <div class="mt-5 sm:mt-6">

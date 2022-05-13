@@ -13,6 +13,7 @@
       defer
     ></script>
 	<script src="https://cdn.tailwindcss.com"></script>
+
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
 
 </head>
