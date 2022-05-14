@@ -6,8 +6,8 @@
     <div class="mt-2 text-green-500"> {{ session('message')}} </div>
 @endif
 
-<div class="lg:flex mx-12 mt-4 bg-blue-200 py-2 px-4">
-    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
+<div class="lg:flex mx-12 mt-4 bg-[#D5C3ED] py-2 px-4">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EBE2F6] rounded-xl">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1> Date : {{$game->created_at}}
         <br>
         Scenario: {{ $game->scenario}}
@@ -22,7 +22,7 @@
         @endif
         </div>
     </div>
-    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl"> 
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EBE2F6] rounded-xl"> 
         Player 1 Name: {{ $game->player1_name}}
         <br>
         Player 1 Faction: {{$game->player1_faction}}
@@ -35,7 +35,7 @@
         <br>
         Player 1 Total Score: {{ $game->player1_primary + $game->player1_secondary }}
      </div>
-     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
+     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EBE2F6] rounded-xl">
          Player 2 Name: {{ $game->player2_name}}
          <br>
          Player 2 Faction: {{$game->player2_faction}}
@@ -49,8 +49,8 @@
          Player 2 Total Score: {{ $game->player2_primary + $game->player2_secondary }}
      </div>
 </div>
-<div class="mx-12 flex px-4 pb-2 bg-blue-200 shadow-xl">
-    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
+<div class="mx-12 flex px-4 pb-2 bg-[#D5C3ED] shadow-xl">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EBE2F6] rounded-xl">
         Description: {{ $game->description}}
     </div>
 </div>
@@ -63,14 +63,14 @@
 
     <a
         href="{{route('index')}}"
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Return to Archive
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-[#5c2d69] rounded-full mr-l hover:bg-[#984da6]"> Return to Archive
     </a>
     <a
         href="{{route('edit', ['game' => $game])}}"
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"> Edit This Game
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-[#5c2d69] rounded-full mr-l hover:bg-[#984da6]"> Edit This Game
     </a>
     <button
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"
+        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-[#5c2d69] rounded-full mr-l hover:bg-[#984da6]"
         @click="open = true"> Delete Game
     </button>
 
