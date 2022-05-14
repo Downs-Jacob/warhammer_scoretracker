@@ -54,7 +54,7 @@
         Description: {{ $game->description}}
     </div>
 </div>
-
+<!--changes-->
 <!--MODAL -->
 <div
     class="mt-6 flex mx-12"
