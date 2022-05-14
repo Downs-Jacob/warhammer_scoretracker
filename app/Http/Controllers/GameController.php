@@ -41,9 +41,22 @@ class GameController extends Controller
                 'name'=>'PURGE',
                 'options'=> [
                     'Assassination',
-                    'For the Emporer!',
+                    'Titan Hunters',
                     'Bring it Down',
-                    'Titan Hunters'
+                    'Slay the Heretic - Adepta Sororitas',
+                    'Codex Warfare - Adeptus Astartes',
+                    'Auric Mortalis - Adeptus Custodes',
+                    'Accretion of Knowledge - Adeptus Mechanicus',
+                    'For the Emperor! - Astra Militarum',
+                    'Destroy the Daemon - Grey Knights',
+                    'Duel of Honour - Imperial Knights',
+                    'A Fitting Challenge - Chaos Knights',
+                    'Sorcerous Prowess - Thousand Sons',
+                    'Take Them Alive! - Drukhari',
+                    'Beasts for the Arenas - Drukhari',
+                    'Ambush - Genestealer Cults',
+                    'Da Biggest and Da Best - Orks',
+                    'Cranial Feasting - Tyranids'
                     ]
             ],[
                 'name'=>'NO MERCY, NO RESPITE',
@@ -51,10 +64,23 @@ class GameController extends Controller
                     'No Prisoners',
                     'Grind Them Down',
                     'To The Last',
-                    'Path of Destruction',
-                    'Synaptic Insight',
-                    'The Long War',
-                    'Malefic Terror'
+                    'A Leap of Faith - Adepta Sororitas',
+                    'Oaths of Moment - Adeptus Astartes',
+                    'Might of Terra - Adeptus Custodes',
+                    'Eradication of Flesh - Adeptus Mechanicus',
+                    'Teleport Assault - Grey Knights',
+                    'Honour of the House - Imperial Knights',
+                    'Malefic Terror - Chaos Daemons',
+                    'Paths of Destruction - Chaos Knights',
+                    'The Long War - Chaos Space Marines',
+                    'Fleeing Vectors - Death Guard',
+                    'Wrath of Magnus - Thousand Sons',
+                    'Wrath of Khaine - Asuryani/Ynnari',
+                    'Fear and Terror - Drukhari',
+                    'Code of Combat - Necrons',
+                    'Stomp em Good - Orks',
+                    'A Clean Victory - T\'au Empire',
+                    'Synaptic Insight - Tyranids'
                     ]
             ],[
                 'name'=>'BATTLEFIELD SUPREMACY',
@@ -62,15 +88,39 @@ class GameController extends Controller
                     'Engage on all Fronts',
                     'Behind Enemy Lines',
                     'Stranglehold',
-                    'Yield No Ground'
+                    'Defend the Shrine - Adepta Sororitas',
+                    'Shock Tactics - Adeptus Astartes',
+                    'Stand Vigil - Adeptus Custodes',
+                    'Uncharted Sequencing - Adeptus Mechanicus',
+                    'Hidden Archeovault - Adeptus Mechanicus',
+                    'Yield No Ground - Imperial Knights',
+                    'Ruthless Tyranny - Chaos Knights',
+                    'Despoiled Ground - Death Guard',
+                    'The Hidden Path - Asuryani/Ynnari',
+                    'Herd the Prey - Drukhari',
+                    'Broodswarm - Genestealer Cults',
+                    'Purge the Vermin - Necrons',
+                    'Green Tide - Orks',
+                    'Decisive Action - T\'au Empire'
                      ]
             ],[
                 'name'=>'SHADOW OPERATIONS',
                 'options'=> [
                     'Raise the Banners High',
                     'Investigate Signal',
-                    'Retrieve Nachmund Data',
-                    'Deploy Teleport Homers'
+                    'Retrieve Octarius Data',
+                    'Deploy Teleport Homers',
+                    'Sacred Grounds - Adepta Sororitas',
+                    'Renew the Oaths - Imperial Knights',
+                    'Storm of Darkness - Chaos Knights',
+                    'Spread the Sickness - Death Guard',
+                    'Burn Empires - Thousand Sons',
+                    'Scout the Enemy - Asuryani/Ynnari',
+                    'Sabotage Critical Location - Genestealer Cults',
+                    'Ancient Machineries - Necrons',
+                    'Get Da Good Bitz - Orks',
+                    'Aerospace Targeting Relays - T\'au Empire',
+                    'Spore Nodes - Tyranids'
                     ]
             ],[
                 'name'=>'WARPCRAFT',
@@ -78,7 +128,10 @@ class GameController extends Controller
                     'Abhor the Witch',
                     'Warp Ritual',
                     'Pierce the Veil',
-                    'Psychic Interrogation'
+                    'Psychic Interrogation',
+                    'Purifying Ritual - Grey Knights',
+                    'Mutate Landscape - Thousand Sons',
+                    'Scry Futures - Asuryani/Ynnari'
                      ]
             ],
             [
@@ -90,6 +143,31 @@ class GameController extends Controller
                     'name'=>'OTHER',
                     'options'=> [
                         'Other Secondary'
+                        ]
+                ],[
+                    'name'=>'TEMPEST OF WAR',
+                    'options'=> [
+                        'Area Denial',
+                        'Assassination',
+                        'Battlefield Supremacy',
+                        'Behind Enemy Lines',
+                        'Blood and Guts',
+                        'Bring it Down',
+                        'Capture Enemy Outpost',
+                        'Defend Stronghold',
+                        'Deploy Teleport Homer',
+                        'Extend Battle Lines',
+                        'Grind Them Down',
+                        'Hold the Line',
+                        'Investigate Site',
+                        'No Prisoners',
+                        'No Retreat, No Surrender',
+                        'Overwhelming Firepower',
+                        'Raise Banner',
+                        'Secure No Mans Land' ,
+                        'Storm Hostile Objective',
+                        'A Tempting Target',
+
                         ]
                 ]
         ];

@@ -73,6 +73,17 @@
                                 'Death and Zeal',
                                 'Secure Missing Artifacts'
                            ]
+                          },
+                          {
+                            name:'TEMPEST OF WAR',
+                            options: [
+                                'Burn and Raze',
+                                'Claim the Battlefield',
+                                'Direct Assault',
+                                'Priority Targets',
+                                'Take and Hold',
+                                'Vital Ground'
+                           ]
                           }
 
                     ],
