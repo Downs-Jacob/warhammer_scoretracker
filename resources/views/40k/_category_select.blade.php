@@ -11,7 +11,7 @@
           @endforeach
     </select>
       <div class="flex items-center m-2">
-        <div class="ml-2 lg:px-4">
+        <div class="ml-2 lg:px-4 flex">
           <button
             class="px-4 py-3 mr-2 lg:mr-6 font-bold text-white bg-red-500 border border-blue-700 rounded hover:bg-red-600"
             @click.prevent="if({{$count_id}}>0) {{$count_id}}--"
