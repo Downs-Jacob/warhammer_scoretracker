@@ -1,7 +1,7 @@
 @extends ('layouts.layout')
 
 @section('content')
-<div class="container pt-4 large:mr-20 large:ml-20">
+<div class="pt-4 mx-24 large:mr-20 large:ml-20">
     <div class="ml-10 mr-10 px-2 py-2 bg-yellow-200 shadow-xl border border-indigo-200 rounded-xl">
       <div class="grid grid-cols-4 bg-yellow-100 ">
         <div class="text-center underline">ID</div>
