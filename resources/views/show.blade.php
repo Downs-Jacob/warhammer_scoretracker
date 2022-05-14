@@ -6,7 +6,7 @@
     <div class="mt-2 text-green-500"> {{ session('message')}} </div>
 @endif
 
-<div class="lg:flex ml-2 mr-2 mt-4 bg-blue-200 py-2 px-4">
+<div class="lg:flex mx-12 mt-4 bg-blue-200 py-2 px-4">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
         <h1 class="font-bold">Game Id: {{ $game->id}}</h1> Date : {{$game->created_at}}
         <br>
@@ -49,7 +49,7 @@
          Player 2 Total Score: {{ $game->player2_primary + $game->player2_secondary }}
      </div>
 </div>
-<div class="ml-2 mr-2 flex px-4 pb-2 bg-blue-200 shadow-xl">
+<div class="mx-12 flex px-4 pb-2 bg-blue-200 shadow-xl">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-blue-100 rounded-xl">
         Description: {{ $game->description}}
     </div>
@@ -57,7 +57,7 @@
 
 <!--MODAL -->
 <div
-    class="mt-6 flex"
+    class="mt-6 flex mx-12"
     x-data="{ open: false }"
     x-show=true>
 
