@@ -37,9 +37,8 @@
                 <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> May 2022 </h2>
                 <div class="mt-2">
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Complete rework of UI styling</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - </p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added Tempest of War scenarios and secondaries</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added Army specific secondaries</p>
 
                 </div>
             </div>
