@@ -4,9 +4,9 @@
 @section ('content')
 
 <body class="font-sans leading-normal tracking-normal">
-    <div class="bg-stone-300 px-24 flex flex-col-2">
-		<div class="mt-24 flex flex-col w-full lg:w-1/2 items-start pb-12 px-6 lg:pl-20">
-			<h1 class="font-bold text-3xl my-4 text-center">Track Your Games of Warhammer 40k of Age of Sigmar</h1>
+    <div class="bg-stone-300 px-24 lg:flex">
+		<div class="lg:flex flex-col w-full lg:w-1/2 items-start pb-12 px-6 lg:pl-20 lg:mt-24">
+			<h1 class="font-bold text-3xl text-center">Track Your Games of Warhammer 40k of Age of Sigmar</h1>
 		<!--Left Col-->
 		@if (auth()->check())
 		
@@ -38,10 +38,10 @@
         </div>
     </div>
 		<!--Left Col-->
-	<div class="bg-violet-300 px-24 pb-4 flex flex-col-2">
-		<div class="w-full lg:w-1/2 lg:py-6 pb-12 text-center">
+	<div class="bg-violet-300 px-24 lg:flex">
+		<div class="w-full lg:w-1/2 lg:py-6 lg:pb-12 text-center">
 			
-			<img class="pb-12 fill-current mx-auto column-tout__image" 
+			<img class="lg:pb-12 fill-current mx-auto column-tout__image" 
 			src="/images/chaos.png"
             alt=""
             class="text-center"
@@ -52,7 +52,7 @@
 		</div>
 		<!--Right Col-->
 		
-		<div class="mt-24 flex flex-col w-full lg:w-1/2 items-start pb-12 px-6 lg:pl-20">
+		<div class="mt-4 lg:mt-24 flex flex-col w-full lg:w-1/2 items-start pb-12 px-6 lg:pl-20">
 			<h1 class="font-bold text-3xl my-4 text-center">Save Your Games of Warhammer 40k or Age of Sigmar</h1>
 
 		@if (auth()->check())
