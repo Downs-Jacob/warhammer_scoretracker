@@ -69,7 +69,7 @@
 			<p class="leading-normal">
 			This website can also help you store your games of Warhammer 40k and Age of Sigmar. If you are logged in, you can save your games into an archive, 
 			allowing you the ability to review your games in the future. You can also view your statistics including win percentage, army use breakdown, and other 
-			stats.
+			statistics.
 		</p>
 		@endif
 

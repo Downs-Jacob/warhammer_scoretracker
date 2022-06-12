@@ -5,22 +5,17 @@ show: false,
 selection_grandstrat: null,
 grandstrats: [
                       {
-                        name: 'CORE RULEBOOK',
+                        name: 'GENERALS HANDBOOK 2021',
                         options: [
                           'Sever the Head',
+                          'Hold the Line',
                           'Vendetta',
-                          'Hold the Line'
-                          ]
-                      },
-
-                      {
-                        name: 'GH 2021',
-                        options: [
                           'Dominating Prescence',
                           'Beast Master',
                           'Prized Sorcery',
                           'Pillars of Belief',
-                          'Predators Domain'
+                          'Predators Domain',
+                          'Army Specific',
                   
                           ]
                       }

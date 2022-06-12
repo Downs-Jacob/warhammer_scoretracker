@@ -41,7 +41,7 @@
             @endforeach
 
             @if($faction_loses_p2 > null) 
-                <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EFE2F2]">Nothing to Display</div>
+                <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EFE2F2]">No Wins Recorded</div>
             @endif
                      
 
@@ -56,7 +56,7 @@
     <div class="flex-2 shadow-xl px-4 py-2 m-2 text-center text-gray-700 bg-[#D0AAD8] border border-indigo-200 rounded-lg">
         <h1 class="font-extrabold">Yearly Breakdown</h1>
                 @foreach($date_stats as $date_stats)
-                    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EFE2F2]">Games played in 2021 : {{$date_stats->date_count}}</div>
+                    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-[#EFE2F2]">Games played in 2022 : {{$date_stats->date_count}}</div>
                 @endforeach
     </div>
 

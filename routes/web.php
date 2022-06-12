@@ -20,29 +20,36 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::middleware('auth')->group(function () {
+    //All 40k handled below
 
+    //40k create and index
     Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
     Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
     Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('index');
-    
+    //40k archive and stats
     Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
     Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
-
+    //40k delete
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
     //contact forms
     Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
     Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
     
-    //All AOS is handled Below
+    //All AOS below
+
+    //AOS create and store
     Route::post('/createaos', [App\Http\Controllers\AosController::class, 'storeaos']);
     Route::get('/createaos', [App\Http\Controllers\AosController::class, 'createaos'])->name('createaos');
+    //AOS index, edit and update
     Route::get('/indexaos', [\App\Http\Controllers\AosController::class,'indexaos'])->name('indexaos');
     Route::get('/aos/{aos}', [\App\Http\Controllers\AosController::class,'showaos']);
     Route::get('/aos/{aos}/edit', [\App\Http\Controllers\AosController::class,'editaos'])->name('editaos');
     Route::put('/aos/{aos}', [\App\Http\Controllers\AosController::class,'updateaos']);
+    //AOS stats
     Route::get('/statsaos', [\App\Http\Controllers\AosController::class,'stats'])->name('statisticsaos');
+    //AOS delete
     Route::get('/aos/{aos}/remove', [\App\Http\Controllers\AosController::class,'destroyaos'])->name('removeaos');
     
 

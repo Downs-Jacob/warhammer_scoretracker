@@ -161,7 +161,7 @@ class AosController extends Controller
             ->get();
         $date_stats =$user->aos()
             ->select('created_at', DB::raw('count(*) as date_count'), 'created_at')
-            ->whereYear('created_at', 2021)
+            ->whereYear('created_at', 2022)
             ->get();
         $faction_stats_p1 = $user->aos()
             ->select(['player1_faction', DB::raw('count(*) as faction_count'), 'player1_name'])

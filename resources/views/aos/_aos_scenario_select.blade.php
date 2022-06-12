@@ -16,17 +16,25 @@
                     show: false,
                     selection_scenario: null,
                     scenarios: [
-                        {
-                        name: 'CORE RULEBOOK',
-                        options: [
-                            'Frontal Assault',
-                            'Burn and Pillage',
-                            'Rising Power'
-                            ]
-                        }
+                          {
+                            name:'2021 GENERALS HANDBOOK',
+                            options: [
+                                'Marking Terrain',
+                                'Savage Gains',
+                                'First Blood',
+                                'Power Struggle',
+                                'Survival of the Fittest',
+                                'Tectonic Interference',
+                                'Apex Predators',
+                                'The Vice',
+                                'Tooth and Nail',
+                                'Feral Foray',
+                                'Power in Numbers',
+                                'The Veins of Ghur',
+                           ]
+                          }
+
                     ],
-
-
                     }"
                   <br>
 
