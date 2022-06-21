@@ -17,20 +17,20 @@
                     selection_scenario: null,
                     scenarios: [
                           {
-                            name:'2021 GENERALS HANDBOOK',
+                            name:'2022 GENERALS HANDBOOK',
                             options: [
-                                'Marking Terrain',
-                                'Savage Gains',
-                                'First Blood',
-                                'Power Struggle',
-                                'Survival of the Fittest',
-                                'Tectonic Interference',
-                                'Apex Predators',
-                                'The Vice',
-                                'Tooth and Nail',
-                                'Feral Foray',
-                                'Power in Numbers',
-                                'The Veins of Ghur',
+                                'The Prize of Gallet',
+                                'The Realmstone Cache',
+                                'Battlelines Drawn',
+                                'The Lurkers Below',
+                                'In the Presence of Idols',
+                                'The Nidus Paths',
+                                'The Mighty and the Cunning',
+                                'Head-on Collision',
+                                'Wont Back Down',
+                                'The Silksteel Nests',
+                                'Close to the Chest',
+                                'Turf Wars',
                            ]
                           }
 
