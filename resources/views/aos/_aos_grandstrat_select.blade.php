@@ -5,16 +5,14 @@ show: false,
 selection_grandstrat: null,
 grandstrats: [
                       {
-                        name: 'GENERALS HANDBOOK 2021',
+                        name: 'GENERALS HANDBOOK 2022',
                         options: [
-                          'Sever the Head',
-                          'Hold the Line',
-                          'Vendetta',
-                          'Dominating Prescence',
-                          'Beast Master',
-                          'Prized Sorcery',
-                          'Pillars of Belief',
-                          'Predators Domain',
+                          'No Place for the Weak',
+                          'Tame the Land',
+                          'Defend Whats Ours',
+                          'Take Whats Theirs',
+                          'Demonstration of Strength',
+                          'Show of Dominance',
                           'Army Specific',
                   
                           ]
