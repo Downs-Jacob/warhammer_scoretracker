@@ -30,6 +30,7 @@
                           'Astra Militarum',
                           'Imperial Knights',
                           'Inquisition',
+                          'Leagues of Votann',
                           'Officio Assassinorum',
                           'Sisters of Silence'
                           ]

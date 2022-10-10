@@ -34,11 +34,10 @@
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> June 2022 </h2>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> October 2022 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Age of Sigmar GH 2022 Grandstrategies</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Age of Sigmar GH 2022 Battleplans</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Added Army specific secondaries</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Leagues of Votann faction</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Leagues of Votann secondaries</p>
 
                 </div>
             </div>
