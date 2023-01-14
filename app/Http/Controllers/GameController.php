@@ -84,7 +84,7 @@ class GameController extends Controller
                     'Wrath of Khaine - Asuryani/Ynnari',
                     'Fear and Terror - Drukhari',
                     'A Deadly Performance - Harlequins',
-                    'Synaptic Insight - Tyranids'
+                    'Synaptic Insight - Tyranids',
                     'Treasures of Aeon - Necrons',
                     'A Clean Victory - T\'au Empire',
                     'The Ancestors Are Watching - Leagues of Votann',
@@ -111,7 +111,7 @@ class GameController extends Controller
                     'Broodswarm - Genestealer Cults',
                     'Purge the Vermin - Necrons',
                     'Green Tide - Orks',
-                    'Decisive Action - T\'au Empire'
+                    'Decisive Action - T\'au Empire',
                     'Lay Claim - Leagues of Votann'
                      ]
             ],[
@@ -135,7 +135,7 @@ class GameController extends Controller
                     'Storm of Darkness - Chaos Knights',
                     'Despoilers of Reality - Chaos Daemons',
                     'Scout the Enemy - Asuryani/Ynnari',
-                    'Spore Nodes - Tyranids'
+                    'Spore Nodes - Tyranids',
                     'Sabotage Critical Location - Genestealer Cults',
                     'Ancient Machineries - Necrons',
                     'Get Da Good Bitz - Orks',
