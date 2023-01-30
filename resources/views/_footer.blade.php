@@ -36,7 +36,9 @@
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
                 <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> January 2023 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 2023 Grand Tournement Scenarios</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 2023 Grand Tournement Scenarios for Warhammer 40k</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 2023 Generals Handbook Scenarios for AoS</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Change GrandStats for AoS</p>
 
                 </div>
             </div>

@@ -47,7 +47,7 @@
                          ]
                         },
                         {
-                            name:'GRAND TOURNAMENT 2022 INCURSION',
+                            name:'GRAND TOURNAMENT 2023 INCURSION',
                             options: [
                                 'Cleanse the Lands',
                                 'Deliverance',
@@ -61,7 +61,7 @@
                            ]
                           },
                           {
-                            name:'GRAND TOURNAMENT 2022 STRIKE FORCE',
+                            name:'GRAND TOURNAMENT 2023 STRIKE FORCE',
                             options: [
                                 'Recover the Relic',
                                 'Tear Down Their Icons',
