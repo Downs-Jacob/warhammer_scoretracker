@@ -7,12 +7,12 @@ grandstrats: [
                       {
                         name: 'GENERALS HANDBOOK 2022',
                         options: [
-                          'No Place for the Weak',
                           'Tame the Land',
                           'Defend Whats Ours',
                           'Take Whats Theirs',
-                          'Demonstration of Strength',
-                          'Show of Dominance',
+                          'Stake a Claim',
+                          'Survivors Instinct',
+                          'The Day is Ours',
                           'Army Specific',
                   
                           ]
