@@ -5,7 +5,7 @@ show: false,
 selection_grandstrat: null,
 grandstrats: [
                       {
-                        name: 'GENERALS HANDBOOK 2022',
+                        name: 'GENERALS HANDBOOK 2023',
                         options: [
                           'Tame the Land',
                           'Defend Whats Ours',
