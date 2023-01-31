@@ -49,7 +49,7 @@ class StatController extends Controller
             ->get();
         $date_stats =$user->games()
             ->select('created_at', DB::raw('count(*) as date_count'), 'created_at')
-            ->whereYear('created_at', 2022)
+            ->whereYear('created_at', 2023)
             ->get();
         $faction_stats_p1 = $user->games()
             ->select(['player1_faction', DB::raw('count(*) as faction_count'), 'player1_name'])

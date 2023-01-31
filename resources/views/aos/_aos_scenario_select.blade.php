@@ -17,7 +17,7 @@
                     selection_scenario: null,
                     scenarios: [
                           {
-                            name:'2022 GENERALS HANDBOOK',
+                            name:'2023 GENERALS HANDBOOK',
                             options: [
                                 'The Prize of Gallet',
                                 'The Realmstone Cache',
