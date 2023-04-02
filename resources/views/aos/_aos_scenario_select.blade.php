@@ -1,44 +1,41 @@
-<div id="page" class=" lg:flex lg:justify-center lg:mx-auto">
+<div id="page" class="lg:flex lg:justify-center lg:mx-auto">
     <div id="content">
         <div class="box2">
             <style>
                 .turngrid {
-                  grid-template-columns: 50px 1fr 1fr 1fr 50px;
-                  grid-template-rows: 50px;
-                  grid-gap: 3px;
-                  margin-bottom: 3px;
+                    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+                    grid-template-rows: 50px;
+                    grid-gap: 3px;
+                    margin-bottom: 3px;
                 }
+            </style>
 
-              </style>
+            <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
+                show: false,
+                selection_scenario: null,
+                scenarios: [
+                    {
+                        name:'2023 GENERALS HANDBOOK',
+                        options: [
+                            'The Prize of Gallet',
+                            'The Realmstone Cache',
+                            'Battlelines Drawn',
+                            'The Lurkers Below',
+                            'In the Presence of Idols',
+                            'The Nidus Paths',
+                            'Only the Worthy',
+                            'Path of a Champion',
+                            'Jaws of Gallet',
+                            'Ours for the Taking',
+                            'Twist and Turns',
+                            'Position Over Power',
+                        ]
+                    }
+                ],
+            }">
+                <br>
 
-              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
-
-                    show: false,
-                    selection_scenario: null,
-                    scenarios: [
-                          {
-                            name:'2023 GENERALS HANDBOOK',
-                            options: [
-                                'The Prize of Gallet',
-                                'The Realmstone Cache',
-                                'Battlelines Drawn',
-                                'The Lurkers Below',
-                                'In the Presence of Idols',
-                                'The Nidus Paths',
-                                'Only the Worthy',
-                                'Path of a Champion',
-                                'Jaws of Gallet',
-                                'Ours for the Taking',
-                                'Twist and Turns',
-                                'Position Over Power',
-                           ]
-                          }
-
-                    ],
-                    }"
-                  <br>
-
-                  <div class="grid grid-cols-2 w-auto">
+                <div class="grid grid-cols-2 w-auto">
                     <label class="mr-2 flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
                         scenario
                     </label>
@@ -65,3 +62,7 @@
                     value="{{ $scenario['pointlimit'] }}"
                     >
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
