@@ -47,9 +47,12 @@ class StatController extends Controller
             ->groupBy('scenario')
             ->orderBy(DB::raw('count(*)'), 'DESC')
             ->get();
+        $current_year = date('Y');
         $date_stats =$user->games()
-            ->select('created_at', DB::raw('count(*) as date_count'), 'created_at')
-            ->whereYear('created_at', 2023)
+            ->select(DB::raw('YEAR(created_at) as year'), DB::raw('count(*) as date_count'))
+            ->whereYear('created_at', '<=', $current_year)
+            ->groupBy('year')
+            ->orderBy('year', 'ASC')
             ->get();
         $faction_stats_p1 = $user->games()
             ->select(['player1_faction', DB::raw('count(*) as faction_count'), 'player1_name'])
