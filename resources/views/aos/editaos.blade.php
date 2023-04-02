@@ -4,8 +4,9 @@
     <form method="POST" action="/aos/{{$aos->id}}">
         @csrf
         @method('PUT')
+        
+        @include ('aos._aos_scenario_select', ['scenario'=>$aos->scenario, 'selected'=>$aos->scenario_select])
 
-        @include ('aos._aos_scenario_select', ['scenario'=>$aos->scenario])
 
         <div class= "px-6 py-3 m-2 border-8 border-gray-300">
             <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
