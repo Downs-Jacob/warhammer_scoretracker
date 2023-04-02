@@ -11,84 +11,82 @@
 
               </style>
 
-              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
+<div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
+  show: false,
+  selection_scenario: null,
+  scenarios: [
+    {
+      name: 'COMBAT PATROL',
+      options: [
+        'Incisive Attack',
+        'Outriders',
+        'Encircle'
+      ]
+    },
+    {
+      name: 'CORE RULES INCURSION',
+      options: [
+        'Divide and Conquer',
+        'Crossfire',
+        'Center Ground',
+        'Forward Push',
+        'Ransack',
+        'Shifting Front'
+      ]
+    },
+    {
+      name:'CORE RULES STRIKE FORCE',
+      options: [
+        'Retrieval Mission',
+        'Front-line Warfare',
+        'The Four Pillars',
+        'No Mans Land',
+        'Scorched Earth',
+        'Vital Intelligence'
+      ]
+    },
+    {
+      name:'GRAND TOURNAMENT 2023 INCURSION',
+      options: [
+        'Cleanse the Lands',
+        'Deliverance',
+        'Desperate Raid',
+        'Sacred Ground',
+        'Ascension',
+        'Surge of Faith',
+        'Rise of the Machine Spirit',
+        'Display of Spiritual Might',
+        'Reconnaissance Mission'
+      ]
+    },
+    {
+      name:'GRAND TOURNAMENT 2023 STRIKE FORCE',
+      options: [
+        'Recover the Relic',
+        'Tear Down Their Icons',
+        'Data Scry-Salvage',
+        'Abandoned Sanctuaries',
+        'Conversion',
+        'The Scouring',
+        'Tide of Conviction',
+        'Death and Zeal',
+        'Secure Missing Artifacts'
+      ]
+    },
+    {
+      name:'TEMPEST OF WAR',
+      options: [
+        'Burn and Raze',
+        'Claim the Battlefield',
+        'Direct Assault',
+        'Priority Targets',
+        'Take and Hold',
+        'Vital Ground'
+      ]
+    }
+  ]
+}">
 
-                    show: false,
-                    selection_scenario: null,
-                    scenarios: [
-                        {
-                        name: 'COMBAT PATROL',
-                        options: [
-                            'Incisive Attack',
-                            'Outriders',
-                            'Encircle'
-                            ]
-                        },
-                        {
-                        name: 'CORE RULES INCURSION',
-                        options: [
-                          'Divide and Conquer',
-                          'Crossfire',
-                          'Center Ground',
-                          'Forward Push',
-                          'Ransack',
-                          'Shifting Front'
-                         ]
-                        },
-                        {
-                          name:'CORE RULES STRIKE FORCE',
-                          options: [
-                            'Retrieval Mission',
-                            'Front-line Warfare',
-                            'The Four Pillars',
-                            'No Mans Land',
-                            'Scorched Earth',
-                            'Vital Intelligence'
-                         ]
-                        },
-                        {
-                            name:'GRAND TOURNAMENT 2023 INCURSION',
-                            options: [
-                                'Cleanse the Lands',
-                                'Deliverance',
-                                'Desperate Raid',
-                                'Sacred Ground',
-                                'Ascension',
-                                'Surge of Faith',
-                                'Rise of the Machine Spirit',
-                                'Display of Spiritual Might',
-                                'Reconnaissance Mission'
-                           ]
-                          },
-                          {
-                            name:'GRAND TOURNAMENT 2023 STRIKE FORCE',
-                            options: [
-                                'Recover the Relic',
-                                'Tear Down Their Icons',
-                                'Data Scry-Salvage',
-                                'Abandoned Sanctuaries',
-                                'Conversion',
-                                'The Scouring',
-                                'Tide of Conviction',
-                                'Death and Zeal',
-                                'Secure Missing Artifacts'
-                           ]
-                          },
-                          {
-                            name:'TEMPEST OF WAR',
-                            options: [
-                                'Burn and Raze',
-                                'Claim the Battlefield',
-                                'Direct Assault',
-                                'Priority Targets',
-                                'Take and Hold',
-                                'Vital Ground'
-                           ]
-                          }
-
-                    ],
-                    }"
-                  <br>
 
 
                     <div class="w-auto">
