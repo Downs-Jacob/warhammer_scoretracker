@@ -11,32 +11,30 @@
 
               </style>
 
-              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
-
-                    show: false,
-                    selection_scenario: null,
-                    scenarios: [
-                          {
-                            name:'2023 GENERALS HANDBOOK',
-                            options: [
-                                'The Prize of Gallet',
-                                'The Realmstone Cache',
-                                'Battlelines Drawn',
-                                'The Lurkers Below',
-                                'In the Presence of Idols',
-                                'The Nidus Paths',
-                                'Only the Worthy',
-                                'Path of a Champion',
-                                'Jaws of Gallet',
-                                'Ours for the Taking',
-                                'Twist and Turns',
-                                'Position Over Power',
-                           ]
-                          }
-
-                    ],
-                    }"
-                  <br>
+                    <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
+                        show: false,
+                        selection_scenario: null,
+                        scenarios: [
+                            {
+                                name:'2023 GENERALS HANDBOOK',
+                                options: [
+                                    'The Prize of Gallet',
+                                    'The Realmstone Cache',
+                                    'Battlelines Drawn',
+                                    'The Lurkers Below',
+                                    'In the Presence of Idols',
+                                    'The Nidus Paths',
+                                    'Only the Worthy',
+                                    'Path of a Champion',
+                                    'Jaws of Gallet',
+                                    'Ours for the Taking',
+                                    'Twist and Turns',
+                                    'Position Over Power',
+                                ]
+                            }
+                        ]
+                    }">
+                        <br>
 
 
                     <div class="grid grid-cols-2 w-auto">
