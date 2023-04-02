@@ -25,7 +25,7 @@
                                 'The Lurkers Below',
                                 'In the Presence of Idols',
                                 'The Nidus Paths',
-                                'Only the Worthy,
+                                'Only the Worthy',
                                 'Path of a Champion',
                                 'Jaws of Gallet',
                                 'Ours for the Taking',
