@@ -88,7 +88,6 @@
 }">
 
 
-
                     <div class="w-auto">
                         <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
                             scenario
