@@ -36,7 +36,7 @@
 
                     ],
                     }"
-                  <br>
+                  <br>>
 
 
                     <div class="grid grid-cols-2 w-auto">
