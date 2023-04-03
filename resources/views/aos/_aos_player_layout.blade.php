@@ -4,7 +4,7 @@
         <div class="mx-auto">
             <style>
                 .turngrid {
-                  grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+                  grid-template-columns: 50px 1fr 1fr 1fr 50px;
                   grid-template-rows: 50px;
                   grid-gap: 3px;
                   margin-bottom: 3px;
