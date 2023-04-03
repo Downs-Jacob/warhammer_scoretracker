@@ -24,8 +24,8 @@
       <option value="option">--</option>
       <template x-for="grandstrat in grandstrats">
         <optgroup :label="grandstrat.name">
-          <template x-for="item in grandstrat.options" :key="item" :selected="item === selection_grandstrat">
-            <option x-text="item" :value="item"></option>
+          <template x-for="item in grandstrat.options" :key="item">
+            <option x-text="item" :value="item" :selected="item === selection_grandstrat"></option>
           </template>
         </optgroup>
       </template>
