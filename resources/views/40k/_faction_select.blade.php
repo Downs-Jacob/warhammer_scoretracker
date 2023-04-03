@@ -2,7 +2,7 @@
               <div class='' x-data="{
 
                     show: false,
-                    selection_faction: null,
+                    selection_faction: '{{ old('scenario') ?? '' }}',
                     factions: [
                       {
                         name: 'SPACE MARINES',
@@ -73,7 +73,7 @@
                             <template x-for="faction in factions">
                                 <optgroup :label="faction.name">
                                     <template x-for="item in faction.options" :key="item">
-                                        <option x-text="item" :value="item"></option>
+                                        <option x-text="item" :value="item" :selected="item === selection_faction"></option>
                                     </template>
                                 </optgroup>
                             </template>
