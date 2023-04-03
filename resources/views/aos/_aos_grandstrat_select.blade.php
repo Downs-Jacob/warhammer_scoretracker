@@ -20,8 +20,8 @@
     <label class="block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-grandstrat">
       {{$player}} grandstrat
     </label>
-    <select class="px-4 py-2 border rounded" x-model="selection_grandstrat" name='{{$player}}_grandstrat'>
-      <option value="option">--</option>
+    <select class="px-4 py-2 border rounded" x-model="selection_grandstrat" name="{{$player}}_grandstrat">
+      <option>--</option>
       <template x-for="grandstrat in grandstrats">
         <optgroup :label="grandstrat.name">
           <template x-for="item in grandstrat.options" :key="item">
