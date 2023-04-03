@@ -38,12 +38,12 @@
 
 @if (auth()->check())
 
-    <div class=container>
+<div class="container" style="margin-left: 10%">
         <div class="title">
             <div class="container flex items-center">
                 <div class="flex items-center py-5 ml-8 mr-4">
                     <button type="submit" form="formid" value="Submit" class="flex-1 px-4 py-2 font-bold text-white bg-[#5c2d69] rounded-full mr-l hover:bg-blue-700">
-                    End This Game and Add to Archive
+                        End This Game and Add to Archive
                     </button>
                 </div>
             </div>
