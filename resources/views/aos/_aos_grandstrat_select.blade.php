@@ -2,7 +2,7 @@
               <div class='' x-data="{
 
 show: false,
-selection_grandstrat: null,
+selection_grandstrat: '{{ old($player.'_grandstrat') ?? '' }}',
 grandstrats: [
                       {
                         name: 'GENERALS HANDBOOK 2023',
@@ -30,7 +30,7 @@ grandstrats: [
         <option value={{'option'}}>--</option>
         <template x-for="grandstrat in grandstrats">
             <optgroup :label="grandstrat.name">
-                <template x-for="item in grandstrat.options" :key="item">
+                <template x-for="item in grandstrat.options" :key="item" :selected="item === selection_grandstrat">
                     <option x-text="item" :value="item"></option>
                 </template>
             </optgroup>
