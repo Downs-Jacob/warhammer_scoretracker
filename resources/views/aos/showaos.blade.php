@@ -1,72 +1,57 @@
-
-@extends ('layouts.layout')
+@extends('layouts.layout')
 @section('content')
 
 @if (session('message'))
-    <div class="mt-2 text-green-500"> {{ session('message')}} </div>
+    <div class="mt-2 text-green-500">{{ session('message') }}</div>
 @endif
 
 <div class="lg:flex ml-2 mr-2 mt-4 bg-yellow-200 py-2 px-4">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl">
-        <h1 class="font-bold">Game Id: {{ $aos->id}}</h1> Date : {{$aos->created_at}}
-        <br>
-        Scenario: {{ $aos->scenario}}
-        <br>
-        Point Total: {{ $aos->pointlimit}}
-        <br>
+        <h1 class="font-bold">Game Id: {{ $aos->id }}</h1>
+        Date: {{ $aos->created_at }}<br>
+        Scenario: {{ $aos->scenario }}<br>
+        Point Total: {{ $aos->pointlimit }}<br>
         <div class="font-bold text-green-700">
-        <br>
-        @if ($aos->player1_score > $aos->player2_score)
-            Player 1 Major Victory
-        @elseif ($aos->player1_score === $aos->player2_score)
-            The Game was a Tie
-        @else Player 2 Major Victory
-        @endif
+            @if ($aos->player1_score > $aos->player2_score)
+                Player 1 Major Victory
+            @elseif ($aos->player1_score === $aos->player2_score)
+                The Game was a Tie
+            @else
+                Player 2 Major Victory
+            @endif
         </div>
     </div>
-    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl"> 
-        Player 1 Name: {{ $aos->player1_name}}
-        <br>
-        Player 1 Faction: {{$aos->player1_faction}}
-        <br>
-        Player 1 Total Score: {{ $aos->player1_score }}
-     </div>
-     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl">
-        Player 2 Name: {{ $aos->player2_name}}
-        <br>
-        Player 2 Faction: {{$aos->player2_faction}}
-        <br>
-        Player 2 Total Score: {{ $aos->player2_score }}
-     </div>
-</div>
-<div class="ml-2 mr-2 flex px-4 pb-2 bg-yellow-200 shadow-xl">
     <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl">
-        Description: {{ $aos->aosdescription}}
+        Player 1 Name: {{ $aos->player1_name }}<br>
+        Player 1 Faction: {{ $aos->player1_faction }}<br>
+        Player 1 Total Score: {{ $aos->player1_score }}
+    </div>
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl">
+        Player 2 Name: {{ $aos->player2_name }}<br>
+        Player 2 Faction: {{ $aos->player2_faction }}<br>
+        Player 2 Total Score: {{ $aos->player2_score }}
     </div>
 </div>
 
-<!--MODAL -->
-<div
-    class="mt-6 flex"
-    x-data="{ open: false }"
-    x-show=true>
+<div class="ml-2 mr-2 flex px-4 pb-2 bg-yellow-200 shadow-xl">
+    <div class="flex-1 px-4 py-2 m-2 text-center text-gray-700 bg-yellow-100 rounded-xl">
+        Description: {{ $aos->aosdescription }}
+    </div>
+</div>
 
-    <a
-        href="{{route('indexaos')}}"
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l 
-        hover:bg-blue-700"
-        > Return to Archive
+<!-- MODAL -->
+<div class="mt-6 flex" x-data="{ open: false }" x-show="true">
+    <a href="{{ route('indexaos') }}" class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+        Return to Archive
     </a>
-    <a
-        href="{{route('editaos', ['aos' => $aos])}}"
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l 
-        hover:bg-blue-700"
-        > Edit This Game
+    <a href="{{ route('editaos', ['aos' => $aos]) }}" class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+        Edit This Game
     </a>
-    <button
-        class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700"
-        @click="open = true"> Delete Game
+    <button class="text-center flex-1 shadow-xl px-4 py-2 m-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700" @click="open = true">
+        Delete Game
     </button>
+</div>
+
 
     <!-- Dialog (full screen) -->
 
