@@ -91,23 +91,22 @@
                   <br>
 
 
-                    <div class="w-auto">
-                        <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
-                            scenario
-                        </label>
-                        
-                        <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
-                            <option value={{'option'}}>--</option>
-                            <template x-for="scenario in scenarios">
-                                <optgroup :label="scenario.name">
-                                    <template x-for="item in scenario.options" :key="item">
-                                        <option x-text="item" :value="item"></option>
-                                    </template>
-                                </optgroup>
-                            </template>
-                        </select>
 
-                    </div>
-                  </div>
+                <div class="w-auto">
+                    <label class="flex-1 block mb-2 text-xs font-bold tracking-wide text-indigo-400 uppercase" for="grid-first-name">
+                        scenario
+                    </label>
+                    
+                    <select class="px-4 py-2 border rounded" x-model="selection_scenario" name='scenario'>
+                        <option value='option'>--</option>
+                        <template x-for="scenario in scenarios">
+                            <optgroup :label="scenario.name">
+                                <template x-for="item in scenario.options" :key="item">
+                                    <option x-text="item" :value="item" :selected="item === selection_scenario"></option>
+                                </template>
+                            </optgroup>
+                        </template>
+                    </select>
+                </div>
 
 
