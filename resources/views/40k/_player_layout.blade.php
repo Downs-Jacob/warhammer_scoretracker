@@ -1,89 +1,81 @@
 <div id="page" class="xl:flex xl:flex-wrap ">
-  
-    <div id="content">
-        <div class="mx-auto">
-            <style>
-                .turngrid {
-                  grid-template-columns: 50px 1fr 1fr 1fr 50px;
-                  grid-template-rows: 50px;
-                  grid-gap: 3px;
-                  margin-bottom: 3px;
-                }
+  <div id="content">
+    <div class="mx-auto">
+      <style>
+        .turngrid {
+          grid-template-columns: 50px 1fr 1fr 1fr 50px;
+          grid-template-rows: 50px;
+          grid-gap: 3px;
+          margin-bottom: 3px;
+        }
+      </style>
 
-              </style>
+      <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
+        getprimaryTotal(turn) {
+          let total = 0;
+          if (turn.primaries.hold) {
+            total += 4;
+          }
+          if (turn.primaries.hold_many) {
+            total += 4;
+          }
+          if (turn.primaries.hold_more) {
+            total += 4;
+          }
+          return total;
+        },
+        primaryTotal() {
+          let total = 0;
+          this.turns.map((turn) => {
+            total += this.getprimaryTotal(turn);
+          })
+          return total;
+        },
+        turns: [{
+            primaries: {
+              hold: false,
+              hold_many: false,
+              hold_more: false
+            }
+          }, {
+            primaries: {
+              hold: false,
+              hold_many: false,
+              hold_more: false
+            }
+          }, {
+            primaries: {
+              hold: false,
+              hold_many: false,
+              hold_more: false
+            }
+          }, {
+            primaries: {
+              hold: false,
+              hold_many: false,
+              hold_more: false
+            }
+          }
+        ],
+        show: false,
+        selection_1: null,
+        selection_2: null,
+        selection_3: null,
+        count: 0,
+        counta: 0,
+        countb: 0,
+        countc: 0,
+        getsecondaryTotal() {
+          return this.count + this.counta + this.countb + this.countc;
+        },
+        getTotal() {
+          return this.primaryTotal() + this.getsecondaryTotal();
+        }
+      }">
 
-              <div class='px-6 py-3 m-2 border-8 border-gray-300' x-data="{
-                    getprimaryTotal(turn) {
-                      let total = 0;
-                      if (turn.primaries.hold) {
-                        total += 4;
-                      }
-                      if (turn.primaries.hold_many) {
-                        total += 4;
-                      }
+        <br>
+        @include('40k._faction_select')
 
-                      if (turn.primaries.hold_more) {
-                        total += 4;
-                      }
-                      return total;
-                    },
-                    primaryTotal() {
-                      let total = 0;
-                        this.turns.map((turn) => {
-                        total += this.getprimaryTotal(turn);
-                      })
-                      return total;
-                    },
-
-                    turns: [
-                        {
-                         
-                          primaries: {
-                            hold: false,
-                            hold_many: false,
-                            hold_more: false
-                          }
-                        },{
-                          primaries: {
-                            hold: false,
-                            hold_many: false,
-                            hold_more: false
-                          }
-                        },{
-                          primaries: {
-                            hold: false,
-                            hold_many: false,
-                            hold_more: false
-                          }
-                        },{
-                          primaries: {
-                            hold: false,
-                            hold_many: false,
-                            hold_more: false
-                            }
-                          }
-                      ],
-                    show: false,
-
-
-                    show: false,
-                    selection_1: null,
-                    selection_2: null,
-                    selection_3: null,
-
-                          count:0,
-                          counta:0,
-                          countb:0,
-                          countc:0,
-                          getsecondaryTotal() {
-                              return this.count + this.counta + this.countb + this.countc;
-                          },
-                          getTotal() {
-                            return this.primaryTotal() + this.getsecondaryTotal();
-                        }
-                    }"
-                  <br>
-                    @include('40k._faction_select')
 
                   <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
                  
@@ -118,30 +110,30 @@
                   </div>
                 <br>
                 <div class="grid bg-white turngrid">
-                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Turn</div>
-                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Hold</div>
-                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Many</div>
-                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">More</div>
-                  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Total</div>
-                </div>
-                  <template x-for="(turn, index) in turns" :key="index">
-                    <div class="grid turngrid">
-                      <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="index+2"></div>
-                      <div class="p-2 text-center text-white border" @click="turn.primaries.hold = !turn.primaries.hold" :class="{
-                          'bg-blue-400': turn.primaries.hold,
-                          'bg-[#5c2d69]': !turn.primaries.hold
-                        }"></div>
-                      <div class="p-2 text-center text-white border" @click="turn.primaries.hold_many = !turn.primaries.hold_many" :class="{
-                          'bg-blue-400': turn.primaries.hold_many,
-                          'bg-[#5c2d69]': !turn.primaries.hold_many
-                        }"></div>
-                      <div class="p-2 text-center text-white border" @click="turn.primaries.hold_more = !turn.primaries.hold_more" :class="{
-                          'bg-blue-400': turn.primaries.hold_more,
-                          'bg-[#5c2d69]': !turn.primaries.hold_more
-                        }"></div>
-                      <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="getprimaryTotal(turn);"></div>
-                    </div>
-                  </template>
+  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Turn</div>
+  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Hold</div>
+  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Many</div>
+  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">More</div>
+  <div class="text-xl font-bold text-center text-white bg-[#5c2d69] border">Total</div>
+</div>
+<template x-for="(turn, index) in turns" :key="index">
+  <div class="grid turngrid">
+    <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="index+2"></div>
+    <div class="p-2 text-center text-white border" @click="toggleHold(turn)" :class="{
+        'bg-blue-400': turn.primaries.hold,
+        'bg-[#5c2d69]': !turn.primaries.hold
+      }"></div>
+    <div class="p-2 text-center text-white border" @click="toggleHoldMany(turn)" :class="{
+        'bg-blue-400': turn.primaries.hold_many,
+        'bg-[#5c2d69]': !turn.primaries.hold_many
+      }"></div>
+    <div class="p-2 text-center text-white border" @click="toggleHoldMore(turn)" :class="{
+        'bg-blue-400': turn.primaries.hold_more,
+        'bg-[#5c2d69]': !turn.primaries.hold_more
+      }"></div>
+    <div class="p-2 text-center text-white bg-[#5c2d69] border" x-text="getprimaryTotal(turn);"></div>
+  </div>
+</template
 
                   <div class="flex justify-between my-4 mr-4 text-xl lg:text-2xl text-indigo-400 w-fullp-2 flex-between">
                     PRIMARY TOTAL
@@ -182,4 +174,32 @@
             
           </body>
     </div>
+
+<script>
+  window.selectedTurns = [];
+
+  function toggleHold(turn) {
+    turn.primaries.hold = !turn.primaries.hold;
+    updateSelectedTurns(turn);
+  }
+
+  function toggleHoldMany(turn) {
+    turn.primaries.hold_many = !turn.primaries.hold_many;
+    updateSelectedTurns(turn);
+  }
+
+  function toggleHoldMore(turn) {
+    turn.primaries.hold_more = !turn.primaries.hold_more;
+    updateSelectedTurns(turn);
+  }
+
+  function updateSelectedTurns(turn) {
+    const existingTurn = selectedTurns.find((t) => t.id === turn.id);
+    if (existingTurn) {
+      existingTurn.primaries = turn.primaries;
+    } else {
+      selectedTurn
+    }
+  }
+</script>
     
