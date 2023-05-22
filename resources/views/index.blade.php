@@ -23,7 +23,11 @@
             </div>
             <div class="col-span-2 bg-[#EBE2F6]"> 
                 <div class="">
-                    {{$game->player1_faction}} vs {{$game->player2_faction}}
+                    @if(\Illuminate\Support\Facades\App::isMobile())
+                        {{ substr($game->player1_faction, 0, 3) }} vs {{ substr($game->player2_faction, 0, 3) }}
+                    @else
+                        {{$game->player1_faction}} vs {{$game->player2_faction}}
+                    @endif
                 </div>
             </div>
         </a>
