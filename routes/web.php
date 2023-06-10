@@ -20,24 +20,32 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::middleware('auth')->group(function () {
-    //All 40k handled below
+    //*** all 40k handled below ***//
 
-    //40k create and index
+    //10th edition create and index
+    
+    //10th edition index, edit and update
+
+    //10th stats
+
+    //10th delete
+
+    //9th Edition create and index
     Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
     Route::get('/create', [\App\Http\Controllers\GameController::class,'create'])->name('create');
     Route::get('/index', [\App\Http\Controllers\GameController::class,'index'])->name('index');
-    //40k archive and stats
+    //9th Edition archive and stats
     Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
     Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
-    //40k delete
+    //9th Edition delete
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
     //contact forms
     Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
     Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
     
-    //All AOS below
+    //*** all AOS below ***//
 
     //AOS create and store
     Route::post('/createaos', [App\Http\Controllers\AosController::class, 'storeaos']);
@@ -56,9 +64,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
-
+Route::get('/editionselect', [App\Http\Controllers\GameController::class, 'editionselect'])->name('editionselect');
 Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])->name('scorecard');
 Route::get('/scorecardSigmar', [App\Http\Controllers\AosController::class, 'createaos'])->name('scorecardSigmar');
+Route::get('/scorecard10th', [App\Http\Controllers\TenEdController::class, 'create10e'])->name('scorecard10th');
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
 
