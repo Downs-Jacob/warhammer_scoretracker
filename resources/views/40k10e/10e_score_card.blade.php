@@ -28,7 +28,7 @@
                         </div>
                         <div class="flex">
                             <div class="mx-4">
-                            @include('40k10e._10e_mission_rule_select')
+                                @include('40k10e._10e_mission_rule_select')
                             </div>  
                         </div>
                     </div>
@@ -36,12 +36,14 @@
 
                 <div class="flex flex-col space-y-4 mt-4">
                     @include('40k10e._10e_player_layout', [
+                        'id' => 'player1',
                         'player' => 'player1',
                         'player_faction' => 'player1_faction',
                         'player_name' => 'player1_name',
                         'player_score' => 'player1_score'
                     ])
                     @include('40k10e._10e_player_layout', [
+                        'id' => 'player2',
                         'player' => 'player2',
                         'player_faction' => 'player2_faction',
                         'player_name' => 'player2_name',
