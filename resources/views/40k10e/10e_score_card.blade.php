@@ -11,28 +11,41 @@
             <form action="/create10e" novalidate method="POST" id="formid">
                 {{ csrf_field() }}
 
-                <!-- @include('aos._aos_scenario_select') -->
-
                 <!-- @if (auth()->check())
                     @include('aos._aos_description')
                 @endif -->
-                <div class="py-3 my-4 bg-gray-100 rounded-lg shadow-lg">
+                <div class="py-3 my-4 mx-4 bg-gray-100 rounded-lg shadow-lg">
                     <div class="flex flex-col space-y-4">
-                        <div class="flex">
-                            <div class="mx-4">
-                                @include('40k10e._10e_primary_mission_select')
+                        <div class="flex flex-wrap">
+                            <div class="w-full lg:w-1/2 px-4">
+                                <div class="flex">
+                                    <div class="w-1/2">
+                                        @include('40k10e._10e_primary_mission_select')
+                                    </div>
+                                    <div class="w-1/2">
+                                        @include('40k10e._10e_deployment_select')
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                @include('40k10e._10e_deployment_select')
+                            <div class="w-full lg:w-1/2 px-4">
+                                <div class="flex">
+                                    <div class="w-1/2">
+                                        @include('40k10e._10e_mission_rule_select')
+                                    </div>
+                                    <div class="w-1/2">
+                                        @include('40k10e._10e_point_total')
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="flex">
-                            <div class="mx-4">
-                                @include('40k10e._10e_mission_rule_select')
-                            </div>  
+                            <div class="w-full px-4">
+                                @include('40k10e._10e_game_description')
+                            </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="flex flex-col space-y-4 mt-4">
                     @include('40k10e._10e_player_layout', [
