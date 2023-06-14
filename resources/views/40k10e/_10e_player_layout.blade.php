@@ -51,12 +51,7 @@
                       <div class="flex justify-end">
                       <div class="flex justify-end">
                       <div class="flex justify-end">
-                        <!-- This button is meant to dynamically add a third secondary -->
-              <!-- <button class="px-3 py-2 text-sm font-medium text-white bg-green-500 border border-blue-700 rounded hover:bg-green-600"
-                  @click.prevent="addSecondaryCounters('{{$player}}')">
-                  Add Secondary Counters for Player {{$player}}
-              </button> -->
-          </div>
+             </div>
                       </div>
 
                       </div>

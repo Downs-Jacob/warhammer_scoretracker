@@ -1,4 +1,4 @@
-<div id="page" class=" lg:flex lg:justify-center lg:mx-auto">
+<div id="page" class=" lg:flex lg:justify-left lg:mx-auto">
     <div id="content">
         <div class="box2">
 

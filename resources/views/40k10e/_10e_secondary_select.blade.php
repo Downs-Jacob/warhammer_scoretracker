@@ -27,7 +27,7 @@
 }">
   <div class="flex items-center">
     <div class="w-full">
-      <select class="py-2 border rounded sm:w-auto" x-model="selection_secondary" name='{{$player}}_secondary'>
+      <select class="py-2 border rounded sm:w-auto text-xs" x-model="selection_secondary" name='{{$player}}_secondary'>
         <option value="">--</option>
         <template x-for="secondary in secondarys">
           <optgroup :label="secondary.name">
