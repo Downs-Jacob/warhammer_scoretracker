@@ -22,4 +22,8 @@ class TenEdController extends Controller
     {
         return view('40k10e.10e_score_card');
     }
+    public function showrules()
+    {
+        return view('40k10e.specialrules');
+    }
 }

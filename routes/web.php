@@ -64,6 +64,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/splash', [App\Http\Controllers\GameController::class, 'splash'])->name('splash');
+Route::get('/specialrules', [App\Http\Controllers\TenEdController::class, 'showrules'])->name('showrules');
 Route::get('/editionselect', [App\Http\Controllers\GameController::class, 'editionselect'])->name('editionselect');
 Route::get('/scorecard', [App\Http\Controllers\GameController::class, 'create'])->name('scorecard');
 Route::get('/scorecardSigmar', [App\Http\Controllers\AosController::class, 'createaos'])->name('scorecardSigmar');
