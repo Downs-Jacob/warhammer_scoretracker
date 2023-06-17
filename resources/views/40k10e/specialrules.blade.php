@@ -79,18 +79,18 @@
         }
     }
 }" @keydown.escape="escapeKey">
-<div class="flex flex-col h-screen mt-4 mx-32">
-    <div class="py-4 bg-slate-300">
-        <div class="max-w-md mx-auto">
+<div class="flex flex-col h-screen mt-4 mx-2 md:mx-32">
+    <div class="py-4 mx-4 bg-slate-300">
+        <div class="max-w-md mx-auto px-4 md:px-0">
             <input class="w-full p-2 border rounded shadow" type="text" placeholder="Search" x-model.debounce.300ms="search">
         </div>
     </div>
 
     <div class="">
         <div class="mx-auto mt-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-4"> 
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"> <!-- Updated grid-cols values -->
                 <template x-for="(keyword, index) in filteredKeywords()">
-                    <div class="cursor-pointer text-center bg-blue-200 p-4 rounded" @click="openModal(keyword.term, keyword.definition)">
+                    <div class="cursor-pointer text-center bg-indigo-200 p-4 rounded" @click="openModal(keyword.term, keyword.definition)">
                         <h3 class="text-lg font-bold mb-2" x-text="keyword.term"></h3>
                     </div>
                 </template>
@@ -102,15 +102,13 @@
         <div class="fixed bottom-0 left-0 flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
             <div @click="outsideClick($event)" class="fixed inset-0 flex items-center justify-center z-50">
                 <div class="modal-container bg-white w-full md:w-1/2 mx-auto p-4 rounded shadow">
-                    <h2 class="text-lg font-bold mb-2" x-text="modalTerm"></h2>
+                    <h2 class="bg-green-200 text-center text-lg font-bold mb-2" x-text="modalTerm"></h2>
                     <p><strong>Definition:</strong> <span x-text="modalDefinition"></span></p>
                 </div>
             </div>
         </div>
     </template>
 </div>
-
-
 
 
 
