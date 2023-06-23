@@ -80,9 +80,9 @@
     }
 }" @keydown.escape="escapeKey">
 <div class="flex flex-col h-screen mt-4 mx-2 md:mx-32">
-    <div class="py-4 mx-4 bg-slate-300">
+    <div class="py-4 mx-4 bg-gray-400">
         <div class="max-w-md mx-auto px-4 md:px-0">
-            <input class="w-full p-2 border rounded shadow" type="text" placeholder="Search" x-model.debounce.300ms="search">
+            <input class="w-full p-2 border border-black border-bold rounded shadow" type="text" placeholder="Search" x-model.debounce.300ms="search">
         </div>
     </div>
 
@@ -90,7 +90,7 @@
         <div class="mx-auto mt-4">
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"> <!-- Updated grid-cols values -->
                 <template x-for="(keyword, index) in filteredKeywords()">
-                    <div class="cursor-pointer text-center bg-indigo-200 p-4 rounded" @click="openModal(keyword.term, keyword.definition)">
+                    <div class="cursor-pointer text-center bg-slate-200 p-4 rounded" @click="openModal(keyword.term, keyword.definition)">
                         <h3 class="text-lg font-bold mb-2" x-text="keyword.term"></h3>
                     </div>
                 </template>

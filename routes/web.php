@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -22,13 +20,19 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     //*** all 40k handled below ***//
 
-    //10th edition create and index
-    
-    //10th edition index, edit and update
+    //10th edition create and store
+    Route::post('/create10e', [App\Http\Controllers\TenEdController::class, 'store10e']);
+    Route::get('/create10e', [App\Http\Controllers\TenEdController::class, 'create10e'])->name('create10e');
+    //10th edition index, edit, and update
+    Route::get('/index10e', [App\Http\Controllers\TenEdController::class, 'index10e'])->name('index10e');
+    Route::get('/ten/{ten}', [App\Http\Controllers\TenEdController::class,'show10e']);
+    Route::get('/ten/{ten}/edit', [App\Http\Controllers\TenEdController::class,'edit10e'])->name('edit10e');
+    Route::put('/ten/{ten}', [App\Http\Controllers\TenEdController::class,'update10e']);
+    //10th edition stats
+    Route::get('/stats10e', [App\Http\Controllers\TenEdController::class,'stats'])->name('statistics10e');
+    //10th edition delete
+    Route::get('/ten/{ten}/remove', [App\Http\Controllers\TenEdController::class,'destroy10e'])->name('remove10e');
 
-    //10th stats
-
-    //10th delete
 
     //9th Edition create and index
     Route::post('/create', [\App\Http\Controllers\GameController::class,'store']);
@@ -59,6 +63,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/statsaos', [\App\Http\Controllers\AosController::class,'stats'])->name('statisticsaos');
     //AOS delete
     Route::get('/aos/{aos}/remove', [\App\Http\Controllers\AosController::class,'destroyaos'])->name('removeaos');
+
+
+    Route::get('/editionselectindex', [App\Http\Controllers\GameController::class, 'editionselectindex'])->name('editionselectindex');
     
 
 });
@@ -71,9 +78,6 @@ Route::get('/scorecardSigmar', [App\Http\Controllers\AosController::class, 'crea
 Route::get('/scorecard10th', [App\Http\Controllers\TenEdController::class, 'create10e'])->name('scorecard10th');
 Route::get('/faq', [App\Http\Controllers\GameController::class, 'faq'])->name('faq');
 Route::get('/about', [App\Http\Controllers\GameController::class, 'about'])->name('about');
-
-
-
 
 
 Auth::routes();

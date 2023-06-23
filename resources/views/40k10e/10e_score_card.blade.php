@@ -14,7 +14,7 @@
                 <!-- @if (auth()->check())
                     @include('aos._aos_description')
                 @endif -->
-                <div class="py-3 my-4 mx-4 bg-gray-100 rounded-lg shadow-lg">
+            <div class="py-3 my-4 mx-4 bg-gray-100 rounded-lg">
                     <div class="flex flex-col space-y-4">
                         <div class="flex flex-wrap">
                             <div class="w-full lg:w-1/2 px-4">
@@ -33,7 +33,9 @@
                                         @include('40k10e._10e_mission_rule_select')
                                     </div>
                                     <div class="w-1/2">
-                                        @include('40k10e._10e_point_total')
+                                        <div class="pl-4">
+                                            @include('40k10e._10e_point_total')
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -46,8 +48,7 @@
                     </div>
                 </div>
 
-
-                <div class="flex flex-col space-y-4 mt-4">
+                <div class="flex flex-col space-y-4 mt-4 mx-4">
                     @include('40k10e._10e_player_layout', [
                         'id' => 'player1',
                         'player' => 'player1',
@@ -64,8 +65,25 @@
                     ])
                 </div>
 
+
             </form>
         </div>
     </div>
+
+    @if (auth()->check())
+
+    <div class=container>
+        <div class="title">
+            <div class="container flex items-center">
+                <div class="flex items-center py-5 ml-8 mr-4">
+                    <button type="submit" form="formid" value="Submit" class="flex-1 px-4 py-2 font-bold text-white bg-blue-500 rounded-full mr-l hover:bg-blue-700">
+                    End This Game and Add to Archive
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
 
 @endsection

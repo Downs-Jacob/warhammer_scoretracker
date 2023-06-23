@@ -5,7 +5,7 @@
         </label>
         <textarea
             class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
-            name='10edescription'
+            name='description'
             rows="4"
             required
             >{{old('10edescription')}}</textarea>

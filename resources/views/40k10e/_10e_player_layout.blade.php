@@ -1,8 +1,4 @@
 
-@if ($errors->any())
-        <p class="text-center mt-2 text-xs text-red-500">{{ "Please make sure that the Scenario, Point Limit, and Player Faction Names, and Player Names have all been added" }}</p>
-    @endif
-
     <div id="page" class="sm:flex items-center justify-center">
         <div id="content" class="mx-auto">
             <div class="px-6 py-3 m-2 border-8 border-gray-300" x-data="{

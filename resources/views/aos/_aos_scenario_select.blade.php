@@ -25,7 +25,7 @@
                                     'In the Presence of Idols',
                                     'The Nidus Paths',
                                     'Only the Worthy',
-                                    'Path of a Champion',
+                         sc           'Path of a Champion',
                                     'Jaws of Gallet',
                                     'Ours for the Taking',
                                     'Twist and Turns',

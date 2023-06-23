@@ -19,7 +19,6 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
         return view('index', [
             'games'=> auth()->user()->games]);
     }
@@ -346,5 +345,9 @@ class GameController extends Controller
     public function editionselect()
     {
         return view('edition');
+    }
+    public function editionselectindex()
+    {
+        return view('editionselectindex');
     }
 }
