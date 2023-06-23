@@ -350,4 +350,8 @@ class GameController extends Controller
     {
         return view('editionselectindex');
     }
+    public function editionselectstatistics()
+    {
+        return view('editionselectstatistics');
+    }
 }

@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
+
 
 class TenEdController extends Controller
 {
@@ -125,7 +127,7 @@ class TenEdController extends Controller
         return view('40k10e.index10e', ['games10e' => auth()->user()->ten]);
     }
 
-    public function stats()
+    public function stats10e()
     {
         $user = auth()->user();
         $count = $user->ten->count();

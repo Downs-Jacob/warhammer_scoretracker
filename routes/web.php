@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/ten/{ten}/edit', [App\Http\Controllers\TenEdController::class,'edit10e'])->name('edit10e');
     Route::put('/ten/{ten}', [App\Http\Controllers\TenEdController::class,'update10e']);
     //10th edition stats
-    Route::get('/stats10e', [App\Http\Controllers\TenEdController::class,'stats'])->name('statistics10e');
+    Route::get('/stats10e', [App\Http\Controllers\TenEdController::class,'stats10e'])->name('stats10e');
     //10th edition delete
     Route::get('/ten/{ten}/remove', [App\Http\Controllers\TenEdController::class,'destroy10e'])->name('remove10e');
 
@@ -45,9 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
     //9th Edition delete
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
-    //contact forms
-    Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
-    Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
     
     //*** all AOS below ***//
 
@@ -64,9 +62,13 @@ Route::middleware('auth')->group(function () {
     //AOS delete
     Route::get('/aos/{aos}/remove', [\App\Http\Controllers\AosController::class,'destroyaos'])->name('removeaos');
 
-
+    //edition selections
     Route::get('/editionselectindex', [App\Http\Controllers\GameController::class, 'editionselectindex'])->name('editionselectindex');
-    
+    Route::get('/editionselectstatistics', [App\Http\Controllers\GameController::class, 'editionselectstatistics'])->name('editionselectstatistics');
+    //contact forms
+    Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
+    Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
 
 });
 
