@@ -19,7 +19,8 @@
 
 		@else
 			<p class="leading-normal">
-			This is a website designed for tracking your games of Warhammer 40k 9th edition and Age of Sigmar 3rd Edition. To save games you will need to register or login first, however, if 
+			This is a website designed for tracking your games of Warhammer 40k and Age of Sigmar. Currently only 9th and 10th edition for 40k are supported and 3rd edition
+			for Age of Sigmar is supported. To save games you will need to register or login first, however, if 
 			you just want to track a single game of Warhammer 40k or Age of Sigmar you can press the 'Score Card' button in the navigation bar and select either Warhammer 40k or Age of Sigmar from 
 			the dropdown menu.
 		</p>

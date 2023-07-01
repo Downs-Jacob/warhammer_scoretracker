@@ -34,11 +34,11 @@
             @click.away="open = false">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-lg text-center font-medium font-bold leading-6 text-gray-900"> Recent Updates </h3>
-                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> April 2023 </h2>
+                <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> June 2023 </h2>
                 <div class="mt-2">
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Fix bug with games per year statiscs for AOS</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Fix issues with games per year statiscs for 40k</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Fix Age of Sigmar bug with scenario selection on AOS</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 40k 10th Edition Tracking</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 40k 10th Edition Archive</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add 40k 10th Edition Statistics</p>
 
                 </div>
             </div>
