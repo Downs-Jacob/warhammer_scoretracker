@@ -10,6 +10,7 @@
                         {
                         name: 'CORE RULES 10th Edition',
                         options: [
+                            'Deploy Servo Skulls',
                             'Take and Hold',
                             'Priority Targets',
                             'Purge the Foe',
