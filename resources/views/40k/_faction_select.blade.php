@@ -42,7 +42,8 @@
                           'Chaos Knights',
                           'Chaos Space Marines',
                           'Death Guard',
-                          'Thousand Sons'
+                          'Thousand Sons',
+                          'World Eaters'
                           ]
                       },
                       {
