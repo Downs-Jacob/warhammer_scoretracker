@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/games/{game}', [\App\Http\Controllers\GameController::class,'show']);
     Route::get('/games/{game}/edit', [\App\Http\Controllers\GameController::class,'edit'])->name('edit');
     Route::put('/games/{game}', [\App\Http\Controllers\GameController::class,'update']);
-    Route::get('/stats', [\App\Http\Controllers\StatController::class,'index'])->name('statistics');
+    Route::get('/stats9e', [\App\Http\Controllers\StatController::class,'stats'])->name('stats9e');
     //9th Edition delete
     Route::get('/games/{game}/remove', [\App\Http\Controllers\GameController::class,'destroy'])->name('remove');
 
