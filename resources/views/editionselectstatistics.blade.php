@@ -15,7 +15,7 @@
                     <h2 class="text-white text-lg sm:text-3xl">10th Edition</h2>
                 </div>
             </a>
-            <a href="{{ route('index') }}">
+            <a href="{{ route('stats') }}">
                 <div class="w-64 h-64 sm:w-96 sm:h-96 bg-violet-500 rounded-lg shadow-lg flex justify-center items-center font-extrabold">
                     <h2 class="text-white text-lg sm:text-3xl">9th Edition</h2>
                 </div>
