@@ -10,7 +10,7 @@ use Illuminate\Database\QueryException;
 
 class StatController extends Controller
 {
-    public function index()
+    public function stats()
     {
         $user = auth()->user();
         $count = $user->games->count();
