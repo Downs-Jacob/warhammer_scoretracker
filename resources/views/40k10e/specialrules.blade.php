@@ -16,7 +16,7 @@
         { term: 'Critical Wound', definition: 'Unmodified Wound roll of 6. Always successful.' },
         { term: 'Deadly Demise x', definition: 'When this model is destroyed, roll one D6. On a 6, each unit within 6 suffers x mortal wounds.' },
         { term: 'Deep Strike', definition: 'Unit can be set up in Reserves instead of on the battlefield. Unit can be set up in your Reinforcements step, more than 9 inches horizontally away from all enemy models.' },
-        { term: 'Devastating Wounds', definition: 'A Critical Wound inflicts mortal wounds equal to the weapons Damage characteristic, instead of any normal damage.' },
+        { term: 'Devastating Wounds', definition: 'Each time an attack is made with such a weapon, if that attack scores a Critical Wound, no saving throw of any kind can be made against that attack (including invulnerable saving throws). Such attacks are only allocated to models after all other attacks made by the attacking unit have been allocated and resolved.' },
         { term: 'Engagement Range', definition: 'Within 1 inch horizontally and 5 inches vertically. Models cannot be set up or end a Normal, Advance or Fall Back move within Engagement Range of any enemy models.' },
         { term: 'Epic Challenge', definition: 'WHEN: Fight phase, when a Character unit from your army that is within Engagement Range of one or more Attached units is selected to fight. TARGET: One Character model in your unit. EFFECT: Until the end of the phase, all melee attacks made by that model have the [PRECISION] ability (pg 26).' },
         { term: 'Extra Attacks', definition: 'The bearer can attack with this weapon in addition to any other weapons it can make attacks with.' },
