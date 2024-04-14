@@ -5,13 +5,14 @@
     {
       name: 'GENERALS HANDBOOK 2023',
       options: [
-        'Tame the Land',
-        'Defend Whats Ours',
-        'Take Whats Theirs',
-        'Stake a Claim',
-        'Survivors Instinct',
-        'The Day is Ours',
-        'Army Specific'
+
+        'Control the Nexus',
+        'Spellcasting Savant',
+        'Slaughter of Sorcery',
+        'Barren Icescape',
+        'Overshadow',
+        'Magic Made Manifest',
+        'Army Specific',
       ]
     }
   ]

@@ -18,18 +18,18 @@
                             {
                                 name:'2023 GENERALS HANDBOOK',
                                 options: [
-                                    'The Prize of Gallet',
-                                    'The Realmstone Cache',
-                                    'Battlelines Drawn',
-                                    'The Lurkers Below',
-                                    'In the Presence of Idols',
-                                    'The Nidus Paths',
-                                    'Only the Worthy',
-                         sc           'Path of a Champion',
-                                    'Jaws of Gallet',
-                                    'Ours for the Taking',
-                                    'Twist and Turns',
-                                    'Position Over Power',
+                                    'Geomantic Pulse',
+                                    'Nexus Collapse',
+                                    'Lines of Communication',
+                                    'Every Step Is Forward',
+                                    'Limited Resources',
+                                    'Spring the Trap',
+                                    'Fountains of Frost',
+                                    'The Icefields',
+                                    'Power Flux',
+                                    'The Frigid Zephyr',
+                                    'No Reward Without Risk',
+                                    'Towers in the Tundra',
                                 ]
                             }
                         ]
