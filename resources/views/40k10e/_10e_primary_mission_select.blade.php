@@ -10,16 +10,15 @@
                         {
                         name: 'CORE RULES 10th Edition',
                         options: [
-                            'Deploy Servo Skulls',
-                            'Take and Hold',
-                            'Priority Targets',
+                            'Burden of Trust',
+                            'Linchpin',
                             'Purge the Foe',
+                            'The Ritual',
                             'Scorched Earth',
-                            'Sites of Power',
                             'Supply Drop',
                             'Take and Hold',
-                            'The Ritual',
-                            'Vital Ground'
+                            'Terraform',
+                            'Unexploded Ordinance',
                             ]
                         },
                     ],

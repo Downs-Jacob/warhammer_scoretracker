@@ -10,18 +10,16 @@
                         {
                         name: 'CORE RULES 10th Edition',
                         options: [
-                            'Chilling Rain',
-                            'Chosen Battlefield',
-                            'Delayed Reserves',
+                            'Adapt of Die',
+                            'Fog of War',
                             'Hidden Supplies',
-                            'Maelstrom of Battle',
-                            'Minefields',
-                            'Secret Intel',
-                            'Scrambler Fields',
-                            'Supply Lines',
-                            'Sweep and Clear',
-                            'Targets of Opportunity',
-                            'Vox Static'
+                            'Inspired Leadership',
+                            'Prepared Positions',
+                            'Raise Banners',
+                            'Rapid Escalation',
+                            'Smoke and Mirrors',
+                            'Stalwarts',
+                            'Swift Action'
                             ]
                         },
                     ],

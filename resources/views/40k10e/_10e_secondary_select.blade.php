@@ -5,22 +5,30 @@
     {
       name: '10th Edition CORE RULEBOOK',
       options: [
-        'Behind Enemy Lines',
-        'Assassination',
-        'Bring it Down',
-        'Engage on All Fronts',
-        'Storm Hostile Objectibe',
-        'Cleanse',
-        'Deploy Teleport Homer',
-        'Investigate Signals',
-        'No Prisoners',
-        'Extend Battlelines',
-        'Defend Stronghold',
-        'Overwhelming Force',
-        'Secure No Mans Land',
         'Area Denial',
-        'A Tempting Target',
-        'Capturing Enemy Outpost'
+        'Assassination',
+        'Behind Enemy Lines',
+        'Bring it Down',
+        'Cleanse',
+        'Command Insertion',
+        'Defend Stronghold',
+        'Containment',
+        'Cull the Horde',
+        'Engage on All Fronts',
+        'Establish Locus',
+        'Extend Battlelines',
+        'Marked for Death',
+        'No Prisoners',
+        'Overwhelming Force',
+        'Recover Assets',
+        'Sabatoge',
+        'Secure No Man's Land',
+        'Shatter Cohesion',
+        'Storm Hostile Objective',
+        'Unbroken Wall',
+        'War of Attrition'
+
+
       ]
     }
   ]
