@@ -14,7 +14,8 @@
                         'Dawn of War',
                         'Sweeping Engagement',
                         'Crucible of Battle',
-                        'Hammer and Anvil'
+                        'Hammer and Anvil',
+                        'Tipping Point'
                         ]
                     },
                 ],
