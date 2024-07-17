@@ -37,7 +37,7 @@
                 <h2 class="text-lg text-center font-small leading-6 pb-3 text-gray-900"> July 2024 </h2>
                 <div class="mt-2">
                     <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Pariah Nexus Update</p>
-                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Age of Sigmar 4.0</p>
+                    <p class="text-left text-justify text-sm leading-5 text-gray-500 pb-2"> - Add Age of Sigmar 4.0 Update</p>
 
                 </div>
             </div>
