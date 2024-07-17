@@ -65,12 +65,10 @@ class AosController extends Controller
         $aos->user_id = auth()->id();
         $aos->player1_name = request('player1_name');
         $aos->player1_faction = request('player1_faction');
-        $aos->player1_grandstrat = request('player1_grandstrat');
         $aos->player1_score = request('player1_score');
 
         $aos->player2_name = request('player2_name');
         $aos->player2_faction = request('player2_faction');
-        $aos->player2_grandstrat = request('player2_grandstrat');
         $aos->player2_score = request('player2_score');
         $aos->aosdescription = request('aosdescription');
         

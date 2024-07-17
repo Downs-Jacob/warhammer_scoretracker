@@ -18,18 +18,18 @@
                             {
                                 name:'2023 GENERALS HANDBOOK',
                                 options: [
-                                    'Geomantic Pulse',
-                                    'Nexus Collapse',
-                                    'Lines of Communication',
-                                    'Every Step Is Forward',
-                                    'Limited Resources',
-                                    'Spring the Trap',
-                                    'Fountains of Frost',
-                                    'The Icefields',
-                                    'Power Flux',
-                                    'The Frigid Zephyr',
-                                    'No Reward Without Risk',
-                                    'Towers in the Tundra',
+                                    'Border War',
+                                    'Focal Points',
+                                    'Starstrike',
+                                    'Shifting Objectives',
+                                    'Feral Foray',
+                                    'The Jaws of Gallet',
+                                    'Battle For the pass',
+                                    'Scorched Earth',
+                                    'The Better Part of Valour',
+                                    'The Vice',
+                                    'Close to the Chest',
+                                    'Limited Resources'
                                 ]
                             }
                         ]
