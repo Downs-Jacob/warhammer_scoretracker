@@ -18,7 +18,6 @@
                 'player' => 'player1',
                 'player_faction'=>'player1_faction',
                 'player_name'=>'player1_name',
-                'player_grandstrat'=>'fart_grandstrat',
                 'player_score'=>'player1_score'
                 ])
 
@@ -26,7 +25,6 @@
                 'player' => 'player2',
                 'player_faction'=>'player2_faction',
                 'player_name'=>'player2_name',
-                'player_grandstrat'=>'player2_grandstrat',
                 'player_score'=>'player2_score'
                 ])
     </form>
