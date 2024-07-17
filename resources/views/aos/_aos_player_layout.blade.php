@@ -28,9 +28,7 @@
                       if (turn.primaries.battle_tactic) {
                         total += 2;
                       }
-                      if (turn.primaries.grand_strat) {
-                        total += 3;
-                      }
+                    
                       return total;
                     },
                     primaryTotal() {
@@ -103,7 +101,6 @@
                     }"
                   <br>
                     @include('aos._aos_army_select')
-                    @include("aos._aos_grandstrat_select")
 
                   <div class="flex md:flex-wrap mt-4 lg:flex-wrap mb-6 ">
                  
@@ -162,7 +159,6 @@
                       <input type="hidden" name="grandstratcheck" :value="selection_1">
                     </div>
                   </div>
-                  @include("aos._grandstrat_success", ['categories'=>$categories, 'selection_id'=>'selection_1', 'count_id'=>"count"])
                   @include("aos._extra_points", ['selection_id'=>'selection_2', 'count_id'=>"counta"])
                 <div class="flex justify-between my-4 mr-4 text-2xl text-indigo-400 w-fullp-2 flex-between">
                     TOTAL
